@@ -48,3 +48,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+# Wordpress
+wp-content/uploads
+wp-content/themes/twentynineteen
+wp-content/themes/twentytwenty
+wp-content/themes/twentytwentyone
