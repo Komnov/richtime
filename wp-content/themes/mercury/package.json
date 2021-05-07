@@ -63,5 +63,8 @@
 		"watch": "chokidar \"**/*.scss\" -c \"npm run build\" --initial",
 		"lint:scss": "stylelint **/*.scss",
 		"lint-fix:scss": "stylelint **/*.scss --fix"
+	},
+	"dependencies": {
+		"bootstrap": "^5.0.0-beta3"
 	}
 }
