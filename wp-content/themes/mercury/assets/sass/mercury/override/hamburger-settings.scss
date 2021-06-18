@@ -1,0 +1,8 @@
+$hamburger-layer-color: var(--global--color-main);
+.theme-dark {
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: #fff;
+  }
+}
+$hamburger-layer-height: 2px;
+$hamburger-layer-width: 27px;

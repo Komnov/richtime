@@ -1,0 +1,44 @@
+/* Variables */
+:root {
+	/* Font sizes */
+	--global--font-size-h1: 2.5rem;
+	--global--font-size-h2: 1.8rem;
+	--global--font-size-h3: 1.5rem;
+	--global--font-size-h4: 1.1rem;
+	--global--font-size-h5: 0.9rem;
+	--global--font-size-h6: 0.75rem;
+	--global--font-size-main: 15px;
+	/* Font family */
+	--global--font-primary: 'Roboto', sans-serif;
+	--global--font-h1: 'Cormorant Garamond';
+	/* Line height */
+	--global--font-line-height-h1: 3.25rem;
+	--global--font-line-height-h2: 2.625rem;
+	--global--font-line-height-h3: 2rem;
+	--global--font-line-height-h4: 1.56rem;
+	--global--font-line-height-h5: 1.56rem;
+	--global--font-line-height-h6: 1.43rem;
+	--global--font-line-height-p: var(--global--font-line-height-h3);
+	--global--font-line-height-main: var(--global--font-line-height-h4);
+	/* Colors */
+	--global--color-main: #232323;
+	--global--color-gray: #F8F8F8;
+	--global--color-white: #FFF7F7;
+	--global--color-red: #E31E1E;
+}
+
+.container-fluid {
+	max-width: 1264px;
+}
+
+.heateorSssMoreSvg {
+	background-color: black !important;
+}
+
+@media (min-width: 1400px) {
+	.container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+		max-width: 1140px !important;
+	}
+}
+
+/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,106 @@
+.mercury-loop__product {
+	position: relative;
+	padding-top: 24px;
+	padding-bottom: 36px;
+	text-align: center;
+	background-color: var(--global--color-gray);
+	max-width: 250px;
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	max-height: 380px;
+	height: 100%;
+	transition: all 1s ease-in;
+}
+
+.mercury-loop__product img {
+	transform: translateY(0);
+	transition: all .6s ease-in;
+}
+
+.mercury-loop__product .mercury-loop__product-title-wrapper {
+	transform: translateY(0);
+	transition: all .6s ease-in;
+}
+
+.mercury-loop__product:hover img {
+	transform: translateY(240px);
+	transition: all .6s ease-in;
+}
+
+.mercury-loop__product:hover .add-favorite {
+	opacity: 1;
+	transition: all .3s ease-in;
+}
+
+.mercury-loop__product:hover .mercury-loop__product-title-wrapper {
+	transform: translateY(-240px);
+	transition: all .6s ease-in;
+}
+
+.mercury-loop__product:hover .price {
+	visibility: visible;
+	opacity: 1;
+	transition: all 1s ease-in;
+	height: auto;
+}
+
+.mercury-loop__product:hover .mercury-product__chars {
+	visibility: visible;
+	opacity: .7;
+	height: auto;
+	transition: all 1s ease-in;
+}
+
+.add-favorite {
+	transition: all .3s ease-out;
+	opacity: 0;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+
+.add-favorite.is-active {
+	opacity: 1;
+}
+
+.woocommerce-loop-product__link {
+	text-decoration: none;
+	color: var(--global--color-main);
+}
+
+.woocommerce-loop-product__link .price {
+	visibility: hidden;
+	height: 1px;
+}
+
+.woocommerce-loop-product__title {
+	font-size: 18px;
+	line-height: 22px;
+	font-family: var(--global--font-h1);
+	letter-spacing: 0.15em;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.mercury-product__tags {
+	opacity: 0.3;
+	font-size: 12px;
+	line-height: 14px;
+	color: #000;
+	margin-bottom: 0;
+	transition: all 1s ease-in;
+}
+
+.mercury-product__chars {
+	visibility: hidden;
+	height: 1px;
+	color: #000;
+	opacity: .7;
+	font-size: 13px;
+	line-height: 23px;
+	margin-top: 1rem;
+	transition: all 1s ease-in;
+}
+
+/*# sourceMappingURL=product-preview.css.map */

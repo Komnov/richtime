@@ -1,0 +1,16 @@
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+	border: none;
+	padding: 0;
+}
+
+.woocommerce button[type="submit"] {
+	width: 100%;
+	max-width: 100%;
+	background-color: transparent;
+	border: 1px solid rgba(35, 35, 35, 0.2);
+	border-radius: 3px;
+	padding: 17px;
+	font-weight: 300;
+}
+
+/*# sourceMappingURL=forms.css.map */

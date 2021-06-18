@@ -1,0 +1,47 @@
+.button {
+	max-width: 275px;
+	padding: 28px 0;
+	border-radius: 5px;
+	border: 1px solid var(--global--color-main);
+}
+
+.button.button-white {
+	border: 1px solid var(--global--color-white);
+}
+
+.icon-plus {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 9px;
+	width: 9px;
+}
+
+.icon-plus::before {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 9px;
+	background: #231F20;
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: -webkit-transform 0.3s;
+	-o-transition: transform 0.3s;
+	transition: transform 0.3s;
+	transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.icon-plus::after {
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: .5px;
+	left: -4px;
+	top: 4px;
+	background: #231F20;
+}
+
+/*# sourceMappingURL=buttons.css.map */

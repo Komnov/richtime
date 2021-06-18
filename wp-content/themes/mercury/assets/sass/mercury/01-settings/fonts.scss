@@ -1,0 +1,132 @@
+* {
+  font-family: var(--global--font-primary);
+  font-weight: 300;
+}
+
+h1 {
+  font-family: var(--global--font-h1);
+  font-size: var(--global--font-size-h1);
+  line-height: var(--global--font-line-height-h1);
+}
+
+h2 {
+  font-size: var(--global--font-size-h2);
+  line-height: var(--global--font-line-height-h2);
+}
+
+h3 {
+  font-size: var(--global--font-size-h3);
+  line-height: var(--global--font-line-height-h3);
+}
+
+h4 {
+  font-size: var(--global--font-size-h4);
+  line-height: var(--global--font-line-height-h4);
+}
+
+h5 {
+  font-size: var(--global--font-size-h5);
+  line-height: var(--global--font-line-height-h5);
+}
+
+h6 {
+  font-size: var(--global--font-size-h6);
+  line-height: var(--global--font-line-height-h6);
+}
+
+p {
+  font-size: var(--global--font-size-main);
+  line-height: var(--global--font-line-height-p);
+}
+
+a {
+  font-size: var(--global--font-size-main);
+  line-height: var(--global--font-line-height-main);
+  color: var(--global--color-main);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--global--color-main);
+  }
+}
+
+.theme-dark {
+  background-color: black;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: var(--global--color-main);
+    }
+  }
+
+  p {
+    color: #fff;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+
+  .menu {
+    a {
+      color: #fff;
+    }
+  }
+
+  .red-link {
+    a {
+      color: var(--global--color-red);
+    }
+  }
+
+  .icons-list {
+    path {
+      fill: #fff;
+    }
+  }
+
+  footer {
+    &.site-footer {
+      background: #232323;
+      .blog-title,
+      .social-links-text,
+      p,
+      a {
+        color: #fff;
+      }
+      .social-links {
+        a {
+          border: 1px solid;
+        }
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
+    //.menu {
+    //  a {
+    //    color: #232323;
+    //  }
+    //}
+    //.copyright {
+    //  color: #232323;
+    //}
+  }
+}
+
+input,
+textarea {
+  padding: 17px 23px;
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(35, 35, 35, .2);
+  border-radius: 3px;
+  color: #232323;
+}
+
+input[type="number"] {
+  padding: inherit;
+}

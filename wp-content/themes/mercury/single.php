@@ -2,39 +2,64 @@
 /**
  * The template for displaying all single posts
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package mercury
  */
 
 get_header();
 ?>
+<?php
+while ( have_posts() ) :
+	the_post(); ?>
 
 	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'mercury' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'mercury' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 class="title"><?php the_title() ?></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="row align-items-center">
+						<div class="col-md-8"><?php mercury_post_tags( 3 ); ?></div>
+						<div class="col-md-4">
+							<div class="mercury-post-meta">
+								<?php
+								mercury_post_views();
+								mercury_post_comments_count();
+								mercury_posted_on();
+								?>
+							</div>
+						</div>
+					</div>
+					<div class="post-content">
+						<?php the_content(); ?>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<?php the_post_thumbnail( 'medium-large' ); ?>
+				</div>
+			</div>
+			<?php
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+			if ( comments_open() || get_comments_number() ) : ?>
+				<div class="row">
+					<div class="col-md-6">
+						<?php comments_template(); ?>
+					</div>
+				</div>
+			<?php endif; ?>
 
-		endwhile; // End of the loop.
-		?>
+		</div>
+
 
 	</main><!-- #main -->
+<?php
+endwhile; // End of the loop.
+?>
+	?>
 
 <?php
-get_sidebar();
 get_footer();

@@ -1,4 +1,4 @@
-@import "01-settings/file-header";
+//@import "01-settings/file-header";
 
 /**
  * SETTINGS
@@ -78,45 +78,98 @@
 // Print................Print styles
 
 /* Categories 01 to 03 are the basics. */
-@import "01-settings/fonts";
-@import "01-settings/global";
+//@import "default/01-settings/fonts";
+//@import "default/01-settings/global";
+//
+//@import "default/02-tools/mixins";
+//@import "default/02-tools/functions";
+//
+//@import "default/03-generic/normalize";
+//@import "default/03-generic/breakpoints";
+//@import "default/03-generic/vertical-margins";
+//@import "default/03-generic/reset";
+//@import "default/03-generic/clearings";
+//
+///* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
+//@import "default/04-elements/blockquote";
+//@import "default/04-elements/forms";
+//@import "default/04-elements/media";
+//@import "default/04-elements/misc";
+//@import "default/04-elements/links";
+//
+///* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
+//@import "default/05-blocks/blocks";
+//
+///* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
+//@import "default/06-components/header";
+//@import "default/06-components/footer";
+//@import "default/06-components/single";
+//@import "default/06-components/posts-and-pages";
+//@import "default/06-components/entry";
+//@import "default/06-components/archives";
+//@import "default/06-components/404";
+//@import "default/06-components/search";
+//@import "default/06-components/comments";
+//@import "default/06-components/navigation";
+//@import "default/06-components/footer-navigation";
+//@import "default/06-components/pagination";
+//@import "default/06-components/widgets";
+//
+///* Category 07 is for any utility classes that are not assigned to a specific component. */
+//@import "default/07-utilities/a11y";
+//@import "default/07-utilities/color-palette";
+//@import "default/07-utilities/measure";
+//@import "default/07-utilities/ie";
 
-@import "02-tools/mixins";
-@import "02-tools/functions";
+/** GLOBAL **/
+@import "mercury/01-settings/breakpoints";
+@import "mercury/01-settings/global";
 
-@import "03-generic/normalize";
-@import "03-generic/breakpoints";
-@import "03-generic/vertical-margins";
-@import "03-generic/reset";
-@import "03-generic/clearings";
+/** LIBS **/
+@import "./../../node_modules/bootstrap/scss/bootstrap";
+@import "mercury/override/hamburger-settings";
+@import "./../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+@import "./node_modules/slick-carousel/slick/slick.css";
+@import "./node_modules/slick-carousel/slick/slick-theme.css";
 
-/* Category 04 can contain any default HTML element. Do not add classes here, just give the elements some basic styles. */
-@import "04-elements/blockquote";
-@import "04-elements/forms";
-@import "04-elements/media";
-@import "04-elements/misc";
-@import "04-elements/links";
+/** Mercury settings **/
+@import "mercury/01-settings/fonts";
+@import "mercury/01-settings/elements";
+@import "mercury/02-html-elements/buttons";
+@import "mercury/02-html-elements/language-switcher";
+@import "mercury/02-html-elements/breadcrumbs";
+@import "mercury/02-html-elements/filter";
+@import "mercury/03-components/header";
+@import "mercury/03-components/footer";
+@import "mercury/03-components/carousel";
+@import "mercury/03-components/page";
+@import "mercury/03-components/front-page";
+@import "mercury/woocommerce/product-preview";
+@import "mercury/woocommerce/product";
+@import "mercury/woocommerce/forms";
 
-/* Category 05 is all about adjusting the default block styles to the given layout. I only added three blocks as examples. */
-@import "05-blocks/blocks";
+.menu-terms {
+  position: relative;
+  &__list {
+    width: 400px;
+    li {
+      &:hover {
+        color: #ff0000;
+        .menu-terms__term-image {
+          display: block;
+        }
+      }
+    }
+  }
+  &__term-image {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+  }
+}
 
-/* Category 06 contains all "bigger" components which contain elements of the previous two categories like header, footer, page template, single template, comments section, archives, ... */
-@import "06-components/header";
-@import "06-components/footer";
-@import "06-components/single";
-@import "06-components/posts-and-pages";
-@import "06-components/entry";
-@import "06-components/archives";
-@import "06-components/404";
-@import "06-components/search";
-@import "06-components/comments";
-@import "06-components/navigation";
-@import "06-components/footer-navigation";
-@import "06-components/pagination";
-@import "06-components/widgets";
-
-/* Category 07 is for any utility classes that are not assigned to a specific component. */
-@import "07-utilities/a11y";
-@import "07-utilities/color-palette";
-@import "07-utilities/measure";
-@import "07-utilities/ie";
+.image-block {
+  width: 200px;
+  height: 400px;
+}

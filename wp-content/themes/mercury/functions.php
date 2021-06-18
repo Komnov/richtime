@@ -2,14 +2,14 @@
 /**
  * mercury functions and definitions
  *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * @link    https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package mercury
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define( '_S_VERSION', '1.0.1' );
 }
 
 if ( ! function_exists( 'mercury_setup' ) ) :
@@ -49,9 +49,10 @@ if ( ! function_exists( 'mercury_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
-			array(
+			[
 				'menu-1' => esc_html__( 'Primary', 'mercury' ),
-			)
+				'menu-2' => esc_html__( 'Footer', 'mercury' ),
+			]
 		);
 
 		/*
@@ -60,7 +61,7 @@ if ( ! function_exists( 'mercury_setup' ) ) :
 		 */
 		add_theme_support(
 			'html5',
-			array(
+			[
 				'search-form',
 				'comment-form',
 				'comment-list',
@@ -68,7 +69,7 @@ if ( ! function_exists( 'mercury_setup' ) ) :
 				'caption',
 				'style',
 				'script',
-			)
+			]
 		);
 
 		// Set up the WordPress core custom background feature.
@@ -76,10 +77,10 @@ if ( ! function_exists( 'mercury_setup' ) ) :
 			'custom-background',
 			apply_filters(
 				'mercury_custom_background_args',
-				array(
+				[
 					'default-color' => 'ffffff',
 					'default-image' => '',
-				)
+				]
 			)
 		);
 
@@ -93,13 +94,21 @@ if ( ! function_exists( 'mercury_setup' ) ) :
 		 */
 		add_theme_support(
 			'custom-logo',
-			array(
+			[
 				'height'      => 250,
 				'width'       => 250,
 				'flex-width'  => true,
 				'flex-height' => true,
-			)
+			]
 		);
+
+		add_theme_support( 'woocommerce' );
+
+		add_image_size( 'post-thumbnail', 350, 213 );
+//		add_theme_support( 'wc-product-gallery-zoom' );
+		add_theme_support( 'wc-product-gallery-lightbox' );
+		add_theme_support( 'wc-product-gallery-slider' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'mercury_setup' );
@@ -114,6 +123,7 @@ add_action( 'after_setup_theme', 'mercury_setup' );
 function mercury_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'mercury_content_width', 640 );
 }
+
 add_action( 'after_setup_theme', 'mercury_content_width', 0 );
 
 /**
@@ -123,33 +133,63 @@ add_action( 'after_setup_theme', 'mercury_content_width', 0 );
  */
 function mercury_widgets_init() {
 	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'mercury' ),
+		[
+			'name'          => esc_html__( 'Сайдар для часов', 'mercury' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'mercury' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
-		)
+		]
+	);
+
+	register_sidebar(
+		[
+			'name'          => esc_html__( 'Сайдаб для украшений', 'mercury' ),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__( 'Add widgets here.', 'mercury' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		]
 	);
 }
+
 add_action( 'widgets_init', 'mercury_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function mercury_scripts() {
-	wp_enqueue_style( 'mercury-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Roboto:wght@300;400;500&display=swap', [], null );
+	wp_enqueue_style( 'mercury-style', get_stylesheet_uri(), [], _S_VERSION );
 	wp_style_add_data( 'mercury-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'mercury-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'mercury-main', get_template_directory_uri() . '/build/index.js', [], _S_VERSION, true );
 }
+
 add_action( 'wp_enqueue_scripts', 'mercury_scripts' );
+
+function mercury_language_switcher() {
+	$langs        = icl_get_languages( 'skip_missing=N&orderby=KEY&order=DIR&link_empty_to=str&active=0' );
+	$current_lang = [];
+	foreach ( $langs as $lang ) {
+		if ( $lang['active'] === 0 ) {
+			$current_lang = $lang;
+			break;
+		}
+	}
+	if ( ! empty( $current_lang ) ) {
+		echo sprintf( '<a class="mercury-language" href="%s">%s</a>', $current_lang['url'], $current_lang['tag'] );
+	}
+
+}
 
 /**
  * Implement the Custom Header feature.
@@ -178,3 +218,33 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Mercury widgets
+ */
+require get_template_directory() . '/inc/widgets/class-mercury-attribute-filter.php';
+
+/**
+ * Load Woocommerce hooks
+ */
+require get_template_directory() . '/inc/woocommerce/hooks.php';
+require get_template_directory() . '/inc/woocommerce/functions.php';
+
+/**
+ * Custom Post Types
+ */
+require get_template_directory() . '/inc/post-types/post-types.php';
+
+/**
+ * Taxonomies
+ */
+require get_template_directory() . '/inc/taxonomies/taxonomies.php';
+
+/**
+ * ACF settings
+ */
+require get_template_directory() . '/inc/acf/acf-settings.php';
+
+/**
+ * Filters
+ */
+require get_template_directory() . '/inc/filters/class-mercury-filter.php';

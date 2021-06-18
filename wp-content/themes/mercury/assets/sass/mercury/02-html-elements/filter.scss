@@ -1,0 +1,82 @@
+.mercury-filter-nav {
+  border: none;
+  justify-content: center;
+
+  .nav-link {
+    border: none;
+    color: #495057;
+    transition: text-shadow .3s;
+
+    &.active,
+    &.show,
+    &:hover {
+      border: none;
+      text-shadow: 0 0 .65px #495057, 0 0 .65px #495057;
+    }
+  }
+  &__item {
+    position: relative;
+    margin-left: 20px;
+  }
+}
+
+.mercury-filter-content {
+  padding-top: 30px;
+
+  &__tab {
+    & > {
+      ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        li {
+          display: flex;
+          justify-content: center;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  .tab-items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1210px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+
+    .tab-item {
+      width: 20%;
+
+      &__label {
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+
+      ul {
+        padding-left: 10px;
+        list-style-type: none;
+      }
+    }
+  }
+
+  input {
+    margin: auto 20px auto 0;
+  }
+}
+
+.woocommerce {
+  .mercury-filter__submit {
+    width: 100%;
+    margin-top: 30px;
+    button[type="submit"] {
+      max-width: 220px;
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}

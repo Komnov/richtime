@@ -1,0 +1,26 @@
+.mercury-language {
+  position: relative;
+  text-transform: uppercase;
+  color: var(--global--color-main);
+  opacity: .5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 25px;
+
+  &:before {
+    content: url('./assets/images/lang.png');
+    position: absolute;
+    width: 28px;
+    height: 16px;
+    left: -35px;
+    top: 3px;
+  }
+}
+
+.black-theme {
+  .mercury-language {
+    color: #fff;
+  }
+}

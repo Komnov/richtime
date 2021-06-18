@@ -1,0 +1,52 @@
+.carousel-item {
+	position: relative;
+}
+
+.carousel-item img {
+	width: 100%;
+}
+
+.carousel-item__read-more {
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+}
+
+.carousel-item__read-more .title {
+	color: #fff;
+	font-weight: 300;
+	font-size: 70px;
+	line-height: 75px;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.carousel-item__read-more a {
+	border: 1px solid #fff;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 500;
+	color: #fff;
+	width: 275px;
+	padding: 27px;
+	text-align: center;
+	display: block;
+}
+
+.carousel-item__read-more a:hover {
+	color: #fff;
+}
+
+.carousel-item__read-more a:after {
+	content: url("./assets/images/next.png");
+	position: relative;
+	left: 30px;
+	top: 2px;
+}
+
+#new-products {
+	margin-top: 50px;
+}
+
+/*# sourceMappingURL=carousel.css.map */

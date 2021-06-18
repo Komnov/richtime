@@ -5,7 +5,7 @@
  * This is the template that displays the area of the page that contains both the current comments
  * and the comment form.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * @link    https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package mercury
  */
@@ -31,13 +31,13 @@ if ( post_password_required() ) {
 			$mercury_comment_count = get_comments_number();
 			if ( '1' === $mercury_comment_count ) {
 				printf(
-					/* translators: 1: title. */
+				/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'mercury' ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
-				printf( 
-					/* translators: 1: comment count number, 2: title. */
+				printf(
+				/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $mercury_comment_count, 'comments title', 'mercury' ) ),
 					number_format_i18n( $mercury_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
@@ -51,10 +51,10 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 			wp_list_comments(
-				array(
+				[
 					'style'      => 'ol',
 					'short_ping' => true,
-				)
+				]
 			);
 			?>
 		</ol><!-- .comment-list -->
@@ -66,12 +66,24 @@ if ( post_password_required() ) {
 		if ( ! comments_open() ) :
 			?>
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'mercury' ); ?></p>
-			<?php
+		<?php
 		endif;
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	$commenter = wp_get_current_commenter();
+	comment_form(
+		[
+			'fields'        => [
+				'author'  => '<p class="comment-form-author">
+					<input id="author" name="author" placeholder="' . __( 'Name' ) . ' *" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . ' />
+				</p>',
+				'cookies' => false,
+			],
+			'comment_field' => '<p class="comment-form-comment"><textarea id="comment" name="comment" aria-required="true">' . _x( 'Comment', 'noun' ) . '</textarea></p>',
+			'label_submit'  => __( 'Submit' ),
+		]
+	);
 	?>
 
 </div><!-- #comments -->
