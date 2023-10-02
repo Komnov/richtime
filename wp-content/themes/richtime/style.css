@@ -15451,3 +15451,9 @@ a.button.button-hide-price:hover {
 	}
 }
 
+@media (max-width: 992px) {
+	.index__page_brands img.swiper-slide-image {
+    padding: 11px;
+	}
+}
+
