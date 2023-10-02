@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "breadcrumbs.css",
+	"sources": [
+		"../../assets/sass/richtime/02-html-elements/breadcrumbs.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,YAAY,CAAC;CACX,UAAU,EAAE,IAAI;CACjB"
+}

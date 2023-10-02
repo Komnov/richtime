@@ -1,0 +1,1184 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Print Products\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-30 11:51+0000\n"
+"PO-Revision-Date: 2021-06-30 11:51+0000\n"
+"Last-Translator: WeLaunch\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.3; wp-5.7.2"
+
+#: admin/options-init.php:158
+msgid "\">register your License here</a>."
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1354
+#: public/class-woocommerce-print-products-public.php:2239
+#, php-format
+msgid "%s review for %s"
+msgid_plural "%s reviews for %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/options-init.php:472 admin/options-init.php:1200
+msgid "1/1"
+msgstr ""
+
+#: admin/options-init.php:473 admin/options-init.php:1201
+msgid "1/2 + 1/2"
+msgstr ""
+
+#: admin/options-init.php:474 admin/options-init.php:1202
+msgid "1/3 + 1/3 + 1/3"
+msgstr ""
+
+#: admin/options-init.php:279
+msgid "2x larger"
+msgstr ""
+
+#: admin/options-init.php:280
+msgid "3x larger"
+msgstr ""
+
+#: admin/options-init.php:281
+msgid "4x larger"
+msgstr ""
+
+#: admin/options-init.php:282
+msgid "5x larger"
+msgstr ""
+
+#: admin/options-init.php:430
+msgid "A value from 0 to 1. Example: 0.2"
+msgstr ""
+
+#: admin/options-init.php:646
+msgid "A0"
+msgstr ""
+
+#: admin/options-init.php:647
+msgid "A1"
+msgstr ""
+
+#: admin/options-init.php:654
+msgid "A10"
+msgstr ""
+
+#: admin/options-init.php:648
+msgid "A3"
+msgstr ""
+
+#: admin/options-init.php:644
+msgid "A4"
+msgstr ""
+
+#: admin/options-init.php:645
+msgid "A4 Landscape"
+msgstr ""
+
+#: admin/options-init.php:649
+msgid "A5"
+msgstr ""
+
+#: admin/options-init.php:650
+msgid "A6"
+msgstr ""
+
+#: admin/options-init.php:651
+msgid "A7"
+msgstr ""
+
+#: admin/options-init.php:652
+msgid "A8"
+msgstr ""
+
+#: admin/options-init.php:653
+msgid "A9"
+msgstr ""
+
+#: admin/options-init.php:386
+msgid "Add a watermark to your catalog."
+msgstr ""
+
+#: admin/options-init.php:1422
+msgid "Add some custom CSS styles for the PDF document here."
+msgstr ""
+
+#: admin/options-init.php:1429
+msgid "Add some javascript for the frontend. JS does not work in PDF files."
+msgstr ""
+
+#: admin/options-init.php:1098
+#: public/class-woocommerce-print-products-public-table.php:1241
+msgid "Additional Information"
+msgstr ""
+
+#: admin/options-init.php:1384
+msgid "Advanced settings"
+msgstr ""
+
+#: admin/options-init.php:256
+msgid "After Main Product"
+msgstr ""
+
+#: admin/options-init.php:1097
+msgid "Attributes Title Name"
+msgstr ""
+
+#: admin/options-init.php:742
+msgid "Background color"
+msgstr ""
+
+#: admin/options-init.php:515 admin/options-init.php:554
+#: admin/options-init.php:591 admin/options-init.php:1243
+#: admin/options-init.php:1281 admin/options-init.php:1318
+msgid "Blog information"
+msgstr ""
+
+#: admin/options-init.php:504 admin/options-init.php:1232
+msgid "Bottom"
+msgstr ""
+
+#: admin/options-init.php:295
+msgid "Button"
+msgstr ""
+
+#: admin/options-init.php:520 admin/options-init.php:559
+#: admin/options-init.php:596 admin/options-init.php:1248
+#: admin/options-init.php:1286 admin/options-init.php:1323
+msgid "Category Description"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:374
+#: public/class-woocommerce-print-products-public-table.php:377
+#: public/class-woocommerce-print-products-public.php:487
+#: public/class-woocommerce-print-products-public.php:490
+msgid "Category:"
+msgid_plural "Categories:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/options-init.php:734
+msgid "Center"
+msgstr ""
+
+#: admin/options-init.php:642
+msgid "Choose a pre-defined page size. A4 is recommended!"
+msgstr ""
+
+#: admin/options-init.php:328
+msgid "Choose how the icons should appear."
+msgstr ""
+
+#: admin/options-init.php:276
+msgid "Choose the icon size."
+msgstr ""
+
+#: admin/options-init.php:243
+msgid "Choose the position of the icons on the product page."
+msgstr ""
+
+#: admin/options-init.php:1421
+msgid "Custom CSS"
+msgstr ""
+
+#: admin/options-init.php:1428
+msgid "Custom JS"
+msgstr ""
+
+#: admin/options-init.php:43
+msgid "Custom Meta Keys Separator"
+msgstr ""
+
+#: admin/options-init.php:1156
+msgid "Custom Post Fields"
+msgstr ""
+
+#: admin/options-init.php:1385
+msgid "Custom stylesheet / javascript."
+msgstr ""
+
+#: admin/options-init.php:516 admin/options-init.php:555
+#: admin/options-init.php:592 admin/options-init.php:1244
+#: admin/options-init.php:1282 admin/options-init.php:1319
+msgid "Custom text"
+msgstr ""
+
+#: admin/options-init.php:847
+msgid "Data to show"
+msgstr ""
+
+#: admin/options-init.php:760
+msgid "Default Font"
+msgstr ""
+
+#: admin/options-init.php:784
+msgid "Default font size"
+msgstr ""
+
+#: admin/options-init.php:793
+msgid "Default line height"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1648
+#: public/class-woocommerce-print-products-public.php:2575
+msgid "Description"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1277
+#: public/class-woocommerce-print-products-public.php:2130
+#: public/class-woocommerce-print-products-public.php:2142
+msgid "Dimensions"
+msgstr ""
+
+#: admin/options-init.php:292
+msgid "Display icon or as button."
+msgstr ""
+
+#: admin/options-init.php:1414
+msgid ""
+"DIVs are better for custom styling, but DIVs float over pages sometimes. "
+"Below Verson 1.4.7 we used tables only."
+msgstr ""
+
+#: admin/options-init.php:1069
+msgid "Do not convert Description to Table"
+msgstr ""
+
+#: admin/options-init.php:765 admin/options-init.php:807
+msgid "Droid Sans"
+msgstr ""
+
+#: admin/options-init.php:766 admin/options-init.php:808
+msgid "Droid Serif"
+msgstr ""
+
+#: admin/options-init.php:165 admin/options-init.php:446
+#: admin/options-init.php:1172 admin/options-init.php:1368
+msgid "Enable"
+msgstr ""
+
+#: admin/options-init.php:196
+msgid "Enable backend"
+msgstr ""
+
+#: admin/options-init.php:1392
+msgid "Enable Debug Mode"
+msgstr ""
+
+#: admin/options-init.php:1173
+msgid "Enable footer"
+msgstr ""
+
+#: admin/options-init.php:188
+msgid "Enable Frontend"
+msgstr ""
+
+#: admin/options-init.php:447
+msgid "Enable header"
+msgstr ""
+
+#: admin/options-init.php:1399
+msgid "Enable MPDF Debug Mode"
+msgstr ""
+
+#: admin/options-init.php:218
+msgid "Enable PDF"
+msgstr ""
+
+#: admin/options-init.php:234
+msgid "Enable Print"
+msgstr ""
+
+#: admin/options-init.php:166
+msgid "Enable Print Products to use the options below"
+msgstr ""
+
+#: admin/options-init.php:172
+msgid "Enable Templates"
+msgstr ""
+
+#: admin/options-init.php:1369
+msgid "Enable the limit access. This will activate the below settings."
+msgstr ""
+
+#: admin/options-init.php:180
+msgid "Enable Variations Support"
+msgstr ""
+
+#: admin/options-init.php:393
+msgid "Enable Watermark"
+msgstr ""
+
+#: admin/options-init.php:226
+msgid "Enable Word"
+msgstr ""
+
+#: admin/options-init.php:422
+msgid "Enter your watermark text here."
+msgstr ""
+
+#: admin/options-init.php:352
+msgid "Exclude Product Categories"
+msgstr ""
+
+#: admin/options-init.php:370
+msgid "Exclude Products"
+msgstr ""
+
+#: admin/options-init.php:341
+msgid "Exclusions"
+msgstr ""
+
+#: admin/options-init.php:657
+msgid "Executive"
+msgstr ""
+
+#: admin/options-init.php:304
+#: public/class-woocommerce-print-products-public-table.php:247
+msgid "Export as PDF"
+msgstr ""
+
+#: admin/options-init.php:311
+#: public/class-woocommerce-print-products-public-table.php:261
+msgid "Export as Word"
+msgstr ""
+
+#: admin/options-init.php:522 admin/options-init.php:561
+#: admin/options-init.php:598 admin/options-init.php:1250
+#: admin/options-init.php:1288 admin/options-init.php:1325
+msgid "Export Information"
+msgstr ""
+
+#: admin/options-init.php:1035
+msgid "Float value (e.g. 0.6 or 1.5). Default is 0.8."
+msgstr ""
+
+#: admin/options-init.php:658
+msgid "Folio"
+msgstr ""
+
+#: admin/options-init.php:1164
+msgid "Footer"
+msgstr ""
+
+#: admin/options-init.php:1180
+msgid "Footer background color"
+msgstr ""
+
+#: admin/options-init.php:1218
+msgid "Footer Height"
+msgstr ""
+
+#: admin/options-init.php:1197
+msgid "Footer Layout"
+msgstr ""
+
+#: admin/options-init.php:1209
+msgid "Footer Margin"
+msgstr ""
+
+#: admin/options-init.php:1189
+msgid "Footer text color"
+msgstr ""
+
+#: admin/options-init.php:641
+msgid "Format"
+msgstr ""
+
+#: admin/options-init.php:901
+msgid "Gallery Image Columns"
+msgstr ""
+
+#: admin/options-init.php:883
+msgid "Gallery Image Size"
+msgstr ""
+
+#: admin/options-init.php:893
+msgid "Gallery Image Size Type"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1524
+#: public/class-woocommerce-print-products-public.php:2428
+msgid "Gallery Images"
+msgstr ""
+
+#: admin/options-init.php:157
+msgid "General"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Give your visitors the option to create a PDF or Word-File from your "
+"Products."
+msgstr ""
+
+#: admin/options-init.php:438
+msgid "Header"
+msgstr ""
+
+#: admin/options-init.php:453
+msgid "Header background color"
+msgstr ""
+
+#: admin/options-init.php:490
+msgid "Header Height"
+msgstr ""
+
+#: admin/options-init.php:469
+msgid "Header Layout"
+msgstr ""
+
+#: admin/options-init.php:481
+msgid "Header Margin"
+msgstr ""
+
+#: admin/options-init.php:461
+msgid "Header text color"
+msgstr ""
+
+#: admin/options-init.php:802
+msgid "Headings Font"
+msgstr ""
+
+#: admin/options-init.php:826
+msgid "Headings font size"
+msgstr ""
+
+#: admin/options-init.php:835
+msgid "Headings line height"
+msgstr ""
+
+#: admin/options-init.php:330
+msgid "Horizontal"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://welaunch.io"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://welaunch.io/plugins/woocommerce-print-products/"
+msgstr ""
+
+#: admin/options-init.php:327
+msgid "Icon Display"
+msgstr ""
+
+#: admin/options-init.php:294
+msgid "Icon Only"
+msgstr ""
+
+#: admin/options-init.php:242
+msgid "Icon position"
+msgstr ""
+
+#: admin/options-init.php:265
+msgid "Icon Priority"
+msgstr ""
+
+#: admin/options-init.php:275
+msgid "Icon Size"
+msgstr ""
+
+#: admin/options-init.php:291
+msgid "Icon Type"
+msgstr ""
+
+#: admin/options-init.php:181
+msgid ""
+"If enabled and user switches select field on variations it will generate PDF "
+"based on single variation."
+msgstr ""
+
+#: admin/options-init.php:403 admin/options-init.php:521
+#: admin/options-init.php:560 admin/options-init.php:597
+#: admin/options-init.php:1249 admin/options-init.php:1287
+#: admin/options-init.php:1324
+#: public/class-woocommerce-print-products-public-table.php:1636
+#: public/class-woocommerce-print-products-public.php:2563
+msgid "Image"
+msgstr ""
+
+#: admin/options-init.php:360 admin/options-init.php:378
+msgid "Instead of exclusion it will include."
+msgstr ""
+
+#: admin/options-init.php:278
+msgid "Large"
+msgstr ""
+
+#: admin/options-init.php:767 admin/options-init.php:809
+msgid "Lato"
+msgstr ""
+
+#: admin/options-init.php:634
+msgid "Layout"
+msgstr ""
+
+#: admin/options-init.php:733
+msgid "Left"
+msgstr ""
+
+#: admin/options-init.php:656
+msgid "Legal"
+msgstr ""
+
+#: admin/options-init.php:655
+msgid "Letter"
+msgstr ""
+
+#: admin/options-init.php:1360
+msgid "Limit Access"
+msgstr ""
+
+#: admin/options-init.php:754
+msgid "Link Color"
+msgstr ""
+
+#: admin/options-init.php:768 admin/options-init.php:810
+msgid "Lora"
+msgstr ""
+
+#: admin/options-init.php:911
+msgid "Max Gallery Images"
+msgstr ""
+
+#: admin/options-init.php:769 admin/options-init.php:811
+msgid "Merriweather"
+msgstr ""
+
+#: admin/options-init.php:988
+msgid "Meta Free Text"
+msgstr ""
+
+#: admin/options-init.php:503 admin/options-init.php:1231
+msgid "Middle"
+msgstr ""
+
+#: admin/options-init.php:764 admin/options-init.php:806
+msgid "Mono"
+msgstr ""
+
+#: admin/options-init.php:770 admin/options-init.php:812
+msgid "Montserrat"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:348
+#: public/class-woocommerce-print-products-public.php:472
+msgid "N/A"
+msgstr ""
+
+#: admin/options-init.php:152
+msgid "Need support? Please use the comment function on codecanyon."
+msgstr ""
+
+#: admin/options-init.php:514 admin/options-init.php:553
+#: admin/options-init.php:590 admin/options-init.php:1242
+#: admin/options-init.php:1280 admin/options-init.php:1317
+msgid "None"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:1989
+msgid "Notes"
+msgstr ""
+
+#: admin/options-init.php:1146
+msgid "Number of Notes Lines"
+msgstr ""
+
+#: admin/options-init.php:771 admin/options-init.php:813
+msgid "Open sans"
+msgstr ""
+
+#: admin/options-init.php:772 admin/options-init.php:814
+msgid "Open Sans Condensed"
+msgstr ""
+
+#: admin/options-init.php:773 admin/options-init.php:815
+msgid "Oswald"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1385
+#: public/class-woocommerce-print-products-public.php:2270
+msgid "out of 5"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:858
+#: public/class-woocommerce-print-products-public.php:1209
+msgid "Page:"
+msgstr ""
+
+#: admin/options-init.php:517 admin/options-init.php:556
+#: admin/options-init.php:593 admin/options-init.php:1245
+#: admin/options-init.php:1283 admin/options-init.php:1320
+msgid "Pagenumber"
+msgstr ""
+
+#: admin/options-init.php:303
+msgid "PDF Button Text"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1644
+#: public/class-woocommerce-print-products-public.php:2571
+msgid "Price"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1142
+#: public/class-woocommerce-print-products-public.php:1544
+msgid "Price:"
+msgstr ""
+
+#: admin/options-init.php:318
+#: public/class-woocommerce-print-products-public-table.php:275
+msgid "Print"
+msgstr ""
+
+#: admin/options-init.php:317
+msgid "Print Button Text"
+msgstr ""
+
+#: admin/options-init.php:150
+msgid "Print Products"
+msgstr ""
+
+#: admin/options-init.php:519 admin/options-init.php:558
+#: admin/options-init.php:595 admin/options-init.php:1247
+#: admin/options-init.php:1285 admin/options-init.php:1322
+msgid "Product Categories"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1190
+#: public/class-woocommerce-print-products-public.php:1721
+#: public/class-woocommerce-print-products-public.php:2017
+msgid "Product Description"
+msgstr ""
+
+#: admin/options-init.php:860
+msgid "Product Image Size"
+msgstr ""
+
+#: admin/options-init.php:518 admin/options-init.php:557
+#: admin/options-init.php:594 admin/options-init.php:1246
+#: admin/options-init.php:1284 admin/options-init.php:1321
+msgid "Product info"
+msgstr ""
+
+#: admin/options-init.php:774 admin/options-init.php:816
+msgid "PT Sans"
+msgstr ""
+
+#: admin/options-init.php:1034
+msgid "QR Code Size"
+msgstr ""
+
+#: admin/options-init.php:523 admin/options-init.php:562
+#: admin/options-init.php:599 admin/options-init.php:1251
+#: admin/options-init.php:1289 admin/options-init.php:1326
+msgid "QR-Code"
+msgstr ""
+
+#: admin/options-init.php:778 admin/options-init.php:820
+msgid "Raleway"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1384
+#: public/class-woocommerce-print-products-public.php:2269
+#, php-format
+msgid "Rated %d out of 5"
+msgstr ""
+
+#: admin/options-init.php:962
+msgid ""
+"Requires tiered pricing plugin: https://woocommerce.com/products/tiered-"
+"pricing-table-for-woocommerce/"
+msgstr ""
+
+#: admin/options-init.php:359
+msgid "Revert Categories Exclusion"
+msgstr ""
+
+#: admin/options-init.php:377
+msgid "Revert Products Exclusion"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1357
+#: public/class-woocommerce-print-products-public.php:2242
+msgid "Reviews"
+msgstr ""
+
+#: admin/options-init.php:735
+msgid "Right"
+msgstr ""
+
+#: admin/options-init.php:777 admin/options-init.php:819
+msgid "Roboto"
+msgstr ""
+
+#: admin/options-init.php:762 admin/options-init.php:804
+msgid "Sans"
+msgstr ""
+
+#: admin/options-init.php:1376
+msgid ""
+"Select a custom user Role (Default is: administrator) who can use this "
+"plugin."
+msgstr ""
+
+#: admin/options-init.php:676
+msgid "Select Layout"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:230
+msgid "Select Print Template"
+msgstr ""
+
+#: admin/options-init.php:763 admin/options-init.php:805
+msgid "Serif"
+msgstr ""
+
+#: admin/options-init.php:394
+msgid "Show a Watermark in your PDF."
+msgstr ""
+
+#: admin/options-init.php:1090
+msgid "Show Attributes Link"
+msgstr ""
+
+#: admin/options-init.php:1083
+msgid "Show Attributes Title"
+msgstr ""
+
+#: admin/options-init.php:1048
+msgid "Show Description Title"
+msgstr ""
+
+#: admin/options-init.php:204
+msgid "Show export button in Backend Product List"
+msgstr ""
+
+#: admin/options-init.php:211
+msgid "Show export button in Backend Product Page."
+msgstr ""
+
+#: admin/options-init.php:197
+msgid "Show export buttons in backend."
+msgstr ""
+
+#: admin/options-init.php:189
+msgid "Show export buttons in frontend."
+msgstr ""
+
+#: admin/options-init.php:870
+msgid "Show Gallery Images"
+msgstr ""
+
+#: admin/options-init.php:935
+msgid "Show Gallery Images Alt Text"
+msgstr ""
+
+#: admin/options-init.php:928
+msgid "Show Gallery Images Caption"
+msgstr ""
+
+#: admin/options-init.php:942
+msgid "Show Gallery Images Description"
+msgstr ""
+
+#: admin/options-init.php:876
+msgid "Show Gallery Images Intro Title"
+msgstr ""
+
+#: admin/options-init.php:921
+msgid "Show Gallery Images Title"
+msgstr ""
+
+#: admin/options-init.php:1400
+msgid "Show image , font or other errors in the PDF Rendering engine."
+msgstr ""
+
+#: admin/options-init.php:982
+msgid "Show Meta Free Text"
+msgstr ""
+
+#: admin/options-init.php:219
+msgid "Show PDF export button."
+msgstr ""
+
+#: admin/options-init.php:235
+msgid "Show print export button."
+msgstr ""
+
+#: admin/options-init.php:1077
+msgid "Show Product Attributes"
+msgstr ""
+
+#: admin/options-init.php:1016
+msgid "Show Product Categories"
+msgstr ""
+
+#: admin/options-init.php:1042
+msgid "Show Product Description"
+msgstr ""
+
+#: admin/options-init.php:854
+msgid "Show Product Image"
+msgstr ""
+
+#: admin/options-init.php:955
+msgid "Show Product Price"
+msgstr ""
+
+#: admin/options-init.php:1104
+msgid "Show Product Reviews"
+msgstr ""
+
+#: admin/options-init.php:997
+msgid "Show Product SKU"
+msgstr ""
+
+#: admin/options-init.php:1010
+msgid "Show Product Stock Status"
+msgstr ""
+
+#: admin/options-init.php:1022
+msgid "Show Product Tags"
+msgstr ""
+
+#: admin/options-init.php:949
+msgid "Show Product Title"
+msgstr ""
+
+#: admin/options-init.php:1110
+msgid "Show Product Upsells"
+msgstr ""
+
+#: admin/options-init.php:1028
+msgid "Show QR-Code"
+msgstr ""
+
+#: admin/options-init.php:969
+msgid "Show Short Description"
+msgstr ""
+
+#: admin/options-init.php:1003
+msgid "Show SKU under Title"
+msgstr ""
+
+#: admin/options-init.php:961
+msgid "Show Tiered Pricing"
+msgstr ""
+
+#: admin/options-init.php:1140
+msgid "Show Variation Attributes"
+msgstr ""
+
+#: admin/options-init.php:1134
+msgid "Show Variation Description"
+msgstr ""
+
+#: admin/options-init.php:1116
+msgid "Show Variation Image"
+msgstr ""
+
+#: admin/options-init.php:1128
+msgid "Show Variation Price"
+msgstr ""
+
+#: admin/options-init.php:1122
+msgid "Show Variation SKU"
+msgstr ""
+
+#: admin/options-init.php:227
+msgid "Show Word export button."
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1640
+#: public/class-woocommerce-print-products-public.php:2567
+msgid "SKU"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:945
+#: public/class-woocommerce-print-products-public-table.php:1026
+#: public/class-woocommerce-print-products-public-table.php:1139
+#: public/class-woocommerce-print-products-public.php:1303
+#: public/class-woocommerce-print-products-public.php:1323
+#: public/class-woocommerce-print-products-public.php:1382
+#: public/class-woocommerce-print-products-public.php:1408
+#: public/class-woocommerce-print-products-public.php:1502
+#: public/class-woocommerce-print-products-public.php:1541
+#: public/class-woocommerce-print-products-public.php:1608
+#: public/class-woocommerce-print-products-public.php:1645
+#: public/class-woocommerce-print-products-public.php:1846
+msgid "SKU:"
+msgstr ""
+
+#: admin/options-init.php:776 admin/options-init.php:818
+msgid "Slabo"
+msgstr ""
+
+#: admin/options-init.php:775 admin/options-init.php:817
+msgid "Source Sans Pro"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:949
+#: public/class-woocommerce-print-products-public-table.php:1030
+#: public/class-woocommerce-print-products-public-table.php:1145
+#: public/class-woocommerce-print-products-public.php:1327
+#: public/class-woocommerce-print-products-public.php:1415
+#: public/class-woocommerce-print-products-public.php:1547
+#: public/class-woocommerce-print-products-public.php:1649
+#: public/class-woocommerce-print-products-public.php:1733
+msgid "Stock:"
+msgstr ""
+
+#: admin/options-init.php:1055
+msgid "Strip Description Images?"
+msgstr ""
+
+#: admin/options-init.php:975
+msgid "Strip Short Description Images?"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:375
+#: public/class-woocommerce-print-products-public-table.php:378
+#: public/class-woocommerce-print-products-public.php:488
+#: public/class-woocommerce-print-products-public.php:491
+msgid "Tag:"
+msgid_plural "Tags:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/options-init.php:173
+msgid ""
+"Templates allow you to create special content between dates, that a user can "
+"select > <a href=\"https://www.welaunch.io/en/knowledge-base/faq/create-use-"
+"print-pdf-templates/\" target=\"_blank\">Learn More</a>."
+msgstr ""
+
+#: admin/options-init.php:402
+msgid "Text"
+msgstr ""
+
+#: admin/options-init.php:625
+msgid "Text after Header"
+msgstr ""
+
+#: admin/options-init.php:731
+msgid "Text Align"
+msgstr ""
+
+#: admin/options-init.php:1351
+msgid "Text before Footer"
+msgstr ""
+
+#: admin/options-init.php:748
+msgid "Text Color"
+msgstr ""
+
+#: admin/options-init.php:257
+msgid "The content"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1350
+msgid "There are no reviews yet."
+msgstr ""
+
+#: public/class-woocommerce-print-products-public.php:2235
+msgid "There are no reviews yet. "
+msgstr ""
+
+#: admin/options-init.php:1393
+msgid "This stops creating the PDF and shows the plain HTML."
+msgstr ""
+
+#: admin/options-init.php:1407
+msgid ""
+"This will get images directly from your server paths rather than requesting "
+"it from a http or https. Only enable it if your images are on the same "
+"server!"
+msgstr ""
+
+#: admin/options-init.php:502 admin/options-init.php:1230
+msgid "Top"
+msgstr ""
+
+#: admin/options-init.php:1239
+msgid "Top Left Footer"
+msgstr ""
+
+#: admin/options-init.php:1268
+msgid "Top Left Footer Image"
+msgstr ""
+
+#: admin/options-init.php:1258
+msgid "Top Left Footer Text"
+msgstr ""
+
+#: admin/options-init.php:511
+msgid "Top Left Header"
+msgstr ""
+
+#: admin/options-init.php:541
+msgid "Top Left Header Image"
+msgstr ""
+
+#: admin/options-init.php:530
+msgid "Top Left Header Text"
+msgstr ""
+
+#: admin/options-init.php:1277
+msgid "Top Middle Footer"
+msgstr ""
+
+#: admin/options-init.php:1305
+msgid "Top Middle Footer Image"
+msgstr ""
+
+#: admin/options-init.php:1295
+msgid "Top Middle Footer Text"
+msgstr ""
+
+#: admin/options-init.php:550
+msgid "Top Middle Header"
+msgstr ""
+
+#: admin/options-init.php:578
+msgid "Top Middle Header Image"
+msgstr ""
+
+#: admin/options-init.php:568
+msgid "Top Middle Header Text"
+msgstr ""
+
+#: admin/options-init.php:1314
+msgid "Top Right Footer"
+msgstr ""
+
+#: admin/options-init.php:1342
+msgid "Top Right Footer Image"
+msgstr ""
+
+#: admin/options-init.php:1332
+msgid "Top Right Footer Text"
+msgstr ""
+
+#: admin/options-init.php:587
+msgid "Top Right Header"
+msgstr ""
+
+#: admin/options-init.php:616
+msgid "Top Right Header Image"
+msgstr ""
+
+#: admin/options-init.php:606
+msgid "Top Right Header Text"
+msgstr ""
+
+#: admin/options-init.php:1062
+msgid "Try executing shortcodes in description"
+msgstr ""
+
+#: admin/options-init.php:1406
+msgid "Use Images Locally"
+msgstr ""
+
+#: admin/options-init.php:1413
+msgid "Use Tables instead of DIVs"
+msgstr ""
+
+#: admin/options-init.php:1375
+msgid "User Role"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1628
+#: public/class-woocommerce-print-products-public.php:2555
+msgid "Variations"
+msgstr ""
+
+#: admin/options-init.php:331
+msgid "Vertical"
+msgstr ""
+
+#: admin/options-init.php:499 admin/options-init.php:1227
+msgid "Vertical Align"
+msgstr ""
+
+#: admin/options-init.php:385
+msgid "Watermark"
+msgstr ""
+
+#: admin/options-init.php:412
+msgid "Watermark Image"
+msgstr ""
+
+#: admin/options-init.php:421
+msgid "Watermark Text"
+msgstr ""
+
+#: admin/options-init.php:429
+msgid "Watermark Transparency"
+msgstr ""
+
+#: admin/options-init.php:400
+msgid "Watermark Type"
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1263
+#: public/class-woocommerce-print-products-public.php:2104
+#: public/class-woocommerce-print-products-public.php:2116
+msgid "Weight"
+msgstr ""
+
+#. Author of the plugin
+msgid "weLaunch"
+msgstr ""
+
+#: admin/options-init.php:353
+msgid "Which product categories should be excluded by the catalog mode."
+msgstr ""
+
+#: admin/options-init.php:371
+msgid "Which products should be excluded by the catalog mode."
+msgstr ""
+
+#: admin/options-init.php:1157
+msgid ""
+"With the below settings you can show custom post meta keys for the posts."
+msgstr ""
+
+#. Name of the plugin
+msgid "WooCommerce Print Products"
+msgstr ""
+
+#: woocommerce-print-products.php:89
+msgid ""
+"WooCommerce Print Products requires the WooCommerce and weLaunch Framework "
+"plugin. Please install or activate them before: https://www.welaunch."
+"io/updates/welaunch-framework.zip"
+msgstr ""
+
+#: admin/options-init.php:310
+msgid "Word Button Text"
+msgstr ""
+
+#: admin/options-init.php:44
+msgid "You can also use HTML like \"br\"."
+msgstr ""
+
+#: admin/options-init.php:894
+msgid ""
+"You can use e.g. full, large, thumbnail, woocommerce_single, shop_single, "
+"shop_catalog..."
+msgstr ""
+
+#: public/class-woocommerce-print-products-public-table.php:1446
+#: public/class-woocommerce-print-products-public.php:2331
+msgid "You may also like&hellip;"
+msgstr ""

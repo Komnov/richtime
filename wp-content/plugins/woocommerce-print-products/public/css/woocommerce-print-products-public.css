@@ -1,0 +1,17 @@
+.woocommerce-print-products.link-wrapper i {
+  margin: 5px;
+}
+
+.woocommerce-print-products-templates-wrapper {
+	margin-top: 20px; 
+}
+
+.woocommerce-print-products-templates-wrapper label {
+	font-weight: bold;
+	font-size: 90%;
+}
+
+.woocommerce-print-products-templates-wrapper select {
+	display: block;
+	margin-bottom: 10px;
+}

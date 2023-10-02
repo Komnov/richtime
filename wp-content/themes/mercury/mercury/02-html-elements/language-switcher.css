@@ -1,0 +1,25 @@
+.mercury-language {
+	position: relative;
+	text-transform: uppercase;
+	color: var(--global--color-main);
+	opacity: .5;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	line-height: 25px;
+}
+
+.mercury-language svg {
+	margin-right: 10px;
+}
+
+.mercury-language path {
+	fill: #232323;
+}
+
+.black-theme .mercury-language {
+	color: #fff;
+}
+
+/*# sourceMappingURL=language-switcher.css.map */

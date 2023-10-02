@@ -1,0 +1,79 @@
+/* OS dark theme preference */
+.site-header.theme-dark {
+	background-color: #000;
+}
+
+.search-input-wrapper.theme-dark {
+	background-color: #000;
+}
+
+.theme-dark #customer_login h2,
+.theme-dark .title {
+	color: #fff;
+}
+
+.theme-dark .showlogin {
+	font-weight: 500;
+	opacity: 1;
+	color: inherit;
+}
+
+.theme-dark .language-wrapper a,
+.theme-dark .icon a {
+	opacity: 1;
+}
+
+.theme-dark .language-wrapper path,
+.theme-dark .icon path {
+	opacity: 1;
+}
+
+.theme-dark .mercury-language path {
+	fill: #fff;
+}
+
+.theme-dark .icon i {
+	opacity: 1;
+	color: #fff;
+}
+
+.theme-dark .mercury-loop__product {
+	background-color: transparent;
+}
+
+.theme-dark .chrono {
+	background-color: transparent;
+}
+
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select {
+	background-color: rgba(255, 255, 255, 0.2);
+	opacity: .8;
+	color: #fff;
+}
+
+.theme-dark input::placeholder,
+.theme-dark textarea::placeholder,
+.theme-dark select::placeholder {
+	opacity: .8;
+	color: #fff;
+}
+
+.theme-dark option {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.theme-dark .chrono svg path {
+	fill: #fff !important;
+}
+
+.theme-dark p.woocommerce-info {
+	color: initial;
+}
+
+.theme-dark #search {
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/*# sourceMappingURL=style-dark-mode.css.map */

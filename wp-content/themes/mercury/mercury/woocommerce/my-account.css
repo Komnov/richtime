@@ -1,0 +1,17 @@
+.woocommerce-MyAccount-navigation ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.woocommerce-MyAccount-navigation li {
+	padding-left: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #fff;
+}
+
+.woocommerce-MyAccount-navigation li:last-of-type {
+	border-bottom: none;
+}
+
+/*# sourceMappingURL=my-account.css.map */

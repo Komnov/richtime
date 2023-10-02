@@ -1,0 +1,93 @@
+/* OS dark theme preference */
+
+.site-header {
+  &.theme-dark {
+    background-color: #000;
+  }
+}
+
+.search-input-wrapper {
+  &.theme-dark {
+    background-color: #000;
+  }
+}
+
+.theme-dark {
+  #customer_login h2,
+  .title {
+    color: #fff;
+  }
+
+  .showlogin {
+    font-weight: 500;
+    opacity: 1;
+    color: inherit;
+  }
+
+  .language-wrapper,
+  .icon {
+    a {
+      opacity: 1;
+    }
+
+    path {
+      opacity: 1;
+    }
+  }
+
+  .mercury-language {
+    path {
+      fill: #fff;
+    }
+  }
+
+  .icon {
+    i {
+      opacity: 1;
+      color: #fff;
+    }
+  }
+
+  .mercury-loop {
+    &__product {
+      background-color: transparent;
+    }
+  }
+
+  .chrono {
+    background-color: transparent;
+  }
+
+  input,
+  textarea,
+  select {
+    background-color: rgba(255, 255, 255, .2);
+    opacity: .8;
+    color: #fff;
+
+    &::placeholder {
+      opacity: .8;
+      color: #fff;
+    }
+  }
+
+  option {
+    background-color: rgba(0, 0, 0, .8);
+  }
+
+  .chrono {
+    svg {
+      path {
+        fill: #fff !important;
+      }
+    }
+  }
+
+  p.woocommerce-info {
+    color: initial;
+  }
+
+  #search {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+}

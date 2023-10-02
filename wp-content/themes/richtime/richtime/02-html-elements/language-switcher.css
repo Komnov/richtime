@@ -1,0 +1,17 @@
+.richtime-language {
+  position: relative;
+  text-transform: uppercase;
+  color: var(--global--color-main);
+  opacity: .5;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 25px; }
+  .richtime-language svg {
+    margin-right: 10px; }
+  .richtime-language path {
+    fill: #232323; }
+
+.black-theme .richtime-language {
+  color: #fff; }

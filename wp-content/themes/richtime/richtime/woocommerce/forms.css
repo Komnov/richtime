@@ -1,0 +1,72 @@
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+  border: none;
+  padding: 0; }
+
+.woocommerce button[type="submit"]:not(.search-submit) {
+  width: 100%;
+  max-width: 275px;
+  border: 1px solid rgba(35, 35, 35, 0.2);
+  border-radius: 3px;
+  padding: 17px;
+  font-weight: 300; }
+
+.theme-dark #add_payment_method #payment,
+.theme-dark .woocommerce-cart #payment,
+.theme-dark .woocommerce-checkout #payment {
+  background-color: transparent; }
+  .theme-dark #add_payment_method #payment div.payment_box,
+  .theme-dark .woocommerce-cart #payment div.payment_box,
+  .theme-dark .woocommerce-checkout #payment div.payment_box {
+    background-color: #073107; }
+    .theme-dark #add_payment_method #payment div.payment_box::before,
+    .theme-dark .woocommerce-cart #payment div.payment_box::before,
+    .theme-dark .woocommerce-checkout #payment div.payment_box::before {
+      border: 1em solid var(--global--color-green);
+      border-right-color: transparent;
+      border-left-color: transparent;
+      border-top-color: transparent; }
+
+.theme-dark table, .theme-dark th, .theme-dark td {
+  border: none; }
+
+.theme-dark .woocommerce form button {
+  border: 1px solid #fff;
+  border-radius: 5px; }
+  .theme-dark .woocommerce form button:hover {
+    transition: var(--global--transition-default);
+    box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.2); }
+  .theme-dark .woocommerce form button:not(:disabled[disabled]) {
+    background-color: transparent;
+    color: #fff; }
+
+.theme-dark .woocommerce #respond input#submit.alt,
+.theme-dark .woocommerce a.button.alt,
+.theme-dark .woocommerce button.button.alt,
+.theme-dark .woocommerce input.button.alt {
+  border: 1px solid #fff;
+  color: #fff; }
+
+.woocommerce #respond input#submit.disabled,
+.woocommerce #respond input#submit:disabled,
+.woocommerce #respond input#submit:disabled[disabled],
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled],
+.woocommerce input.button.disabled,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled] {
+  padding: 17px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff; }
+
+#billing_country_field {
+  display: none; }
+
+.recipient-fields {
+  padding-top: 20px; }
+
+#order_comments {
+  max-height: 100px; }
