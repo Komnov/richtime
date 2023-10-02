@@ -8,13 +8,94 @@
     }
   }
 
-  button[type="submit"] {
+  button[type="submit"]:not(.search-submit) {
     width: 100%;
-    max-width: 100%;
-    background-color: transparent;
+    max-width: 275px;
     border: 1px solid rgba(35, 35, 35, .2);
     border-radius: 3px;
     padding: 17px;
     font-weight: 300;
   }
+}
+
+
+.theme-dark {
+
+
+  #add_payment_method #payment,
+  .woocommerce-cart #payment,
+  .woocommerce-checkout #payment {
+    background-color: transparent;
+
+    div.payment_box {
+      &::before {
+        border: 1em solid var(--global--color-green);
+        border-right-color: transparent;
+        border-left-color: transparent;
+        border-top-color: transparent;
+      }
+
+      background-color: #073107;
+    }
+  }
+
+  table, th, td {
+    border: none;
+  }
+
+  .woocommerce {
+    form {
+      button {
+        border: 1px solid #fff;
+        border-radius: 5px;
+
+        &:hover {
+          transition: var(--global--transition-default);
+          box-shadow: 0px 0px 8px 4px rgba(255, 255, 255, 0.2);
+        }
+
+        &:not(:disabled[disabled]) {
+          background-color: transparent;
+          color: #fff;
+        }
+      }
+    }
+
+    #respond input#submit.alt,
+    a.button.alt,
+    button.button.alt,
+    input.button.alt {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+}
+
+.woocommerce #respond input#submit.disabled,
+.woocommerce #respond input#submit:disabled,
+.woocommerce #respond input#submit:disabled[disabled],
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled],
+.woocommerce input.button.disabled,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled] {
+  padding: 17px;
+  background-color: rgba(255, 255, 255, .2);
+  color: #fff;
+}
+
+#billing_country_field {
+  display: none;
+}
+
+.recipient-fields {
+  padding-top: 20px;
+}
+
+#order_comments {
+  max-height: 100px;
 }

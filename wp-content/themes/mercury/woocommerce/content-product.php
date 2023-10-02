@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div <?php wc_product_class( 'col-md-3', $product ); ?>>
+<div <?php wc_product_class( 'col-lg-3 col-md-4 col-12', $product ); ?>>
 	<?php
 
 	do_action( 'mercury_before_product_link' );

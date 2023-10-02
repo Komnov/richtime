@@ -9,6 +9,18 @@ get_header(); ?>
 					<h1 class="title"><?php _e( 'News', 'mercury' ) ?></h1>
 				</div>
 			</div>
+			<?php if ( ! empty( $tags ) ) : ?>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="news-tags">
+							<?php for ( $i = 0; $i < count( $tags ); $i ++ ) : ?>
+								<a class="tag"
+										href="<?php echo get_tag_link( $tags[ $i ]->term_id ) ?>"><?php echo $tags[ $i ]->name ?></a>
+							<?php endfor; ?>
+						</div>
+					</div>
+				</div>
+			<?php endif ?>
 			<?php
 			$news = new WP_Query(
 				[
@@ -38,18 +50,6 @@ get_header(); ?>
 			<?php endif;
 			wp_reset_postdata();
 			?>
-			<?php if ( ! empty( $tags ) ) : ?>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="news-tags">
-							<?php for ( $i = 0; $i < count( $tags ); $i ++ ) : ?>
-								<a class="tag"
-										href="<?php echo get_tag_link( $tags[ $i ]->term_id ) ?>"><?php echo $tags[ $i ]->name ?></a>
-							<?php endfor; ?>
-						</div>
-					</div>
-				</div>
-			<?php endif ?>
 			<?php if ( have_posts() ) : ?>
 				<div class="row">
 					<?php while ( have_posts() ) : the_post(); ?>

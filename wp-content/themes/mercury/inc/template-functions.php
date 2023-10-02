@@ -9,6 +9,7 @@
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
+ *
  * @return array
  */
 function mercury_body_classes( $classes ) {
@@ -24,6 +25,7 @@ function mercury_body_classes( $classes ) {
 
 	return $classes;
 }
+
 add_filter( 'body_class', 'mercury_body_classes' );
 
 /**
@@ -34,4 +36,18 @@ function mercury_pingback_header() {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
+
 add_action( 'wp_head', 'mercury_pingback_header' );
+
+function get_product_cat_image( $term_id ) {
+
+	// get the thumbnail id using the queried category term_id
+	$thumbnail_id = get_term_meta( $term_id, 'thumbnail_id', true );
+	if ( '0' !== $thumbnail_id ) {
+		// get the image URL
+		$image = wp_get_attachment_url( $thumbnail_id );
+
+		// print the IMG HTML
+		return "<img src='{$image}' alt='' />";
+	}
+}

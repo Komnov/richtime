@@ -42,6 +42,51 @@ class Url_Helper {
 	}
 
 	/**
+	 * Determines whether the plugin is active for the entire network.
+	 *
+	 * @return bool Whether or not the plugin is network-active.
+	 */
+	public function is_plugin_network_active() {
+		static $network_active = null;
+
+		if ( ! \is_multisite() ) {
+			return false;
+		}
+
+		// If a cached result is available, bail early.
+		if ( $network_active !== null ) {
+			return $network_active;
+		}
+
+		$network_active_plugins = \wp_get_active_network_plugins();
+
+		// Consider MU plugins and network-activated plugins as network-active.
+		$network_active = \strpos( \wp_normalize_path( \WPSEO_FILE ), \wp_normalize_path( \WPMU_PLUGIN_DIR ) ) === 0
+			|| \in_array( \WP_PLUGIN_DIR . '/' . \WPSEO_BASENAME, $network_active_plugins, true );
+
+		return $network_active;
+	}
+
+	/**
+	 * Retrieve network home URL if plugin is network-activated, or home url otherwise.
+	 *
+	 * @return string Home URL with optional path, appropriately slashed if not.
+	 */
+	public function network_safe_home_url() {
+		/**
+		 * Action: 'wpseo_home_url' - Allows overriding of the home URL.
+		 */
+		\do_action( 'wpseo_home_url' );
+
+		// If the plugin is network-activated, use the network home URL.
+		if ( self::is_plugin_network_active() ) {
+			return \network_home_url();
+		}
+
+		return \home_url();
+	}
+
+	/**
 	 * Check whether a url is relative.
 	 *
 	 * @param string $url URL string to check.
@@ -55,13 +100,18 @@ class Url_Helper {
 	/**
 	 * Gets the path from the passed URL.
 	 *
-	 * @codeCoverageIgnore It only wraps a WordPress function.
-	 *
 	 * @param string $url The URL to get the path from.
 	 *
 	 * @return string The path of the URL. Returns an empty string if URL parsing fails.
 	 */
 	public function get_url_path( $url ) {
+		if ( \is_string( $url ) === false
+			&& \is_object( $url ) === false
+			|| ( \is_object( $url ) === true && \method_exists( $url, '__toString' ) === false )
+		) {
+			return '';
+		}
+
 		return (string) \wp_parse_url( $url, \PHP_URL_PATH );
 	}
 

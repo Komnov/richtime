@@ -120,6 +120,10 @@
 	border-bottom-right-radius: 5px;
 }
 
+.woocommerce div.product .woocommerce-Tabs-panel td {
+	max-width: 50%;
+}
+
 .woocommerce .flex-viewport {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 10px;
@@ -197,7 +201,6 @@ table, th, td {
 
 td {
 	padding: 20px;
-	max-width: 50%;
 	width: 100%;
 }
 
@@ -255,6 +258,29 @@ td {
 
 .product .quantity {
 	display: none;
+}
+
+button#clear-wishlist {
+	background-color: transparent;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	border-radius: 3px;
+	padding: 5px 15px;
+}
+
+.malinky-load-more {
+	margin-top: 40px;
+}
+
+.malinky-load-more__button {
+	padding: 15px 30px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	transition: all 0.5s ease;
+}
+
+.malinky-load-more__button:hover {
+	transition: all 0.5s ease;
+	box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=product.css.map */

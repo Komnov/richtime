@@ -24,7 +24,7 @@ class Tables extends PluginSettingsBase {
 	/**
 	 * Script localization object.
 	 */
-	const OBJECT = ' Cyr2LatTablesObject';
+	const OBJECT = 'Cyr2LatTablesObject';
 
 	/**
 	 * Served locales.
@@ -94,16 +94,6 @@ class Tables extends PluginSettingsBase {
 	 */
 	protected function section_title() {
 		return '';
-	}
-
-	/**
-	 * Get parent slug.
-	 *
-	 * @return string
-	 */
-	protected function parent_slug() {
-		// Indicate that it is the main menu page.
-		return 'options-general.php';
 	}
 
 	/**
@@ -217,7 +207,7 @@ class Tables extends PluginSettingsBase {
 				</h2>
 				<a
 					target="_blank"
-					href="https://wordpress.org/support/view/plugin-reviews/cyr2lat?rate=5#postform">
+					href="https://wordpress.org/support/view/plugin-reviews/cyr2lat?rate=5#new-post">
 					<?php echo esc_html( __( 'Leave a ★★★★★ plugin review on WordPress.org', 'cyr2lat' ) ); ?>
 				</a>
 			</div>
@@ -274,6 +264,10 @@ class Tables extends PluginSettingsBase {
 	 * Setup settings sections.
 	 */
 	public function setup_sections() {
+		if ( ! $this->is_options_screen() ) {
+			return;
+		}
+
 		foreach ( $this->form_fields as $form_field ) {
 			add_settings_section(
 				$form_field['section'],

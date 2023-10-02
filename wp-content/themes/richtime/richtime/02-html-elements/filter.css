@@ -1,0 +1,64 @@
+.richtime-filter-nav {
+  border: none;
+  justify-content: center; }
+  .richtime-filter-nav .nav-link {
+    border: none;
+    color: #495057;
+    transition: text-shadow .3s; }
+    .richtime-filter-nav .nav-link.active, .richtime-filter-nav .nav-link.show, .richtime-filter-nav .nav-link:hover {
+      border: none;
+      text-shadow: 0 0 .65px #495057, 0 0 .65px #495057; }
+  .richtime-filter-nav__item {
+    position: relative;
+    margin-left: 20px; }
+
+.richtime-filter-content {
+  padding-top: 30px; }
+  .richtime-filter-content__tab > ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; }
+    .richtime-filter-content__tab > ul li {
+      display: flex;
+      justify-content: center;
+      margin-right: 20px; }
+  .richtime-filter-content .tab-items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1210px;
+    width: 100%;
+    justify-content: flex-end;
+    margin: auto; }
+    @media (min-width: 768px) {
+      .richtime-filter-content .tab-items-wrapper {
+        justify-content: center; } }
+    .richtime-filter-content .tab-items-wrapper .tab-item {
+      width: 50%; }
+      @media (min-width: 768px) {
+        .richtime-filter-content .tab-items-wrapper .tab-item {
+          width: 33%; } }
+      @media (min-width: 1200px) {
+        .richtime-filter-content .tab-items-wrapper .tab-item {
+          width: 20%; } }
+      .richtime-filter-content .tab-items-wrapper .tab-item__label {
+        font-weight: 500;
+        margin-bottom: 30px; }
+      .richtime-filter-content .tab-items-wrapper .tab-item ul {
+        padding-left: 10px;
+        list-style-type: none; }
+  .richtime-filter-content input {
+    margin: auto 20px auto 0; }
+
+.woocommerce .richtime-filter__wrapper {
+  display: flex;
+  justify-content: center; }
+
+.woocommerce .richtime-filter__submit {
+  width: 100%;
+  margin-top: 30px; }
+  .woocommerce .richtime-filter__submit button[type="submit"] {
+    max-width: 220px;
+    width: 100%;
+    margin: 0 auto;
+    display: block; }

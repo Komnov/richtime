@@ -2,7 +2,6 @@
 
 namespace Yoast\WP\SEO\Presenters\Admin;
 
-use WPSEO_Admin_Asset_Manager;
 use Yoast\WP\SEO\Presenters\Abstract_Presenter;
 
 /**
@@ -25,13 +24,6 @@ class Premium_Badge_Presenter extends Abstract_Presenter {
 	private $link;
 
 	/**
-	 * An instance of the WPSEO_Admin_Asset_Manager class.
-	 *
-	 * @var WPSEO_Admin_Asset_Manager
-	 */
-	private $asset_manager;
-
-	/**
 	 * Premium_Badge_Presenter constructor.
 	 *
 	 * @param string $id   Id of the badge.
@@ -40,12 +32,6 @@ class Premium_Badge_Presenter extends Abstract_Presenter {
 	public function __construct( $id, $link = '' ) {
 		$this->id   = $id;
 		$this->link = $link;
-
-		if ( ! $this->asset_manager ) {
-			$this->asset_manager = new WPSEO_Admin_Asset_Manager();
-		}
-
-		$this->asset_manager->enqueue_style( 'badge' );
 	}
 
 	/**

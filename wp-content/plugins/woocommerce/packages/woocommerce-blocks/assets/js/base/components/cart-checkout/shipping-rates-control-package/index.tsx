@@ -4,11 +4,10 @@
 import classNames from 'classnames';
 import { _n, sprintf } from '@wordpress/i18n';
 import { decodeEntities } from '@wordpress/html-entities';
-import Label from '@woocommerce/base-components/label';
-import Title from '@woocommerce/base-components/title';
 import type { ReactElement } from 'react';
 import type { PackageRateOption } from '@woocommerce/type-defs/shipping';
 import { Panel } from '@woocommerce/blocks-checkout';
+import Label from '@woocommerce/base-components/label';
 import { useSelectShippingRate } from '@woocommerce/base-context/hooks';
 import type { CartShippingPackageShippingRate } from '@woocommerce/type-defs/cart';
 
@@ -25,9 +24,7 @@ interface PackageItem {
 }
 
 interface Destination {
-	// eslint-disable-next-line camelcase
 	address_1: string;
-	// eslint-disable-next-line camelcase
 	address_2: string;
 	city: string;
 	state: string;
@@ -38,7 +35,6 @@ interface Destination {
 export interface PackageData {
 	destination: Destination;
 	name: string;
-	// eslint-disable-next-line camelcase
 	shipping_rates: CartShippingPackageShippingRate[];
 	items: PackageItem[];
 }
@@ -61,7 +57,7 @@ interface PackageProps {
 
 export const ShippingRatesControlPackage = ( {
 	packageId,
-	className,
+	className = '',
 	noResultsMessage,
 	renderOption,
 	packageData,
@@ -69,20 +65,14 @@ export const ShippingRatesControlPackage = ( {
 	collapse = false,
 	showItems = false,
 }: PackageProps ): ReactElement => {
-	const { selectShippingRate, selectedShippingRate } = useSelectShippingRate(
-		packageId,
-		packageData.shipping_rates
-	);
+	const { selectShippingRate } = useSelectShippingRate();
 
 	const header = (
 		<>
 			{ ( showItems || collapsible ) && (
-				<Title
-					className="wc-block-components-shipping-rates-control__package-title"
-					headingLevel="3"
-				>
+				<div className="wc-block-components-shipping-rates-control__package-title">
 					{ packageData.name }
-				</Title>
+				</div>
 			) }
 			{ showItems && (
 				<ul className="wc-block-components-shipping-rates-control__package-items">
@@ -124,8 +114,12 @@ export const ShippingRatesControlPackage = ( {
 			className={ className }
 			noResultsMessage={ noResultsMessage }
 			rates={ packageData.shipping_rates }
-			onSelectRate={ selectShippingRate }
-			selected={ selectedShippingRate }
+			onSelectRate={ ( newShippingRateId ) =>
+				selectShippingRate( newShippingRateId, packageId )
+			}
+			selectedRate={ packageData.shipping_rates.find(
+				( rate ) => rate.selected
+			) }
 			renderOption={ renderOption }
 		/>
 	);

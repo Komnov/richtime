@@ -52,18 +52,24 @@ a:hover {
 
 .theme-dark {
 	background-color: black;
+	color: #fff;
 }
 
 .theme-dark a {
 	color: #fff;
+	opacity: .7;
+	transition: var(--global--transition-default);
 }
 
 .theme-dark a:hover {
-	color: var(--global--color-main);
+	font-size: 20px;
+	transition: var(--global--transition-default);
+	opacity: 1;
 }
 
 .theme-dark p {
 	color: #fff;
+	opacity: 1;
 }
 
 .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6 {
@@ -76,10 +82,6 @@ a:hover {
 
 .theme-dark .red-link a {
 	color: var(--global--color-red);
-}
-
-.theme-dark .icons-list path {
-	fill: #fff;
 }
 
 .theme-dark footer.site-footer {

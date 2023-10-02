@@ -47,6 +47,8 @@ const withReviews = ( OriginalComponent ) => {
 
 		delayedAppendReviews = this.props.delayFunction( this.appendReviews );
 
+		isMounted = false;
+
 		state = {
 			error: null,
 			loading: true,
@@ -57,6 +59,7 @@ const withReviews = ( OriginalComponent ) => {
 		};
 
 		componentDidMount() {
+			this.isMounted = true;
 			this.replaceReviews();
 		}
 
@@ -80,7 +83,9 @@ const withReviews = ( OriginalComponent ) => {
 			);
 		}
 
-		componentWillUnMount() {
+		componentWillUnmount() {
+			this.isMounted = false;
+
 			if ( this.delayedAppendReviews.cancel ) {
 				this.delayedAppendReviews.cancel();
 			}
@@ -101,10 +106,14 @@ const withReviews = ( OriginalComponent ) => {
 				offset: reviewsToSkip,
 			};
 
-			if ( categoryIds && categoryIds.length ) {
-				args.category_id = Array.isArray( categoryIds )
-					? categoryIds.join( ',' )
-					: categoryIds;
+			if ( categoryIds ) {
+				const categories = Array.isArray( categoryIds )
+					? categoryIds
+					: JSON.parse( categoryIds );
+
+				args.category_id = Array.isArray( categories )
+					? categories.join( ',' )
+					: categories;
 			}
 
 			if ( productId ) {
@@ -120,7 +129,6 @@ const withReviews = ( OriginalComponent ) => {
 			}
 
 			const { onReviewsReplaced } = this.props;
-
 			this.updateListOfReviews().then( onReviewsReplaced );
 		}
 
@@ -158,16 +166,19 @@ const withReviews = ( OriginalComponent ) => {
 						reviews: newReviews,
 						totalReviews: newTotalReviews,
 					} ) => {
-						this.setState( {
-							reviews: oldReviews
-								.filter(
-									( review ) => Object.keys( review ).length
-								)
-								.concat( newReviews ),
-							totalReviews: newTotalReviews,
-							loading: false,
-							error: null,
-						} );
+						if ( this.isMounted ) {
+							this.setState( {
+								reviews: oldReviews
+									.filter(
+										( review ) =>
+											Object.keys( review ).length
+									)
+									.concat( newReviews ),
+								totalReviews: newTotalReviews,
+								loading: false,
+								error: null,
+							} );
+						}
 
 						return { newReviews };
 					}
@@ -176,6 +187,9 @@ const withReviews = ( OriginalComponent ) => {
 		}
 
 		setError = async ( e ) => {
+			if ( ! this.isMounted ) {
+				return;
+			}
 			const { onReviewsLoadError } = this.props;
 			const error = await formatError( e );
 

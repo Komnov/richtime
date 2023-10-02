@@ -6,6 +6,8 @@
  * @since   1.8.0
  */
 
+use Yoast\WP\SEO\Integrations\Feature_Flag_Integration;
+
 /**
  * Group of utility methods for use by WPSEO.
  * All methods are static, this is just a sort of namespacing class wrapper.
@@ -47,7 +49,7 @@ class WPSEO_Utils {
 	}
 
 	/**
-	 * Check if the web server is running on Apache.
+	 * Check if the web server is running on Apache or compatible (LiteSpeed).
 	 *
 	 * @since 1.8.0
 	 *
@@ -60,7 +62,7 @@ class WPSEO_Utils {
 
 		$software = sanitize_text_field( wp_unslash( $_SERVER['SERVER_SOFTWARE'] ) );
 
-		return stripos( $software, 'apache' ) !== false;
+		return stripos( $software, 'apache' ) !== false || stripos( $software, 'litespeed' ) !== false;
 	}
 
 	/**
@@ -446,7 +448,7 @@ class WPSEO_Utils {
 	 * @since 1.8.0
 	 */
 	public static function clear_rewrites() {
-		delete_option( 'rewrite_rules' );
+		update_option( 'rewrite_rules', '' );
 	}
 
 	/**
@@ -587,16 +589,16 @@ class WPSEO_Utils {
 	 *
 	 * @since 2.0.0
 	 *
-	 * @param string $string String input to trim.
+	 * @param string $text String input to trim.
 	 *
 	 * @return string
 	 */
-	public static function trim_nbsp_from_string( $string ) {
-		$find   = [ '&nbsp;', chr( 0xC2 ) . chr( 0xA0 ) ];
-		$string = str_replace( $find, ' ', $string );
-		$string = trim( $string );
+	public static function trim_nbsp_from_string( $text ) {
+		$find = [ '&nbsp;', chr( 0xC2 ) . chr( 0xA0 ) ];
+		$text = str_replace( $find, ' ', $text );
+		$text = trim( $text );
 
-		return $string;
+		return $text;
 	}
 
 	/**
@@ -827,24 +829,7 @@ class WPSEO_Utils {
 	 * @return bool Whether or not the plugin is network-active.
 	 */
 	public static function is_plugin_network_active() {
-		static $network_active = null;
-
-		if ( ! is_multisite() ) {
-			return false;
-		}
-
-		// If a cached result is available, bail early.
-		if ( $network_active !== null ) {
-			return $network_active;
-		}
-
-		$network_active_plugins = wp_get_active_network_plugins();
-
-		// Consider MU plugins and network-activated plugins as network-active.
-		$network_active = strpos( wp_normalize_path( WPSEO_FILE ), wp_normalize_path( WPMU_PLUGIN_DIR ) ) === 0
-			|| in_array( WP_PLUGIN_DIR . '/' . WPSEO_BASENAME, $network_active_plugins, true );
-
-		return $network_active;
+		return YoastSEO()->helpers->url->is_plugin_network_active();
 	}
 
 	/**
@@ -951,18 +936,7 @@ class WPSEO_Utils {
 	 * @return string The home url.
 	 */
 	public static function get_home_url() {
-
-		/**
-		 * Action: 'wpseo_home_url' - Allows overriding of the home URL.
-		 */
-		do_action( 'wpseo_home_url' );
-
-		// If the plugin is network-activated, use the network home URL.
-		if ( self::is_plugin_network_active() ) {
-			return network_home_url();
-		}
-
-		return home_url();
+		return YoastSEO()->helpers->url->network_safe_home_url();
 	}
 
 	/**
@@ -973,7 +947,7 @@ class WPSEO_Utils {
 	 * @return false|string The prepared JSON string.
 	 */
 	public static function format_json_encode( $data ) {
-		$flags = JSON_UNESCAPED_SLASHES;
+		$flags = ( JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
 
 		if ( self::is_development_mode() ) {
 			$flags = ( $flags | JSON_PRETTY_PRINT );
@@ -1148,14 +1122,13 @@ class WPSEO_Utils {
 	 * @return string[] The array of enabled features.
 	 */
 	public static function retrieve_enabled_features() {
-		$enabled_features = [];
-		if ( defined( 'YOAST_SEO_ENABLED_FEATURES' ) ) {
-			$enabled_features = preg_split( '/,\W*/', YOAST_SEO_ENABLED_FEATURES );
-		}
-		// Make the array of enabled features filterable, so features can be enabled at will.
-		$enabled_features = apply_filters( 'wpseo_enable_feature', $enabled_features );
-
-		return $enabled_features;
+		/**
+		 * The feature flag integration.
+		 *
+		 * @var Feature_Flag_Integration $feature_flag_integration;
+		 */
+		$feature_flag_integration = YoastSEO()->classes->get( Feature_Flag_Integration::class );
+		return $feature_flag_integration->get_enabled_features();
 	}
 
 	/* ********************* DEPRECATED METHODS ********************* */
@@ -1200,14 +1173,14 @@ class WPSEO_Utils {
 	 * @deprecated 15.2
 	 * @codeCoverageIgnore
 	 *
-	 * @param string $string String input to standardize.
+	 * @param string $text String input to standardize.
 	 *
 	 * @return string
 	 */
-	public static function standardize_whitespace( $string ) {
+	public static function standardize_whitespace( $text ) {
 		_deprecated_function( __METHOD__, 'WPSEO 15.2' );
 
-		return YoastSEO()->helpers->string->standardize_whitespace( $string );
+		return YoastSEO()->helpers->string->standardize_whitespace( $text );
 	}
 
 	/**
@@ -1274,12 +1247,12 @@ class WPSEO_Utils {
 	 * @deprecated 15.5
 	 * @codeCoverageIgnore
 	 *
-	 * @param array  $graph The Schema graph array to output.
-	 * @param string $class The (optional) class to add to the script tag.
+	 * @param array  $graph        The Schema graph array to output.
+	 * @param string $class_to_add The (optional) class to add to the script tag.
 	 *
 	 * @return bool
 	 */
-	public static function schema_output( $graph, $class = 'yoast-schema-graph' ) {
+	public static function schema_output( $graph, $class_to_add = 'yoast-schema-graph' ) {
 		_deprecated_function( __METHOD__, 'WPSEO 15.5' );
 
 		if ( ! is_array( $graph ) || empty( $graph ) ) {
@@ -1287,7 +1260,7 @@ class WPSEO_Utils {
 		}
 
 		// phpcs:ignore WordPress.Security.EscapeOutput -- Escaping happens in WPSEO_Utils::schema_tag, which should be whitelisted.
-		echo self::schema_tag( $graph, $class );
+		echo self::schema_tag( $graph, $class_to_add );
 		return true;
 	}
 
@@ -1297,12 +1270,12 @@ class WPSEO_Utils {
 	 * @deprecated 15.5
 	 * @codeCoverageIgnore
 	 *
-	 * @param array  $graph The Schema graph array to output.
-	 * @param string $class The (optional) class to add to the script tag.
+	 * @param array  $graph        The Schema graph array to output.
+	 * @param string $class_to_add The (optional) class to add to the script tag.
 	 *
 	 * @return false|string A schema blob with script tags.
 	 */
-	public static function schema_tag( $graph, $class = 'yoast-schema-graph' ) {
+	public static function schema_tag( $graph, $class_to_add = 'yoast-schema-graph' ) {
 		_deprecated_function( __METHOD__, 'WPSEO 15.5' );
 
 		if ( ! is_array( $graph ) || empty( $graph ) ) {
@@ -1313,7 +1286,7 @@ class WPSEO_Utils {
 			'@context' => 'https://schema.org',
 			'@graph'   => $graph,
 		];
-		return "<script type='application/ld+json' class='" . esc_attr( $class ) . "'>" . self::format_json_encode( $output ) . '</script>' . "\n";
+		return "<script type='application/ld+json' class='" . esc_attr( $class_to_add ) . "'>" . self::format_json_encode( $output ) . '</script>' . "\n";
 	}
 
 	/**

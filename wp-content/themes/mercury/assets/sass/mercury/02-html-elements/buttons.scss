@@ -43,3 +43,16 @@
     background: #231F20;
   }
 }
+
+.chrono {
+  margin: 25px auto;
+  @include media-breakpoint-up(lg) {
+    margin: 25px 0;
+  }
+  svg {
+    path {
+      fill: #546760!important;
+    }
+  }
+  max-width: 185px;
+}

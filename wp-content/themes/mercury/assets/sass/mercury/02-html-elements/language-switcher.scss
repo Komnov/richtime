@@ -9,13 +9,11 @@
   font-size: 15px;
   line-height: 25px;
 
-  &:before {
-    content: url('./assets/images/lang.png');
-    position: absolute;
-    width: 28px;
-    height: 16px;
-    left: -35px;
-    top: 3px;
+  svg {
+    margin-right: 10px;
+  }
+  path {
+    fill: #232323;
   }
 }
 

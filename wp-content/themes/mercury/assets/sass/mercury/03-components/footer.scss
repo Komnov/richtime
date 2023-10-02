@@ -1,7 +1,16 @@
 footer.site-footer {
-  margin-top: 66px;
-  padding: 75px 0;
+  margin-top: 25px;
+  padding: 40px 0;
+  @include media-breakpoint-up(lg) {
+    padding: 75px 0;
+    margin-top: 66px;
+  }
   background-color: #F9F9F9;
+  text-align: center;
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
+
   ul {
     padding-left: 0;
   }
@@ -11,7 +20,18 @@ footer.site-footer {
     margin: auto;
 
     li {
-      width: 33%;
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        width: 33%;
+      }
+    }
+  }
+
+  .social-links {
+    justify-content: center;
+
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
     }
   }
 }
@@ -22,7 +42,9 @@ footer.site-footer {
 
 .social-links {
   padding-top: 10px;
-  ul {
+  display: flex;
+
+  li {
     padding: 0;
     display: flex;
   }
@@ -48,6 +70,7 @@ footer.site-footer {
   ul {
     list-style-type: none;
     padding-left: 0;
+
     a {
       text-decoration: none;
       color: #000000;

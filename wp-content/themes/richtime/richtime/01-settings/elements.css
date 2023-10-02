@@ -1,0 +1,19 @@
+.blog-title {
+  font-size: 1.6rem;
+  font-family: var(--global--font-h1);
+  line-height: var(--global--font-line-height-h3);
+  text-transform: uppercase;
+  color: #546760; }
+
+#customer_login h2,
+.title {
+  font-family: var(--global--font-h1);
+  font-size: var(--global--font-size-h1);
+  line-height: var(--global--font-line-height-h1);
+  font-weight: normal;
+  color: var(--global--color-main);
+  text-align: center; }
+
+img {
+  max-width: 100%;
+  height: auto; }

@@ -14,8 +14,9 @@ if ( ! defined( 'ABSPATH' ) )
 
 /**
  * Get post views for a post or array of posts.
- * 
- * @global $wpdb
+ *
+ * @global object $wpdb
+ *
  * @param int|array $post_id
  * @return int
  */
@@ -36,40 +37,46 @@ if ( ! function_exists( 'pvc_get_post_views' ) ) {
 		FROM " . $wpdb->prefix . "post_views
 		WHERE id IN (" . $post_id . ") AND type = 4";
 
+		// calculate query hash
+		$query_hash = md5( $query );
+
 		// get cached data
-		$post_views = wp_cache_get( md5( $query ), 'pvc-get_post_views' );
+		$post_views = wp_cache_get( $query_hash, 'pvc-get_post_views' );
 
 		// cached data not found?
 		if ( $post_views === false ) {
+			// get post views
 			$post_views = (int) $wpdb->get_var( $query );
-			
-			// set the cache expiration, 5 minutes by default
-			$expire = absint( apply_filters( 'pvc_object_cache_expire', 5 * 60 ) );
 
-			wp_cache_add( md5( $query ), $post_views, 'pvc-get_post_views', $expire );
+			// set the cache expiration, 5 minutes by default
+			$expire = absint( apply_filters( 'pvc_object_cache_expire', 300 ) );
+
+			// add cached post views
+			wp_cache_add( $query_hash, $post_views, 'pvc-get_post_views', $expire );
 		}
 
-		return apply_filters( 'pvc_get_post_views', $post_views, $post_id );
+		return (int) apply_filters( 'pvc_get_post_views', $post_views, $post_id );
 	}
 
 }
 
 /**
  * Get views query.
- * 
- * @global $wpdb
+ *
+ * @global object $wpdb
+ *
  * @param array $args
  * @return int|array
  */
 if ( ! function_exists( 'pvc_get_views' ) ) {
 
-	function pvc_get_views( $args = array() ) {
-		$range = array();
-		$defaults = array(
+	function pvc_get_views( $args = [] ) {
+		$range = [];
+		$defaults = [
 			'fields'		=> 'views',
 			'post_id'		=> '',
 			'post_type'		=> '',
-			'views_query'	=> array(
+			'views_query'	=> [
 				'year'		=> '',
 				'month'		=> '',
 				'week'		=> '',
@@ -77,8 +84,8 @@ if ( ! function_exists( 'pvc_get_views' ) ) {
 				'after'		=> '',	// string or array
 				'before'	=> '',	// string or array
 				'inclusive'	=> true
-			)
-		);
+			]
+		];
 
 		// merge default options with new arguments
 		$args = array_merge( $defaults, $args );
@@ -94,7 +101,7 @@ if ( ! function_exists( 'pvc_get_views' ) ) {
 
 		// check post types
 		if ( is_array( $args['post_type'] ) && ! empty( $args['post_type'] ) ) {
-			$post_types = array();
+			$post_types = [];
 
 			foreach( $args['post_type'] as $post_type ) {
 				$post_types[] = "'" . $post_type . "'";
@@ -113,22 +120,22 @@ if ( ! function_exists( 'pvc_get_views' ) ) {
 			$args['post_id'] = (int) $args['post_id'];
 
 		// check fields
-		if ( ! in_array( $args['fields'], array( 'views', 'date=>views' ), true ) )
+		if ( ! in_array( $args['fields'], [ 'views', 'date=>views' ], true ) )
 			$args['fields'] = $defaults['fields'];
 
-		$query_chunks = array();
+		$query_chunks = [];
 		$views_query = '';
 
 		// views query after/before parameters work only when fields == views
 		if ( $args['fields'] === 'views' ) {
 			// check views query inclusive
-			if ( ! isset( $args['views_query']['inclusive'] ) ) {
+			if ( ! isset( $args['views_query']['inclusive'] ) )
 				$args['views_query']['inclusive'] = $defaults['views_query']['inclusive'];
-			} else
+			else
 				$args['views_query']['inclusive'] = (bool) $args['views_query']['inclusive'];
 
 			// check after and before dates
-			foreach ( array( 'after' => '>', 'before' => '<' ) as $date => $type ) {
+			foreach ( [ 'after' => '>', 'before' => '<' ] as $date => $type ) {
 				$year_ = null;
 				$month_ = null;
 				$week_ = null;
@@ -166,13 +173,13 @@ if ( ! function_exists( 'pvc_get_views' ) ) {
 
 					// valid date?
 					if ( ! ( $year_ === null && $month_ === null && $week_ === null && $day_ === null ) ) {
-						$query_chunks[] = array(
+						$query_chunks[] = [
 							'year'	=> $year_,
 							'month'	=> $month_,
 							'day'	=> $day_,
 							'week'	=> $week_,
 							'type'	=> $type . ( $args['views_query']['inclusive'] ? '=' : '' )
-						);
+						];
 					}
 				}
 			}
@@ -183,7 +190,7 @@ if ( ! function_exists( 'pvc_get_views' ) ) {
 				// after and before?
 				if ( count( $query_chunks ) === 2 ) {
 					// before and after dates should be the same
-					foreach ( array( 'year', 'month', 'day', 'week' ) as $date_type ) {
+					foreach ( [ 'year', 'month', 'day', 'week' ] as $date_type ) {
 						if ( ! ( ( $query_chunks[0][$date_type] !== null && $query_chunks[1][$date_type] !== null ) || ( $query_chunks[0][$date_type] === null && $query_chunks[1][$date_type] === null ) ) )
 							$valid_dates = false;
 					}
@@ -336,7 +343,7 @@ if ( ! function_exists( 'pvc_get_views' ) ) {
 
 		global $wpdb;
 
-		$query = "SELECT " . ( $args['fields'] === 'date=>views' ? 'pvc.period, ' : '' ) . "SUM( IFNULL( pvc.count, 0 ) ) AS post_views
+		$query = "SELECT " . ( $args['fields'] === 'date=>views' ? 'pvc.period, ' : '' ) . "SUM( COALESCE( pvc.count, 0 ) ) AS post_views
 		FROM " . $wpdb->prefix . "posts wpp
 		LEFT JOIN " . $wpdb->prefix . "post_views pvc ON pvc.id = wpp.ID" . ( $views_query !== '' ? ' ' . $views_query : ' AND pvc.type = 4' ) . ( ! empty( $args['post_id'] ) ? ' AND pvc.id IN (' . $args['post_id'] . ')' : '' ) . "
 		" . ( $args['post_type'] !== '' ? "WHERE wpp.post_type IN (" . $args['post_type'] . ")" : '' ) . "
@@ -374,10 +381,10 @@ if ( ! function_exists( 'pvc_get_views' ) ) {
 
 /**
  * Display post views for a given post.
- * 
- * @param  int|array $post_id
+ *
+ * @param int|array $post_id
  * @param bool $display
- * @return mixed
+ * @return string|void
  */
 if ( ! function_exists( 'pvc_post_views' ) ) {
 
@@ -394,7 +401,7 @@ if ( ! function_exists( 'pvc_post_views' ) ) {
 		$icon_class = ( $options['icon_class'] !== '' ? esc_attr( $options['icon_class'] ) : '' );
 
 		// add dashicons class if needed
-		$icon_class = strpos( $icon_class, 'dashicons' ) === 0 ? 'dashicons ' . $icon_class : $icon_class;
+		$icon_class = strpos( $icon_class, 'dashicons ' ) === 0 ? $icon_class : 'dashicons ' . $icon_class;
 
 		// prepare icon output
 		$icon = apply_filters( 'pvc_post_views_icon', '<span class="post-views-icon ' . $icon_class . '"></span>', $post_id );
@@ -403,7 +410,7 @@ if ( ! function_exists( 'pvc_post_views' ) ) {
 			'pvc_post_views_html',
 			'<div class="post-views post-' . $post_id . ' entry-meta">
 				' . ( $options['display_style']['icon'] && $icon_class !== '' ? $icon : '' ) . '
-				' . ( $options['display_style']['text'] && $label !== '' ? '<span class="post-views-label">' . $label . ' </span>' : '' ) . '
+				' . ( $options['display_style']['text'] && $label !== '' ? '<span class="post-views-label">' . esc_html( $label ) . '</span>' : '' ) . '
 				<span class="post-views-count">' . number_format_i18n( $views ) . '</span>
 			</div>',
 			$post_id,
@@ -422,19 +429,21 @@ if ( ! function_exists( 'pvc_post_views' ) ) {
 
 /**
  * Get most viewed posts.
- * 
+ *
  * @param array $args
  * @return array
  */
 if ( ! function_exists( 'pvc_get_most_viewed_posts' ) ) {
 
-	function pvc_get_most_viewed_posts( $args = array() ) {
+	function pvc_get_most_viewed_posts( $args = [] ) {
 		$args = array_merge(
-			array(
+			[
 				'posts_per_page' => 10,
 				'order'			 => 'desc',
-				'post_type'		 => 'post'
-			), $args
+				'post_type'		 => 'post',
+				'fields'		 => ''
+			],
+			$args
 		);
 
 		$args = apply_filters( 'pvc_get_most_viewed_posts_args', $args );
@@ -445,9 +454,6 @@ if ( ! function_exists( 'pvc_get_most_viewed_posts' ) ) {
 		// force to use post views as order
 		$args['orderby'] = 'post_views';
 
-		// force to get all fields
-		$args['fields'] = '';
-
 		return apply_filters( 'pvc_get_most_viewed_posts', get_posts( $args ), $args );
 	}
 
@@ -455,17 +461,17 @@ if ( ! function_exists( 'pvc_get_most_viewed_posts' ) ) {
 
 /**
  * Display a list of most viewed posts.
- * 
+ *
  * @param array $post_id
  * @param bool $display
  * @return mixed
  */
 if ( ! function_exists( 'pvc_most_viewed_posts' ) ) {
 
-	function pvc_most_viewed_posts( $args = array(), $display = true ) {
-		$defaults = array(
+	function pvc_most_viewed_posts( $args = [], $display = true ) {
+		$defaults = [
 			'number_of_posts'		=> 5,
-			'post_type'				=> array( 'post' ),
+			'post_type'				=> [ 'post' ],
 			'order'					=> 'desc',
 			'thumbnail_size'		=> 'thumbnail',
 			'list_type'				=> 'unordered',
@@ -476,7 +482,7 @@ if ( ! function_exists( 'pvc_most_viewed_posts' ) ) {
 			'no_posts_message'		=> __( 'No Posts', 'post-views-counter' ),
 			'item_before'			=> '',
 			'item_after'			=> ''
-		);
+		];
 
 		$args = apply_filters( 'pvc_most_viewed_posts_args', wp_parse_args( $args, $defaults ) );
 
@@ -486,11 +492,11 @@ if ( ! function_exists( 'pvc_most_viewed_posts' ) ) {
 		$args['show_post_excerpt'] = (bool) $args['show_post_excerpt'];
 
 		$posts = pvc_get_most_viewed_posts(
-			array(
+			[
 				'posts_per_page' => ( isset( $args['number_of_posts'] ) ? (int) $args['number_of_posts'] : $defaults['number_of_posts'] ),
 				'order'			 => ( isset( $args['order'] ) ? $args['order'] : $defaults['order'] ),
 				'post_type'		 => ( isset( $args['post_type'] ) ? $args['post_type'] : $defaults['post_type'] )
-			)
+			]
 		);
 
 		if ( ! empty( $posts ) ) {
@@ -501,7 +507,7 @@ if ( ! function_exists( 'pvc_most_viewed_posts' ) ) {
 
 			$html .= '
 			<li>';
-				
+
 				$html .= apply_filters( 'pvc_most_viewed_posts_item_before', $args['item_before'], $post );
 
 				if ( $args['show_post_thumbnail'] && has_post_thumbnail( $post->ID ) ) {
@@ -528,9 +534,9 @@ if ( ! function_exists( 'pvc_most_viewed_posts' ) ) {
 
 				if ( ! empty( $excerpt ) )
 					$html .= '
-				
+
 				<div class="post-excerpt">' . esc_html( $excerpt ) . '</div>';
-				
+
 				$html .= apply_filters( 'pvc_most_viewed_posts_item_after', $args['item_after'], $post );
 
 				$html .= '
@@ -556,10 +562,11 @@ if ( ! function_exists( 'pvc_most_viewed_posts' ) ) {
 /**
  * Update total number of post views for a post.
  *
- * @global $wpdb
+ * @global object $wpdb
+ *
  * @param int $post_id Post ID
  * @param int $post_views Number of post views
- * @return true|string True on success, error string otherwise
+ * @return true|int
  */
 function pvc_update_post_views( $post_id = 0, $post_views = 0 ) {
 	// cast post ID
@@ -578,11 +585,20 @@ function pvc_update_post_views( $post_id = 0, $post_views = 0 ) {
 
 	global $wpdb;
 
-	// chnage post views?
+	// change post views?
 	$post_views = apply_filters( 'pvc_update_post_views_count', $post_views, $post_id );
 
-	// insert or update db post views count
-	$wpdb->query( $wpdb->prepare( "INSERT INTO " . $wpdb->prefix . "post_views (id, type, period, count) VALUES (%d, %d, %s, %d) ON DUPLICATE KEY UPDATE count = %d", $post_id, 4, 'total', $post_views, $post_views ) );
+	// insert or update database post views count
+	$wpdb->query(
+		$wpdb->prepare(
+			"INSERT INTO " . $wpdb->prefix . "post_views (id, type, period, count) VALUES (%d, %d, %s, %d) ON DUPLICATE KEY UPDATE count = %d",
+			$post_id,
+			4,
+			'total',
+			$post_views,
+			$post_views
+		)
+	);
 
 	// query fails only if it returns false
 	return apply_filters( 'pvc_update_post_views', $post_id );
@@ -590,7 +606,7 @@ function pvc_update_post_views( $post_id = 0, $post_views = 0 ) {
 
 /**
  * View post manually function.
- * 
+ *
  * @since 1.2.0
  * @param int $post_id
  * @return bool

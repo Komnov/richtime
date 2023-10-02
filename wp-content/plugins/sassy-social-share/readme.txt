@@ -1,17 +1,18 @@
 ﻿=== Social Sharing Plugin - Sassy Social Share ===
 Contributors: Heateor, jatin8heateor, farhan8heateor
 Donate link: https://www.heateor.com/donate/?action=Sassy+Social+Share
-Tags: social share, social sharing, social media share, share facebook, facebook social share, wordpress social share, share buttons, social share buttons, facebook like, twitter tweet, whatsapp share, line share, gab share, parler share
+Tags: social share, social sharing, social media share, share facebook, facebook social share, wordpress social share, share buttons, social share buttons, facebook like, twitter tweet, whatsapp share, line share, gab share, gab, parler share, gettr, gettr share, mewe share, mewe
 Requires at least: 2.5.0
-Tested up to: 5.7
-Stable tag: 3.3.20
+Tested up to: 6.0
+Stable tag: 3.3.42
 License: GPLv2 or later
 
-Slickest, Simplest and Optimized Share buttons. Facebook, Twitter, Reddit, Pinterest, Whatsapp, Parler, Gab and over 100 more.
+Slickest, Simplest and Optimized Share buttons. Facebook, Twitter, Reddit, Pinterest, Whatsapp, Parler, Gab, Gettr and over 100 more.
 
 == Description ==
+**Try it out live => <a href="https://tastewp.com/new/?pre-installed-plugin-slug=sassy-social-share">Click here</a>**
 
-Sassy Social Share enables your website users to share the content over Facebook, Twitter, Google, Linkedin, Whatsapp, Tumblr, Pinterest, Reddit, Parler, Gab and over 100 more social sharing and bookmarking services.
+Sassy Social Share enables your website users to share the content over Facebook, Twitter, Google, Linkedin, Whatsapp, Tumblr, Pinterest, Reddit, Parler, Gab, Gettr and over 100 more social sharing and bookmarking services.
 
 This is the Simplest and Smoothest Social Sharing plugin with optimized and great looking vector icons.
 
@@ -20,12 +21,13 @@ This is the Simplest and Smoothest Social Sharing plugin with optimized and grea
 **This plugin does not save any cookie in the browser of the user visiting the website having this plugin installed**
 
 = Feature list =
-* GDPR Compliant
+* EU-GDPR Compliant
 * Compatible with Gutenberg editor
+* Compatible with WPML and multilingual website
 * Compatible with myCRED (append myCRED referral ID at the end of the url being shared)
 * Around **100 Social Sharing/Bookmarking** services
 * Social Media follow icons (Redirect website visitors to your Social Media pages)
-* Share counts are supported for Facebook, Linkedin, Twitter, Buffer, Reddit, Pinterest, Odnoklassniki, Fintel and Vkontakte
+* Share counts are supported for Twitter, Buffer, Reddit, Pinterest, Odnoklassniki, Fintel and Vkontakte
 * FREE **Icon Customization** options
 * Options to specify sharing icon shape - Square, Round and Rectangular
 * Options to specify sharing icon size - minimum 16 pixels, no upper limit
@@ -123,6 +125,109 @@ Yes, we can help you with it. Just drop an email at support[at]heateor[dot]com
 4. **Universal Sharing Popup**: Universal Sharing popup having all the supported sharing and bookmarking services
 
 == Changelog ==
+= 3.3.42 [23 May 2022] =
+* [Improvement] Code quality improvement
+
+= 3.3.41 [11 May 2022] =
+* [Improvement] Code quality improvement
+
+= 3.3.40 [24 March 2022] =
+* [Security] Fixed two XSS Vulnerability issues
+* [Bugfix] Right and Bottom counter positions in the Theme Selection section were not working
+* [Improvement] Updated the official Facebook SDK being used throughout the plugin to the latest version 13.0
+* [Improvement] Anchor HTML tag for the More share icon now has an HREF attribute
+* [Improvement] Performmance improvement
+
+= 3.3.39 [15 March 2022] =
+* [Bugfix] myCRED Points for Linkedin shares were not being rewarded when using <a href="https://www.heateor.com/social-share-mycred/">Social Share myCRED Integration</a> add-on
+
+= 3.3.38 [4 January 2022] =
+* [Improvement] Unnecessary CSS file was being loaded at the front-end
+
+= 3.3.37 [9 December 2021] =
+* [Improvement] Added wpml-config.xml file for compatibility with the multi-language translation
+
+= 3.3.36 [7 December 2021] =
+* [Improvement] Integrating Social Media Follow widget was breaking the functionality at the Widgets page in the admin area in some cases
+
+= 3.3.35 [2 December 2021] =
+* [Bugfix] Multi-colored background of Instagram icon was not changing if customized from the Theme Selection section
+* [Bugfix] Floating option was not working for the social media follow icons
+* [Bugfix] "More" text was being displayed with the "More" share icon
+* [New] Added an option to align the standard Social Media follow bar to the left, center or right
+* [Improvement] Improved the code of the Social Media Follow widget
+
+= 3.3.34 [26 November 2021] =
+* [Improvement] Code improvement
+* [Improvement] Admin UI improvement
+
+= 3.3.33 [23 November 2021] =
+* [Bugfix] Social share widet, Social Media follow widget and social share icons at BuddyPress pages were causing fatal errors after previous update
+
+= 3.3.32 [23 November 2021] =
+* [Improvement] Code improvement
+* [Improvement] Removed unnecessary CSS from the public.css file
+* [Improvement] Admin UI improvements
+
+= 3.3.31 [16 November 2021] =
+* [Bugfix] Icons rendered by the shortcode for Social Media Follow Icons were broken since the version 3.3.26 
+
+= 3.3.30 [16 November 2021] =
+* [Bugfix] PHP warning was being displayed on updating the plugin if custom logo color was being used in the Theme Selection section at the plugin configuration page
+
+= 3.3.29 [16 November 2021] =
+* [Bugfix] Fixed Gmail social share icon
+* [Bugfix] Background color of Instagram in the social media follow widget was not changing to multi-colored after changing from the Miscellaneous section 
+* [Improvement] Improved logo of WordPress social share icon
+* [Improvement] Performance improvement
+
+= 3.3.28 [14 November 2021] =
+* [Bugfix] Copy Link icon was not functioning
+* [Bugfix] Print icon was not functioning
+* [Bugfix] Gettr share icon was not sharing properly
+* [Bugfix] Mewe, Gettr and Outlook share icons were not working in the More social share popup
+* [Improvement] Minor CSS improvements in the More social share popup
+
+= 3.3.27 [13 November 2021] =
+* [Bugfix] Background color of some social share icons was not correct in the previous update
+* [Bugfix] Threema social share icon was showing the logo of Telegram
+* [Bugfix] Center alignment was not working for the standard social share bar from the last update
+* [Bugfix] PHP warning was being generated in the AMP mode
+* [Bugfix] Pinterest share icon was not functioning since the last update
+* [Improvement] Horizontal sticky share bar was slightly hidden below the bottom of the screen
+
+= 3.3.26 [12 November 2021] =
+* [New] Added Gettr social share and social media follow icon
+* [Improvement] Extra CSS files will not be loaded anymore if you change the logo color of icons
+* [Improvement] Updated the Facebook JS SDK being used throughout the plugin to the latest version 12.0
+* [Improvement] Improved HTML of the social share and social media follow icons meeting the W3C standards
+* [Bugfix] Yoolink social share was not working
+* [Bugfix] Whatsapp share was not triggering the app in the mobile device
+* [Bugfix] Selecting "Floating" type in the Follow Icons widget was not triggering the relevant extra options
+* [Security] Fixed XSS vulnerability
+
+= 3.3.25 [16 October 2021] =
+* [Improvement] Fixed broken links at the plugin configuration page
+
+= 3.3.24 [17 September 2021] =
+* [Important] Fixed PHP Object Injection vulnerability
+* [Improvement] Admin UI improvement
+
+= 3.3.23 [29 July 2021] =
+* [New] Added options to export and import plugin configuration
+
+= 3.3.22 [13 July 2021] =
+* [Improvement] Admin UI improvements
+* [Improvement] Performance improvement of Social Media Follow widget
+
+= 3.3.21 [29 June 2021] =
+* [Bugfix] Floating share Bar was not appearing at the home page when Yoast SEO plugin was active
+* [Bugfix] Pinterest share icon was not working in AMP
+* [Improvement] Updated the Facebook JS SDK being used to the latest version 11.0
+* [Improvement] Admin UI improvement
+* [Improvement] Widgets enabled from the "Appearance > Widgets" page were causing PHP notices in some cases
+* [Improvement] Compatible with PHP 8
+
 = 3.3.20 [11 February 2021] =
 * [Improvement] Improved Gab logo 
 * [Bugfix] Color of Gab share logo was not changing in the "Rearrange Icons" section at the plugin configuration page when customizing from "Theme Selection" section
@@ -340,7 +445,7 @@ Yes, we can help you with it. Just drop an email at support[at]heateor[dot]com
 = 3.2.4 =
 * [New] StumbleUpon share is now Mix share
 * [Bugfix] Enabling the horizontal sticky floating share bar was causing a white bar to appear at the bottom of webpages in mobile devices where floating bar was not enabled
-* [Bugfix] "heateor-sss-no-counts" attribute was causing "disallowed attribute" validation error on AMP 
+* [Bugfix] "data-heateor-sss-no-counts" attribute was causing "disallowed attribute" validation error on AMP 
 * [Improvement] Meta options for individual posts/pages were also appearing for non-admin users
 * [Improvement] "global $post" was generating PHP notices where $post was NULL
 
@@ -552,12 +657,12 @@ Yes, we can help you with it. Just drop an email at support[at]heateor[dot]com
 * [Improvement] Improved share counter functionality
 * [Improvement] Admin UI improvements
 
-= 1.0.0 =
+= 1.0 =
 * Initial release of the plugin
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0 =
 * Initial release of the plugin
 
 = 1.1 =
@@ -771,7 +876,7 @@ Yes, we can help you with it. Just drop an email at support[at]heateor[dot]com
 = 3.2.4 =
 * [New] StumbleUpon share is now Mix share
 * [Bugfix] Enabling the horizontal sticky floating share bar was causing a white bar to appear at the bottom of webpages in mobile devices where floating bar was not enabled
-* [Bugfix] "heateor-sss-no-counts" attribute was causing "disallowed attribute" validation error on AMP 
+* [Bugfix] "data-heateor-sss-no-counts" attribute was causing "disallowed attribute" validation error on AMP 
 * [Improvement] Meta options for individual posts/pages were also appearing for non-admin users
 * [Improvement] "global $post" was generating PHP notices where $post was NULL
 
@@ -988,3 +1093,106 @@ Yes, we can help you with it. Just drop an email at support[at]heateor[dot]com
 * [Improvement] Improved Gab logo 
 * [Bugfix] Color of Gab share logo was not changing in the "Rearrange Icons" section at the plugin configuration page when customizing from "Theme Selection" section
 * [Bugfix] Title above the standard share bar was not being translated when using WPML
+
+= 3.3.21 [29 June 2021] =
+* [Bugfix] Floating share Bar was not appearing at the home page when Yoast SEO plugin was active
+* [Bugfix] Pinterest share icon was not working in AMP
+* [Improvement] Updated the Facebook JS SDK being used to the latest version 11.0
+* [Improvement] Admin UI improvement
+* [Improvement] Widgets enabled from the "Appearance > Widgets" page were causing PHP notices in some cases
+* [Improvement] Compatible with PHP 8
+
+= 3.3.22 [13 July 2021] =
+* [Improvement] Admin UI improvements
+* [Improvement] Performance improvement of Social Media Follow widget
+
+= 3.3.23 [29 July 2021] =
+* [New] Added options to export and import plugin configuration
+
+= 3.3.24 [17 September 2021] =
+* [Important] Fixed PHP Object Injection vulnerability
+* [Improvement] Admin UI improvement
+
+= 3.3.25 [16 October 2021] =
+* [Improvement] Fixed broken links at the plugin configuration page
+
+= 3.3.26 [12 November 2021] =
+* [New] Added Gettr social share and social media follow icon 
+* [Improvement] Extra CSS files will not be loaded anymore if you change the logo color of icons
+* [Improvement] Updated the Facebook JS SDK being used throughout the plugin to the latest version 12.0
+* [Improvement] Improved HTML of the social share and social media follow icons meeting the W3C standards
+* [Bugfix] Yoolink social share was not working
+* [Bugfix] Whatsapp share was not triggering the app in the mobile device
+* [Bugfix] Selecting "Floating" type in the Follow Icons widget was not triggering the relevant extra options
+* [Security] Fixed XSS vulnerability
+
+= 3.3.27 [13 November 2021] =
+* [Bugfix] Background color of some social share icons was not correct in the previous update
+* [Bugfix] Threema social share icon was showing the logo of Telegram
+* [Bugfix] Center alignment was not working for the standard social share bar from the last update
+* [Bugfix] PHP warning was being generated in the AMP mode
+* [Bugfix] Pinterest share icon was not functioning since the last update 
+* [Improvement] Horizontal sticky share bar was slightly hidden below the bottom of the screen
+
+= 3.3.28 [14 November 2021] =
+* [Bugfix] Copy Link icon was not functioning
+* [Bugfix] Print icon was not functioning
+* [Bugfix] Gettr share icon was not sharing properly
+* [Bugfix] Mewe, Gettr and Outlook share icons were not working in the More social share popup
+* [Improvement] Minor CSS improvements in the More social share popup
+
+= 3.3.29 [16 November 2021] =
+* [Bugfix] Fixed Gmail social share icon
+* [Bugfix] Background color of Instagram in the social media follow widget was not changing to multi-colored after changing from the Miscellaneous section 
+* [Improvement] Improved logo of WordPress social share icon
+* [Improvement] Performance improvement
+
+= 3.3.30 [16 November 2021] =
+* [Bugfix] PHP warning was being displayed on updating the plugin if custom logo color was being used in the Theme Selection section at the plugin configuration page
+
+= 3.3.31 [16 November 2021] =
+* [Bugfix] Icons rendered by the shortcode for Social Media Follow Icons were broken since the version 3.3.26 
+
+= 3.3.32 [23 November 2021] =
+* [Improvement] Code improvement
+* [Improvement] Removed unnecessary CSS from the public.css file
+* [Improvement] Admin UI improvements
+
+= 3.3.33 [23 November 2021] =
+* [Bugfix] Social share widet, Social Media follow widget and social share icons at BuddyPress pages were causing fatal errors after previous update
+
+= 3.3.34 [26 November 2021] =
+* [Improvement] Code improvement
+* [Improvement] Admin UI improvement
+
+= 3.3.35 [2 December 2021] =
+* [Bugfix] Multi-colored background of Instagram icon was not changing if customized from the Theme Selection section
+* [Bugfix] Floating option was not working for the social media follow icons
+* [Bugfix] "More" text was being displayed with the "More" share icon
+* [New] Added an option to align the standard Social Media follow bar to the left, center or right
+* [Improvement] Improved the code of the Social Media Follow widget
+
+= 3.3.36 [7 December 2021] =
+* [Improvement] Integrating Social Media Follow widget was breaking the functionality at the Widgets page in the admin area in some cases
+
+= 3.3.37 [9 December 2021] =
+* [Improvement] Added wpml-config.xml file for compatibility with the multi-language translation
+
+= 3.3.38 [4 January 2022] =
+* [Improvement] Unnecessary CSS file was being loaded at the front-end
+
+= 3.3.39 [15 March 2022] =
+* [Bugfix] myCRED Points for Linkedin shares were not being rewarded when using <a href="https://www.heateor.com/social-share-mycred/">Social Share myCRED Integration</a> add-on
+
+= 3.3.40 [24 March 2022] =
+* [Security] Fixed two XSS Vulnerability issues
+* [Bugfix] Right and Bottom counter positions in the Theme Selection section were not working
+* [Improvement] Updated the official Facebook SDK being used throughout the plugin to the latest version 13.0
+* [Improvement] Anchor HTML tag for the More share icon now has an HREF attribute
+* [Improvement] Performmance improvement
+
+= 3.3.41 [11 May 2022] =
+* [Improvement] Code quality improvement
+
+= 3.3.42 [23 May 2022] =
+* [Improvement] Code quality improvement

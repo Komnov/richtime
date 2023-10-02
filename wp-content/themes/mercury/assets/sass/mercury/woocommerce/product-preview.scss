@@ -1,3 +1,9 @@
+.add-favorite {
+  i.bi-star-fill {
+    color: #ffa900;
+  }
+}
+
 .mercury-loop__product {
   position: relative;
   padding-top: 24px;
@@ -12,7 +18,7 @@
   height: 100%;
   transition: all 1s ease-in;
   margin-bottom: 30px;
-  @include media( wide ) {
+  @include media(wide) {
     max-width: 300px;
   }
 
@@ -22,8 +28,11 @@
     margin: 0 auto;
     max-height: 256px;
     max-width: 256px;
-    width: auto;
+    width: 100%;
     height: auto;
+    @include media-breakpoint-up(sm) {
+      width: auto;
+    }
   }
 
   .mercury-loop__product-title-wrapper {
@@ -73,6 +82,10 @@
 
   &.is-active {
     opacity: 1;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 

@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "fonts.css",
+	"sources": [
+		"../../assets/sass/default/01-settings/fonts.scss"
+	],
+	"names": [],
+	"mappings": "AACA,AAAA,EAAE,CAAC;CACD,WAAW,EAAE,gCAAgC;CAC7C,WAAW,EAAE,GAAG;CACjB"
+}

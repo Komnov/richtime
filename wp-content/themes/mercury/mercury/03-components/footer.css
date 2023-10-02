@@ -2,6 +2,7 @@ footer.site-footer {
 	margin-top: 66px;
 	padding: 75px 0;
 	background-color: #F9F9F9;
+	text-align: center;
 }
 
 footer.site-footer ul {
@@ -25,7 +26,7 @@ footer.site-footer .menu li {
 	padding-top: 10px;
 }
 
-.social-links ul {
+.social-links li {
 	padding: 0;
 	display: flex;
 }

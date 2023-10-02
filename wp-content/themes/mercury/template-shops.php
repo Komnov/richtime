@@ -28,7 +28,7 @@ get_header( 'null', [
 	</article>
 	<div class="addresses">
 		<div class="map-wrapper">
-			<img src="<?php echo get_template_directory_uri() . '/assets/images/map.jpg' ?>" alt="">
+			<iframe src="https://snazzymaps.com/embed/325731" width="100%" height="600px" style="border:none;"></iframe>
 		</div>
 		<div class="container-fluid">
 			<div class="row">
@@ -36,13 +36,13 @@ get_header( 'null', [
 					<div class="addresses_data">
 						<p><span class="dashicons dashicons-location"></span><strong><?php _e( 'Address' ) ?></strong>
 						</p>
-						<p><?php echo get_field( 'address' ) ?></p>
+						<p><?php the_field( 'address', get_the_id() ) ?></p>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="addresses_data">
 						<p><span class="dashicons dashicons-phone"></span><strong><?php _e( 'Contacts' ) ?></strong></p>
-						<p><?php the_field( 'contacts' ) ?></p>
+						<p><?php the_field( 'contacts',  get_the_id() ) ?></p>
 					</div>
 				</div>
 			</div>

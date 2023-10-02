@@ -3,9 +3,9 @@ Contributors: dfactory
 Donate link: http://dfactory.eu/
 Tags: counter, hits, posts, postviews, post views, views, count, statistics, stats, analytics, pageviews, tracking
 Requires at least: 5.0
-Requires PHP: 5.2.4
-Tested up to: 5.7
-Stable tag: 1.3.4
+Requires PHP: 5.3.0
+Tested up to: 5.9
+Stable tag: 1.3.11
 License: MIT License
 License URI: http://opensource.org/licenses/MIT
 
@@ -20,10 +20,11 @@ For more information, check out plugin page at [dFactory](http://dfactory.eu/) o
 = Features include: =
 
 * Option to select post types for which post views will be counted and displayed.
-* 4 methods of collecting post views data: PHP, Javascript, Fast AJAX and REST API for greater flexibility
+* 3 methods of collecting post views data: PHP, Javascript and REST API for greater flexibility
 * Compatible with data privacy regulations
 * Possibility to manually set views count for each post
 * Dashboard post views stats widget
+* Full Data Privacy compliance
 * Capability to query posts according to its views count
 * Custom REST API endpoints
 * Option to set counts interval
@@ -61,6 +62,34 @@ No questions yet.
 2. screenshot-2.png
 
 == Changelog ==
+
+= 1.3.11 =
+* Fix: Potentailly incorrect counting of post views in edge case db queries
+* Fix: Possible empty chart in dashboard
+* Fix: Incorrect saving of dashboard widget user options
+* Tweak: Updated Chart.js to version 3.7.0
+
+= 1.3.10 =
+* Fix: Post views column not working properly
+* Tweak: Switched to openssl_encrypt method for IP encryption
+* Tweak: Improved user input escaping
+
+= 1.3.9 =
+* Tweak: Remove unnecessary plugin files
+
+= 1.3.8 =
+* Tweak: Improved user input escaping
+
+= 1.3.7 =
+* Tweak: Implemented internal settings API
+
+= 1.3.6 =
+* Fix: Option to hide admin bar chart
+
+= 1.3.5 =
+* New: Option to hide admin bar chart
+* Fix: Small security bug with views label
+* Tweak: Remove unnecessary CSS on every page
 
 = 1.3.4 =
 * New: Post Views stats preview in the admin bar
@@ -211,8 +240,8 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.3.4 =
-* New: Post Views stats preview in the admin bar
-* New: Top Posts data available in the dashboard widget
-* Tweak: Improved privacy using IP encrypting
-* Tweak: PHP 8.x compatibility
+= 1.3.11 =
+* Fix: Potentailly incorrect counting of post views in edge case db queries
+* Fix: Possible empty chart in dashboard
+* Fix: Incorrect saving of dashboard widget user options
+* Tweak: Updated Chart.js to version 3.7.0

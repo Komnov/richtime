@@ -217,7 +217,6 @@ abstract class SettingsBase {
 	 * Is this the main menu page.
 	 *
 	 * @return bool
-	 * @noinspection PhpPureAttributeCanBeAddedInspection
 	 */
 	protected function is_main_menu_page() {
 		// Main menu page should have empty string as parent slug.
@@ -262,7 +261,7 @@ abstract class SettingsBase {
 	 *                            With Multisite active this can also include
 	 *                            'network_active' and 'network_only' items.
 	 *
-	 * @return array|mixed Plugin links
+	 * @return array|string[] Plugin links
 	 */
 	public function add_settings_link( array $actions ) {
 		$new_actions = [
@@ -379,6 +378,10 @@ abstract class SettingsBase {
 	 * Setup settings sections.
 	 */
 	public function setup_sections() {
+		if ( ! $this->is_options_screen() ) {
+			return;
+		}
+
 		$tab = $this->get_active_tab();
 
 		foreach ( $this->form_fields as $form_field ) {
@@ -396,6 +399,10 @@ abstract class SettingsBase {
 	 * Setup tabs section.
 	 */
 	public function setup_tabs_section() {
+		if ( ! $this->is_options_screen() ) {
+			return;
+		}
+
 		$tab = $this->get_active_tab();
 
 		add_settings_section(
@@ -448,7 +455,7 @@ abstract class SettingsBase {
 	 * @return bool
 	 */
 	protected function is_tab_active( $tab ) {
-		$current_tab_name = filter_input( INPUT_GET, 'tab', FILTER_SANITIZE_STRING );
+		$current_tab_name = filter_input( INPUT_GET, 'tab', FILTER_SANITIZE_FULL_SPECIAL_CHARS );
 
 		if ( null === $current_tab_name && ! $tab->is_tab() ) {
 			return true;
@@ -960,6 +967,10 @@ abstract class SettingsBase {
 	 * @return bool
 	 */
 	protected function is_options_screen() {
+		if ( ! function_exists( 'get_current_screen' ) ) {
+			return false;
+		}
+
 		$current_screen = get_current_screen();
 
 		$screen_id = $this->screen_id();

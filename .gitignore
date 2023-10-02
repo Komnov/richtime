@@ -55,3 +55,6 @@ wp-content/themes/twentytwenty
 wp-content/themes/twentytwentyone
 wp-content/themes/mercury/node_modules
 wp-config.php
+
+# custom
+wp-content/plugins/welaunch-framework

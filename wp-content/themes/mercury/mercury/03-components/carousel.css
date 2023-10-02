@@ -1,3 +1,7 @@
+#main-carousel {
+	position: relative;
+}
+
 .carousel-item {
 	position: relative;
 }
@@ -47,6 +51,31 @@
 
 #new-products {
 	margin-top: 50px;
+}
+
+.carousel-nav {
+	z-index: 9;
+	position: absolute;
+	display: flex;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	align-items: center;
+	justify-content: space-between;
+}
+
+.carousel-nav .slick-arrow {
+	width: 107px;
+	height: 141px;
+}
+
+.carousel-nav .slick-arrow.slick-disabled {
+	transform: var(--global--transition-default);
+	opacity: 0;
+}
+
+.banners_prev img {
+	transform: scaleX(-1);
 }
 
 /*# sourceMappingURL=carousel.css.map */

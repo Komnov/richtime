@@ -52,17 +52,23 @@ a {
 
 .theme-dark {
   background-color: black;
+  color: #fff;
 
   a {
     color: #fff;
+    opacity: .7;
+    transition: var(--global--transition-default);
 
     &:hover {
-      color: var(--global--color-main);
+      font-size: 20px;
+      transition: var(--global--transition-default);
+      opacity: 1;
     }
   }
 
   p {
     color: #fff;
+    opacity: 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -81,25 +87,22 @@ a {
     }
   }
 
-  .icons-list {
-    path {
-      fill: #fff;
-    }
-  }
-
   footer {
     &.site-footer {
       background: #232323;
+
       .blog-title,
       .social-links-text,
       p,
       a {
         color: #fff;
       }
+
       .social-links {
         a {
           border: 1px solid;
         }
+
         path {
           fill: #fff;
         }
@@ -118,7 +121,8 @@ a {
 }
 
 input,
-textarea {
+textarea,
+select {
   padding: 17px 23px;
   width: 100%;
   outline: none;

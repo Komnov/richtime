@@ -1,0 +1,136 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 410px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+@import "./node_modules/bootstrap/scss/mixins/breakpoints";
+
+#main-carousel {
+  position: relative;
+}
+
+.carousel-item {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  &__read-more {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include media-breakpoint-up(lg) {
+      bottom: 50px;
+      left: 50px;
+      top: inherit;
+      transform: none;
+    }
+
+    .title {
+      color: #fff;
+      font-weight: 300;
+      font-size: var(--global--font-size-banner);
+      line-height: var(--global--font-line-height-banner);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 40px;
+      }
+    }
+
+    a {
+      border: 1px solid #fff;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 500;
+      color: #fff;
+      width: 120px;
+      padding: 10px;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+
+      @include media-breakpoint-up(md) {
+        width: 275px;
+        padding: 27px;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+
+      &:after {
+        content: url('./assets/images/next.png');
+        position: relative;
+        left: 15px;
+        top: 2px;
+        @include media-breakpoint-up(md) {
+          left: 30px;
+        }
+      }
+    }
+  }
+}
+
+#new-products {
+  margin-top: 50px;
+  .richtime-loop__product {
+    margin-top: 5px;
+  }
+}
+
+.carousel-nav {
+  display: none;
+  @include media-breakpoint-up(lg) {
+    z-index: 9;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .slick-arrow {
+    width: 107px;
+    height: 141px;
+
+    &.slick-disabled {
+      transform: var(--global--transition-default);
+      opacity: 0;
+    }
+  }
+}
+
+.banners_prev {
+  img {
+    transform: scaleX(-1);
+  }
+}
+
+#new-products {
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: rgba(0, 0, 0, .5);
+    z-index: 10;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .bi-chevron-compact-right {
+    right: 0;
+  }
+}

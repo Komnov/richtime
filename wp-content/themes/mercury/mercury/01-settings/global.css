@@ -9,7 +9,7 @@
 	--global--font-size-h6: 0.75rem;
 	--global--font-size-main: 15px;
 	/* Font family */
-	--global--font-primary: 'Roboto', sans-serif;
+	--global--font-primary: 'Jost', sans-serif;
 	--global--font-h1: 'Cormorant Garamond';
 	/* Line height */
 	--global--font-line-height-h1: 3.25rem;
@@ -25,6 +25,12 @@
 	--global--color-gray: #F8F8F8;
 	--global--color-white: #FFF7F7;
 	--global--color-red: #E31E1E;
+	--global--color-green: #073107;
+	/* Transitions */
+	--global--transition-default: all .3s ease-in;
+	/* Shadow */
+	--global-box-shadow-white: 0px 0px 12px 2px rgba(255, 255, 255, 0.8);
+	--global-svg-shadow-white: 0 0 12px rgba(255, 255, 255, 0.8);
 }
 
 .container-fluid {

@@ -121,16 +121,32 @@
 //@import "default/07-utilities/measure";
 //@import "default/07-utilities/ie";
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 410px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/mixins";
+
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/flatpickr/dist/flatpickr.min.css";
+
 /** GLOBAL **/
 @import "mercury/01-settings/breakpoints";
 @import "mercury/01-settings/global";
 
 /** LIBS **/
-@import "./../../node_modules/bootstrap/scss/bootstrap";
 @import "mercury/override/hamburger-settings";
-@import "./../../node_modules/hamburgers/_sass/hamburgers/hamburgers";
+@import "./node_modules/hamburgers/_sass/hamburgers/hamburgers";
 @import "./node_modules/slick-carousel/slick/slick.css";
 @import "./node_modules/slick-carousel/slick/slick-theme.css";
+@import "./node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 /** Mercury settings **/
 @import "mercury/01-settings/fonts";
@@ -144,9 +160,12 @@
 @import "mercury/03-components/carousel";
 @import "mercury/03-components/page";
 @import "mercury/03-components/front-page";
+@import "mercury/03-components/search";
 @import "mercury/woocommerce/product-preview";
 @import "mercury/woocommerce/product";
 @import "mercury/woocommerce/forms";
+@import "mercury/woocommerce/my-account";
+@import "style-dark-mode";
 
 .menu-terms {
   position: relative;

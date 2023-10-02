@@ -10,13 +10,12 @@
 	line-height: 25px;
 }
 
-.mercury-language:before {
-	content: url("./assets/images/lang.png");
-	position: absolute;
-	width: 28px;
-	height: 16px;
-	left: -35px;
-	top: 3px;
+.mercury-language svg {
+	margin-right: 10px;
+}
+
+.mercury-language path {
+	fill: #232323;
 }
 
 .black-theme .mercury-language {

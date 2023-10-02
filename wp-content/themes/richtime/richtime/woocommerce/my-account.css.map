@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "my-account.css",
+	"sources": [
+		"../../assets/sass/richtime/woocommerce/my-account.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACE,iCAD+B,CAC/B,EAAE,CAAC;CACD,eAAe,EAAE,IAAI;CACrB,YAAY,EAAE,CAAC;CAChB;;AAJH,AAME,iCAN+B,CAM/B,EAAE,CAAC;CACD,YAAY,EAAE,IAAI;CAClB,WAAW,EAAE,IAAI;CACjB,cAAc,EAAE,IAAI;CACpB,aAAa,EAAE,cAAc;CAI9B;;AAdH,AAWI,iCAX6B,CAM/B,EAAE,AAKC,aAAa,CAAC;CACb,aAAa,EAAE,IAAI;CACpB;;AAIL,AACE,qBADmB,CACnB,GAAG,CAAC;CACF,MAAM,EAAE,IAAI;CACb"
+}

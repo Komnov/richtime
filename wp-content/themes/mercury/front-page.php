@@ -23,6 +23,12 @@ if ( ! empty( $banners ) ) : ?>
 				</div>
 			<?php endforeach; ?>
 		</div>
+		<div class="carousel-nav">
+			<div class="banners_prev"><img src="<?php echo get_theme_file_uri( '/assets/images/slick-nav.png' ) ?>"
+						alt=""></div>
+			<div class="banners_next"><img src="<?php echo get_theme_file_uri( '/assets/images/slick-nav.png' ) ?>"
+						alt=""></div>
+		</div>
 	</section>
 <?php endif ?>
 <?php if ( is_object( $term ) ) : ?>
@@ -31,13 +37,15 @@ if ( ! empty( $banners ) ) : ?>
 			<div class="row">
 				<h2 class="title"><?php echo $term->name ?></h2>
 			</div>
-			<div class="row">
+			<div class="row products-row">
 				<?php
+				$paged    = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
 				$products = new WP_Query(
 					[
-						'posts_per_page' => 8,
+						'posts_per_page' => 4,
 						'post_type'      => 'product',
 						'post_status'    => 'publish',
+						'paged'          => $paged,
 						'tax_query'      => [
 							[
 								'taxonomy' => 'product_cat',
@@ -48,6 +56,10 @@ if ( ! empty( $banners ) ) : ?>
 					]
 				);
 
+				$temp_query = $wp_query;
+				$wp_query   = null;
+				$wp_query   = $products;
+
 				if ( $products->have_posts() ) :
 					while ( $products->have_posts() ) : $products->the_post();
 						wc_get_template_part( 'content', 'product' );
@@ -55,7 +67,17 @@ if ( ! empty( $banners ) ) : ?>
 				else:
 					echo 'No products';
 				endif;
+				wp_reset_postdata();
 				?>
+			</div>
+			<div class="row">
+				<div class="pagination">
+					<?php
+					next_posts_link( 'next', $products->max_num_pages );
+					$wp_query = null;
+					$wp_query = $temp_query;
+					?>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,0 +1,94 @@
+#main-carousel {
+  position: relative; }
+
+.carousel-item {
+  position: relative; }
+  .carousel-item img {
+    width: 100%; }
+  .carousel-item__read-more {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); }
+    @media (min-width: 992px) {
+      .carousel-item__read-more {
+        bottom: 50px;
+        left: 50px;
+        top: inherit;
+        transform: none; } }
+    .carousel-item__read-more .title {
+      color: #fff;
+      font-weight: 300;
+      font-size: var(--global--font-size-banner);
+      line-height: var(--global--font-line-height-banner);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 20px; }
+      @media (min-width: 992px) {
+        .carousel-item__read-more .title {
+          margin-bottom: 40px; } }
+    .carousel-item__read-more a {
+      border: 1px solid #fff;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 500;
+      color: #fff;
+      width: 120px;
+      padding: 10px;
+      text-align: center;
+      display: block;
+      margin: 0 auto; }
+      @media (min-width: 768px) {
+        .carousel-item__read-more a {
+          width: 275px;
+          padding: 27px; } }
+      .carousel-item__read-more a:hover {
+        color: #fff; }
+      .carousel-item__read-more a:after {
+        content: url("./assets/images/next.png");
+        position: relative;
+        left: 15px;
+        top: 2px; }
+        @media (min-width: 768px) {
+          .carousel-item__read-more a:after {
+            left: 30px; } }
+
+#new-products {
+  margin-top: 50px; }
+  #new-products .richtime-loop__product {
+    margin-top: 5px; }
+
+.carousel-nav {
+  display: none; }
+  @media (min-width: 992px) {
+    .carousel-nav {
+      z-index: 9;
+      position: absolute;
+      display: flex;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      align-items: center;
+      justify-content: space-between; } }
+  .carousel-nav .slick-arrow {
+    width: 107px;
+    height: 141px; }
+    .carousel-nav .slick-arrow.slick-disabled {
+      transform: var(--global--transition-default);
+      opacity: 0; }
+
+.banners_prev img {
+  transform: scaleX(-1); }
+
+#new-products .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.5);
+  z-index: 10; }
+  #new-products .slick-arrow:hover {
+    cursor: pointer; }
+
+#new-products .bi-chevron-compact-right {
+  right: 0; }

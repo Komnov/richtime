@@ -3,7 +3,7 @@
 	// ready event
 	$( function() {
 		// rest api request
-		if ( pvcArgsFrontend.mode == 'rest_api' ) {
+		if ( pvcArgsFrontend.mode === 'rest_api' ) {
 			var request = {
 				id: pvcArgsFrontend.postID
 			};
@@ -24,7 +24,7 @@
 					detail: response
 				} );
 			} );
-		// admin ajax or fast ajax request
+		// admin ajax request
 		} else {
 			var request = {
 				action: 'pvc-check-post',

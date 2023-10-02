@@ -7,10 +7,12 @@
  * @see mercury_product_close_wrapper()
  * @see add_favorite_button()
  * @see get_user_favorites_list()
- * @see mercury_update_favorite()
+ * @see mercury_ajax_update_favorite()
  * @see mercury_remove_favorite()
  * @see mercury_filter_products()
  * @see mercury_woocommerce_init()
+ * @see mercury_update_custom_order_fields()
+ * @see mercury_checkout_notices()
  */
 add_action( 'mercury_before_product_link', 'mercury_product_open_wrapper' );
 add_action( 'mercury_after_product_link', 'mercury_product_close_wrapper' );
@@ -20,8 +22,8 @@ add_action( 'woocommerce_after_shop_loop_item_title', 'mercury_after_product_tit
 add_action( 'woocommerce_shop_loop_item_title', 'get_product_tags', 20 );
 add_action( 'woocommerce_shop_loop_item_title', 'get_product_chars', 30 );
 add_action( 'init', 'get_user_favorites_list' );
-add_action( 'wp_ajax_mercury_update_favorite', 'mercury_update_favorite' );
-add_action( 'wp_ajax_mercury_remove_favorite', 'mercury_remove_favorite' );
+add_action( 'wp_ajax_mercury_update_favorite', 'mercury_ajax_update_favorite' );
+add_action( 'wp_ajax_mercury_clear_favorites', 'mercury_clear_favorites' );
 add_action( 'pre_get_posts', 'mercury_filter_products' );
 add_action( 'woocommerce_init', 'mercury_woocommerce_init' );
 add_action( 'pre_get_posts', 'mercury_news_filter' );
@@ -31,6 +33,13 @@ add_action( 'woocommerce_after_add_to_cart_button', 'mercury_add_to_cart_after_w
 add_action( 'woocommerce_single_product_summary', 'mercury_product_article', 1 );
 add_action( 'woocommerce_single_product_summary', 'mercury_product_short_description', 6 );
 add_action( 'mercury_woocommerce_after_content', 'mercury_woocommerce_actions' );
+add_action( 'wp_ajax_ajax_search', 'ajax_search' );
+add_action( 'wp_ajax_nopriv_ajax_search', 'ajax_search' );
+add_action( 'woocommerce_checkout_before_order_review_heading', 'mercury_recipient_fields' );
+add_action( 'woocommerce_checkout_update_order_meta', 'mercury_update_custom_order_fields', 10, 2 );
+add_action( 'woocommerce_after_checkout_validation', 'mercury_checkout_notices', 10, 2 );
+add_action( 'template_redirect', 'mercury_after_user_login', 10 );
+add_action( 'template_redirect', 'mercury_woocommerce_account_redirect', 20 );
 
 /**
  * Remove actions and filters
@@ -42,6 +51,7 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
  *
  * @see set_attribute_hierarchy()
  * @see mercury_product_tabs()
+ * @see mercury_woocommerce_billing_fields()
  */
 add_filter( 'woocommerce_taxonomy_args_pa_individualnyj-podbor', 'set_attribute_hierarchy', 10, 1 );
 add_filter( 'woocommerce_product_tabs', 'mercury_product_tabs' );
@@ -52,16 +62,20 @@ add_filter( 'woocommerce_process_registration_errors', 'mercury_user_registratio
 add_filter( 'woocommerce_single_product_carousel_options', 'mercury_gallery_settings' );
 add_filter( 'woocommerce_checkout_fields', 'custom_checkout_fields' );
 add_filter( 'woocommerce_gateway_icon', 'mastercard_change_icon', 10, 2 );
+add_filter( 'woocommerce_billing_fields', 'mercury_woocommerce_billing_fields' );
 
 function add_favorite_button() {
 	global $product, $favorites;
-	$favorites = (array) $favorites;
-	echo sprintf( '<span class="add-favorite" data-product_id="%d"><svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path opacity="0.5" d="M23.9597 8.32198C23.8841 8.11156 23.7464 7.92674 23.5635 7.78993C23.3805 7.65312 23.1602 7.5702 22.9291 7.55122L16.1104 6.59641L13.0546 0.648941C12.9565 0.454445 12.8032 0.290416 12.6125 0.175644C12.4217 0.0608723 12.2012 0 11.9761 0C11.7509 0 11.5304 0.0608723 11.3396 0.175644C11.1489 0.290416 10.9957 0.454445 10.8975 0.648941L7.84168 6.5849L1.02296 7.55122C0.801172 7.58148 0.592658 7.67082 0.421083 7.80909C0.249508 7.94736 0.121742 8.12903 0.0522846 8.33348C-0.0112949 8.53327 -0.0170004 8.74591 0.0357803 8.94858C0.0885611 9.15125 0.197836 9.33629 0.351877 9.48386L5.30114 14.0854L4.10277 20.6195C4.05999 20.8352 4.08239 21.0581 4.16733 21.262C4.25227 21.4658 4.3962 21.6421 4.58212 21.7699C4.76333 21.8943 4.97707 21.9677 5.19934 21.9819C5.4216 21.9961 5.6436 21.9506 5.84041 21.8504L11.9761 18.7789L18.0877 21.8619C18.2559 21.953 18.4459 22.0006 18.639 22C18.8928 22.0009 19.1404 21.9243 19.346 21.7814C19.5319 21.6536 19.6759 21.4773 19.7608 21.2735C19.8458 21.0696 19.8682 20.8467 19.8254 20.631L18.627 14.0969L23.5763 9.49536C23.7493 9.35465 23.8772 9.16969 23.945 8.96199C24.0129 8.75428 24.018 8.53235 23.9597 8.32198ZM16.5898 12.9235C16.4492 13.054 16.3441 13.2155 16.2835 13.394C16.2229 13.5724 16.2088 13.7624 16.2422 13.9473L17.1051 18.7674L12.5992 16.4667C12.4258 16.378 12.2324 16.3317 12.036 16.3317C11.8395 16.3317 11.6461 16.378 11.4727 16.4667L6.96687 18.7674L7.8297 13.9473C7.86318 13.7624 7.84901 13.5724 7.78843 13.394C7.72786 13.2155 7.62271 13.054 7.48217 12.9235L3.88707 9.47236L8.9322 8.77062C9.12633 8.7447 9.31088 8.67346 9.46967 8.56316C9.62845 8.45285 9.75663 8.30683 9.84296 8.13791L11.9761 3.75497L14.229 8.14942C14.3153 8.31834 14.4435 8.46435 14.6023 8.57466C14.7611 8.68497 14.9456 8.7562 15.1397 8.78213L20.1849 9.48386L16.5898 12.9235Z" fill="#232323" fill-opacity="0.7"/>
-							</svg>
-							</span>',
-	              $product->get_id()
+	$favorites    = (array) $favorites;
+	$is_favorite  = in_array( $product->get_id(), $favorites ) ? 'bi-star-fill' : 'bi-star';
+	$account_link = ! is_user_logged_in() ? get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) : '';
+
+	echo sprintf( '<span class="add-favorite" data-account="%s" data-product_id="%d"><i class="bi %s"></i></span>',
+	              $account_link,
+	              $product->get_id(),
+	              $is_favorite
 	);
+
 }
 
 function set_attribute_hierarchy( $data ) {
@@ -87,7 +101,7 @@ function get_user_favorites_list() {
 /**
  * Add product to user favorites list
  */
-function mercury_update_favorite() {
+function mercury_ajax_update_favorite() {
 	if ( is_user_logged_in() && ! empty( $_POST['pid'] ) ) {
 		$user_id        = get_current_user_id();
 		$favorites_list = get_user_meta( $user_id, 'favorites_products', true );
@@ -96,11 +110,11 @@ function mercury_update_favorite() {
 		if ( false !== $key ) {
 			unset( $favorites_list[ $key ] );
 			$updated = update_user_meta( $user_id, 'favorites_products', $favorites_list );
-			$message = __( 'Removed', 'mercury' );
+			$message = __( 'removed', 'mercury' );
 		} else {
 			array_push( $favorites_list, $pid );
 			$updated = update_user_meta( get_current_user_id(), 'favorites_products', $favorites_list );
-			$message = __( 'Added', 'mercury' );
+			$message = __( 'added', 'mercury' );
 		}
 		$updated ? wp_send_json_success( [ 'message' => $message ] ) : wp_send_json_error();
 	}
@@ -289,21 +303,14 @@ function mercury_product_short_description() {
 	get_template_part( 'template-parts/product/single-short-description' );
 }
 
-function custom_checkout_fields( $fields ) {
-	unset( $fields['billing']['billing_company'] );
-	unset( $fields['billing']['billing_postcode'] );
-	unset( $fields['billing']['billing_address_1'] );
-	unset( $fields['billing']['billing_state'] );
-//	unset( $fields['billing']['billing_country'] );
-	unset( $fields['billing']['billing_city'] );
-
-	$fields['billing']['middle_name'] = [
+function mercury_woocommerce_billing_fields( $fields ) {
+	$fields['billing_middle_name'] = [
 		'class'       => [
 			'form-row-wide',
 		],
 		'id'          => 'middle_name',
 		'required'    => true,
-		'label'       => 'Отчество',
+		'label'       => __( 'Middle name', 'mercury' ),
 		'placeholder' => '',
 		'priority'    => 30,
 	];
@@ -311,9 +318,84 @@ function custom_checkout_fields( $fields ) {
 	return $fields;
 }
 
+function custom_checkout_fields( $fields ) {
+	unset( $fields['billing']['billing_company'] );
+	unset( $fields['billing']['billing_postcode'] );
+	unset( $fields['billing']['billing_address_1'] );
+	unset( $fields['billing']['billing_state'] );
+	unset( $fields['billing']['billing_city'] );
+
+	$fields['recipient']['custom_recipient']            = [
+		'class'    => [ 'form-row-wide' ],
+		'type'     => 'checkbox',
+		'label'    => __( 'Third party recipient', 'mercury' ),
+		'required' => false,
+	];
+	$fields['recipient']['custom_recipient_first_name'] = [
+		'class'    => [ 'form-row-wide recipient-field recipient-required' ],
+		'type'     => 'text',
+		'label'    => __( 'First name', 'woocommerce' ),
+		'required' => true,
+	];
+	$fields['recipient']['custom_recipient_last_name']  = [
+		'class'    => [ 'form-row-first recipient-field recipient-required' ],
+		'type'     => 'text',
+		'label'    => __( 'Last name', 'woocommerce' ),
+		'required' => true,
+	];
+	$fields['recipient']['custom_recipient_third_name'] = [
+		'class'    => [ 'form-row-last recipient-field recipient-required' ],
+		'type'     => 'text',
+		'label'    => __( 'Third party name', 'mercury' ),
+		'required' => true,
+	];
+	$fields['recipient']['custom_recipient_email']      = [
+		'class'    => [ 'form-row-first recipient-field' ],
+		'type'     => 'text',
+		'label'    => __( 'Email', 'mercury' ),
+		'required' => true,
+	];
+	$fields['recipient']['custom_recipient_phone']      = [
+		'class'    => [ 'form-row-last recipient-field recipient-required' ],
+		'type'     => 'text',
+		'label'    => __( 'Phone', 'mercury' ),
+		'required' => true,
+	];
+	$fields['recipient']['custom_recipient_date']       = [
+		'class'    => [ 'form-row-first recipient-field recipient-required' ],
+		'label'    => __( 'Date of receiving', 'mercury' ),
+		'required' => true,
+	];
+
+	$fields['recipient']['custom_recipient_time'] = [
+		'type'        => 'select',
+		'class'       => [ 'form-row-last recipient-field recipient-required' ],
+		'options'     => [
+			''            => __( 'Choose interval', 'mercury' ),
+			'10:00-11:00' => '10:00-11:00',
+			'11:00-12:00' => '11:00-12:00',
+			'12:00-13:00' => '12:00-13:00',
+			'13:00-14:00' => '13:00-14:00',
+			'14:00-15:00' => '14:00-15:00',
+			'15:00-16:00' => '15:00-16:00',
+			'16:00-17:00' => '16:00-17:00',
+			'17:00-18:00' => '17:00-18:00',
+			'18:00-19:00' => '18:00-19:00',
+			'19:00-20:00' => '19:00-20:00',
+			'20:00-21:00' => '20:00-21:00',
+			'21:00-22:00' => '21:00-22:00',
+		],
+		'required'    => true,
+		'label'       => __( 'Time of receiving', 'mercury' ),
+		'placeholder' => __( 'Choose interval', 'mercury' ),
+	];
+
+	return $fields;
+}
+
 function mastercard_change_icon( $icon, $id ) {
 	if ( 'fondy' === $id ) {
-		$icon = "<img src='" . get_template_directory_uri() . '/assets/images/visa.png' . "'>";
+		$icon = "<img src='" . get_template_directory_uri() . '/assets/images/pay1.png' . "'>";
 	} elseif ( 'paypal' === $id ) {
 		$icon = "<img src='" . get_template_directory_uri() . '/assets/images/paypal.png' . "'>";
 	}
@@ -324,5 +406,88 @@ function mastercard_change_icon( $icon, $id ) {
 function mercury_woocommerce_actions() {
 	if ( is_product() ) {
 		woocommerce_output_related_products();
+	}
+}
+
+function ajax_search() {
+	ob_start();
+	get_template_part( 'template-parts/search/ajax' );
+	$content = ob_get_contents();
+	ob_end_clean();
+	wp_send_json_success( $content );
+}
+
+function mercury_clear_favorites() {
+	wp_send_json_success( update_user_meta( get_current_user_id(), 'favorites_products', [] ) );
+}
+
+function mercury_recipient_fields() {
+	get_template_part( 'template-parts/checkout/recipient' );
+}
+
+function mercury_update_custom_order_fields( $order_id, $data ) {
+	$order = wc_get_order( $order_id );
+	update_field( 'custom_recipient', $data['custom_recipient'], $order_id );
+	update_field( 'custom_recipient_first_name', $data['custom_recipient_first_name'], $order_id );
+	update_field( 'custom_recipient_last_name', $data['custom_recipient_last_name'], $order_id );
+	update_field( 'custom_recipient_third_name', $data['custom_recipient_third_name'], $order_id );
+	update_field( 'custom_recipient_email', $data['custom_recipient_email'], $order_id );
+	update_field( 'custom_recipient_phone', $data['custom_recipient_phone'], $order_id );
+	update_field( 'custom_recipient_date', $data['custom_recipient_date'], $order_id );
+	update_field( 'custom_recipient_time', $data['custom_recipient_time'], $order_id );
+	$order->save();
+}
+
+function mercury_checkout_notices( $data, $errors ) {
+	$fields = [
+		'custom_recipient_first_name_required',
+		'custom_recipient_last_name_required',
+		'custom_recipient_third_name_required',
+		'custom_recipient_email_required',
+		'custom_recipient_phone_required',
+	];
+
+	if ( empty( $data['custom_recipient'] ) ) {
+		foreach ( $fields as $recipient ) {
+			$errors->remove( $recipient );
+		}
+	}
+}
+
+function mercury_after_user_login() {
+	global $wp;
+
+	if ( isset( $wp->query_vars['pagename'] ) && 'my-account' === $wp->query_vars['pagename'] && is_user_logged_in() ) {
+		$user = wp_get_current_user();
+
+		$favorite_product = isset( $_GET['fp'] ) ? (int) $_GET['fp'] : 0;
+
+		if ( 0 !== $favorite_product ) {
+			$favorite_list = get_user_meta( $user->ID, 'favorites_products', true );
+			$key           = array_search( $favorite_product, $favorite_list, true );
+			if ( false !== $key ) {
+				unset( $favorite_list[ $key ] );
+				wc_add_notice( 'Товар удалён', 'success' );
+			} else {
+				array_push( $favorite_list, $favorite_product );
+				wc_add_notice( 'Товар добавлен', 'success' );
+			}
+
+			update_user_meta( $user->ID, 'favorites_products', $favorite_list );
+		}
+	}
+
+}
+
+function mercury_woocommerce_account_redirect() {
+
+	$current_url = ( isset( $_SERVER['HTTPS'] ) ? "https" : "http" ) . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+	$dashboard_url = get_permalink( get_option( 'woocommerce_myaccount_page_id' ) );
+
+	if ( is_user_logged_in() && $dashboard_url == $current_url ) {
+		$url = get_home_url() . '/my-account/orders';
+		wp_redirect( $url );
+		exit;
 	}
 }

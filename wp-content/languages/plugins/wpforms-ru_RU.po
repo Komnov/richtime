@@ -1,0 +1,3749 @@
+# Translation of WPForms - WPForms in Russian
+# This file is distributed under the same license as the WPForms - WPForms package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-16 15:44:29+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: ru\n"
+"Project-Id-Version: WPForms - WPForms\n"
+
+#: wpforms/src/Pro/Admin/Entries/Overview/Page.php:236
+msgid "All Forms"
+msgstr "Все формы"
+
+#: wpforms/src/Pro/Admin/Entries/Overview/Page.php:161
+msgid "Number of forms per page:"
+msgstr "Количество форм на странице:"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:819
+msgid "Subscription Period"
+msgstr "Срок действия подписки"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:818
+msgid "Payment Note"
+msgstr "Примечание к платежу"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:798
+msgid "Subscription Status"
+msgstr "Статус подписки"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:792
+msgid "Gateway"
+msgstr "Шлюз"
+
+#: wpforms/pro/templates/admin/entries/single-entry/payment-details.php:109
+msgid "View Payment"
+msgstr "Открыть платеж"
+
+#. translators: %s - payment gateway.
+#: wpforms/pro/templates/admin/entries/single-entry/payment-details.php:83
+msgid "Gateway: <strong>%s</strong>"
+msgstr "Шлюз: <strong>%s</strong>"
+
+#. translators: %s - payment total.
+#: wpforms/pro/templates/admin/entries/single-entry/payment-details.php:70
+msgid "Total: <strong>%s</strong>"
+msgstr "Итого: <strong>%s</strong>"
+
+#. translators: %s - payment type.
+#: wpforms/pro/templates/admin/entries/single-entry/payment-details.php:50
+msgid "Type: <strong>%s</strong>"
+msgstr "Тип: <strong>%s</strong>"
+
+#. translators: %s - payment status.
+#: wpforms/pro/templates/admin/entries/single-entry/payment-details.php:35
+msgid "Status: <strong>%s</strong>"
+msgstr "Статус: <strong>%s</strong>"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1198
+msgid "Type:"
+msgstr "Тип:"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:374
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1501
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1510
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1270
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:659
+msgid "N/A"
+msgstr "Н/Д"
+
+#. translators: %s - choice number.
+#: wpforms/src/Pro/Admin/Entries/PrintPreview.php:484
+#: wpforms/src/Pro/Admin/Entries/PrintPreview.php:534
+msgid "Choice %s"
+msgstr "Выбор %s"
+
+#. translators: %1$s - current step in multi-page form; %2$s - total number of
+#. pages.
+#: wpforms/src/Pro/Forms/Fields/Pagebreak/Frontend.php:146
+msgid "Step %1$s of %2$s"
+msgstr "Шаг %1$s из %2$s"
+
+#: wpforms/src/Pro/Forms/Fields/DateTime/Frontend.php:80
+msgid "Year"
+msgstr "Год"
+
+#: wpforms/src/Pro/Forms/Fields/DateTime/Frontend.php:79
+msgid "Month"
+msgstr "Месяц"
+
+#: wpforms/src/Pro/Forms/Fields/DateTime/Frontend.php:78
+msgid "Day"
+msgstr "День"
+
+#: wpforms/src/Pro/Forms/Fields/CreditCard/Frontend.php:218
+msgid "Expiration year"
+msgstr "Год окончания срока действия"
+
+#: wpforms/src/Pro/Forms/Fields/CreditCard/Frontend.php:189
+msgid "Expiration month"
+msgstr "Месяц окончания срока действия"
+
+#. translators: %s - WPForms.com access control link.
+#: wpforms/src/Pro/Admin/Settings/Access.php:222
+msgid "Select the user roles that are allowed to manage different aspects of WPForms. By default, all permissions are provided only to administrator users. Please see our <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Access Controls documentation</a> for full details."
+msgstr "Выберите роли для пользователей, которые могут управлять разными аспектами WPForms. По умолчанию все разрешения предоставляются только администраторам. Подробнее в <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">документации о контроле доступа</a>."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:203
+msgid "File system is not configured."
+msgstr "Файловая система не настроена."
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:116
+msgid "Display Settings"
+msgstr "Настройки отображения"
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:102
+msgid "Field Settings"
+msgstr "Настройки поля"
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:27
+msgid "Maintain Layout"
+msgstr "Сохранять макет"
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:24
+msgid "Page Breaks"
+msgstr "Разрывы страниц"
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:21
+msgid "Unselected Choices"
+msgstr "Невыбранные варианты"
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:19
+msgid "Field Description"
+msgstr "Описание поля"
+
+#. translators: %s - subfield name, e.g. state, country.
+#: wpforms/pro/includes/fields/class-address.php:1302
+msgid "--- Select %s ---"
+msgstr "--- Выберите: %s ---"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1439
+msgid "and"
+msgstr "и"
+
+#. translators: %s - A list of addons that disable the link.
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1433
+msgid "Unavailable because %s is enabled."
+msgid_plural "Unavailable because %s are enabled."
+msgstr[0] "Недоступно, так как включено дополнение %s."
+msgstr[1] "Недоступно, так как включены дополнения %s."
+msgstr[2] "Недоступно, так как включены дополнения %s."
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:384
+msgid "Sorry, your message can't be submitted because it contains prohibited words."
+msgstr "Невозможно отправить ваше сообщение, так как оно содержит запрещенные слова."
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:124
+msgid "Displayed if a visitor tries to submit an entry that contains a blocked keyword."
+msgstr "Отображается, если пользователь пытается отправить запись с запрещенными ключевыми словами."
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:120
+msgid "Keyword Filter Message"
+msgstr "Сообщение для фильтра ключевых слов"
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:106
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:101
+msgid "Each word or phrase should be on its own line."
+msgstr "Каждое слово или фраза должны начинаться с новой строки."
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:98
+msgid "Keywords that will be blocked if they are found in a form entry."
+msgstr "Записи с этими ключевыми словами будут блокироваться."
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:98
+msgid "Keyword Filter List"
+msgstr "Список ключевых слов для фильтра"
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:92
+msgid "Edit keyword list."
+msgstr "Редактировать список ключевых слов."
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:91
+msgid "Collapse keyword list."
+msgstr "Свернуть список ключевых слов."
+
+#. translators: %s - number of phrases.
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:87
+msgid "Your keyword filter contains %s phrase(s)."
+msgstr "Фраз в фильтре ключевых слов: %s."
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:78
+msgid "Block entries that contain one or more keywords you define."
+msgstr "Блокируйте записи, содержащие одно или несколько ключевых слов."
+
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:74
+msgid "Enable keyword filter"
+msgstr "Включить фильтр ключевых слов"
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:518
+msgid "Sorry, this form does not accept submissions from your country."
+msgstr "Эта форма не принимает записи из вашей страны."
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:160
+msgid "Filtering"
+msgstr "Фильтрация"
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:159
+msgid "Restrict form entries based on customizable filters or conditions."
+msgstr "Ограничивайте доступ к записям в формах с помощью особых фильтров или условий."
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:149
+msgid "Displayed if a visitor from a restricted country tries to submit your form."
+msgstr "Отображается, если пользователь из заблокированной страны пытается отправить форму."
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:144
+msgid "Country Filter Message"
+msgstr "Сообщение для фильтра стран"
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:118
+msgid "entries from"
+msgstr "записи из"
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:112
+msgid "Deny"
+msgstr "Блокировать"
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:111
+msgid "Allow"
+msgstr "Разрешить"
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:98
+msgid "Country Filter"
+msgstr "Фильтр стран"
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:91
+msgid "Allow or deny entries from the countries you select."
+msgstr "Разрешайте или блокируйте записи из определенных стран."
+
+#: wpforms/src/Pro/AntiSpam/CountryFilter.php:87
+msgid "Enable country filter"
+msgstr "Включить фильтр стран"
+
+#: wpforms/src/Pro/Admin/Entries/PrintPreview.php:406
+msgid "Content Field"
+msgstr "Поле контента"
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:22
+msgid "HTML/Content fields"
+msgstr "Поля HTML/контента"
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/Settings.php:48
+msgid "Field #"
+msgstr "Поле #"
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:148
+msgid "Select the file upload field(s) containing the files you’d like to receive as attachments."
+msgstr "Выберите поля отправки с файлами, которые вы хотите получать во вложениях."
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:145
+msgid "File Upload Fields"
+msgstr "Поля отправки файлов"
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:131
+msgid "You allow attaching up to <strong><span class=\"notifications-file-upload-attachment-size\">0</span> MB</strong>"
+msgstr "Вы разрешили прикреплять до <strong><span class=\"notifications-file-upload-attachment-size\">0</span> МБ</strong>"
+
+#. translators: Links to the WPForms.com doc articles.
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:111
+msgid "<strong>Heads up!</strong> Some email providers have limits on attachment file size. If your visitors upload large files, your notifications may not be delivered. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>"
+msgstr "<strong>Внимание!</strong> Некоторые почтовые сервисы устанавливают ограничение на размер файлов во вложении. Если посетители будут отправлять более объемные файлы, уведомления могут не прийти. <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Подробнее</a>"
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:79
+msgid "Enable File Upload Attachments"
+msgstr "Включить отправку вложений"
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/FileUploadAttachment.php:55
+msgid "You do not have any file upload fields"
+msgstr "У вас нет полей для отправки файлов"
+
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:135
+msgid "Dismiss"
+msgstr "Скрыть"
+
+#: wpforms/src/Pro/Admin/Builder/AntiSpam.php:47
+msgid "Your keyword filter list has been reformatted. Please save these changes."
+msgstr "Формат фильтра ключевых слов изменен. Сохраните изменения."
+
+#. translators: %s - <email@example.com>.
+#: wpforms/pro/wpforms-pro.php:977
+msgid "Enter the email address or email address with recipient's name in \"First Last %s\" format."
+msgstr "Введите эл. почту или имя получателя в формате «имя фамилия %s»."
+
+#. translators: %s - Refresh link.
+#: wpforms/pro/wpforms-pro.php:373
+msgid "If your license has been upgraded or is incorrect, then please %1$sforce a refresh%2$s."
+msgstr "Если ваша лицензия была обновлена или неверна, пожалуйста,%1$sвыполните обновление%2$s."
+
+#. translators: $s - license type.
+#: wpforms/pro/wpforms-pro.php:366
+msgid "Your license key level is %s."
+msgstr "Уровень лицензионного ключа - %s."
+
+#: wpforms/pro/wpforms-pro.php:356
+msgid "Remove Key"
+msgstr "Удалить ключ"
+
+#: wpforms/pro/wpforms-pro.php:350
+msgid "Renew License"
+msgstr "Продлить лицензию"
+
+#: wpforms/pro/wpforms-pro.php:344
+msgid "Verify Key"
+msgstr "Проверка ключа"
+
+#: wpforms/pro/templates/builder/antispam/reformat-warning.php:19
+msgid "Yes, Reformat"
+msgstr "Да, изменить"
+
+#: wpforms/pro/templates/builder/antispam/reformat-warning.php:14
+msgid "It appears your keyword filter list is comma-separated. Would you like to reformat it?"
+msgstr "Похоже, фильтр ключевых слов содержит запятые. Изменить формат?"
+
+#: wpforms/pro/templates/admin/addons-item.php:30
+#: wpforms/pro/templates/education/builder/providers-item.php:41
+msgid "Recommended"
+msgstr "Рекомендуемые"
+
+#: wpforms/pro/includes/fields/class-content.php:20
+msgid "Content"
+msgstr "Содержание"
+
+#: wpforms/pro/includes/admin/class-license.php:467
+msgid "<strong>Your license key is invalid.</strong> The key no longer exists or the user associated with the key has been deleted. Please use a different key to continue receiving automatic updates."
+msgstr "<strong>Недопустимый лицензионный ключ.</strong> Ключ больше не существует или удален связанный с ним пользователь. Используйте другой ключ для активации автоматических обновлений."
+
+#: wpforms/pro/includes/admin/class-license.php:460
+msgid "<strong>Your license key has been disabled.</strong> Please use a different key to continue receiving automatic updates."
+msgstr "<strong>Лицензионный ключ заблокирован.</strong> Введите другой ключ для активации автоматических обновлений."
+
+#: wpforms/pro/includes/admin/class-license.php:453
+msgid "<strong>Your license has expired.</strong> An active license is needed to create new forms and edit existing forms. It also provides access to new features & addons, plugin updates (including security improvements), and our world class support!"
+msgstr "<strong>Истек срок действия лицензии.</strong> Для создания новых форм и редактирования существующих требуется лицензия. Она дает доступ к новым функциям и дополнениям, обновлениям плагинов (в том числе повышающим безопасность) и приоритетной поддержке!"
+
+#. translators: %1$s - WPForms.com Account dashboard URL; %2$s - WPForms.com
+#. pricing URL.
+#: wpforms/pro/includes/admin/class-license.php:437
+msgid "Your license key can be found in your <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">WPForms Account Dashboard</a>. Don’t have a license? <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">Sign up today!</a>"
+msgstr "Лицензионный ключ находится на <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">панели управления учетной записью WPForms</a>. Нет лицензии? <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">Зарегистрируйтесь!</a>"
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:394
+msgid "Click to set this column as default. Click again to unset."
+msgstr "Нажмите, чтобы сделать этот столбец элементом по умолчанию. Нажмите еще раз, чтобы отменить это действие."
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:370
+msgid "Are you sure you want to delete the Layout field? Deleting this field will also delete the fields inside it."
+msgstr "Удалить поле шаблона? Находящиеся в нем поля также будут удалены."
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:369
+msgid "The Layout field cannot be used when Conversational Forms is enabled."
+msgstr "Нельзя использовать поле макета при включенных диалоговых формах."
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:367
+msgid "Layouts Have Moved!"
+msgstr "Макеты переместились!"
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:366
+msgid "Don’t Show Again"
+msgstr "Больше не показывать"
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:365
+msgid "When a field is placed inside a column, the field size always equals the column width."
+msgstr "Если поле находится в столбце, его размер всегда равен ширине столбца."
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:364
+msgid "Field size cannot be changed when used in a layout."
+msgstr "Нельзя изменить размер поля при использовании в макете."
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:363
+msgid "Got it!"
+msgstr "Понятно!"
+
+#. translators: %s - Field name.
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:361
+msgid "The %s field can’t be placed inside a Layout field."
+msgstr "Поле %s нельзя поместить в поле макета."
+
+#. translators: %1$s - WPForms.com URL to a related doc.
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:344
+msgid "We’ve added a new field to help you build advanced form layouts more easily. Give the Layout Field a try! Layout CSS classes are still supported. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Learn More</a>"
+msgstr "Чтобы вам было проще создавать сложные макеты форм, мы добавили новое поле. Попробуйте поле макета! Классы CSS макета поддерживаются, как и раньше. <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">Подробнее</a>"
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:237
+msgid "Drag and drop fields into the columns below, or click a column to make it active. You may then click on new fields to easily place them directly into the active column."
+msgstr "Перетаскивайте поля в столбцы ниже или нажмите на столбец, чтобы его активировать. После этого нажатием на новые поля можно добавлять их в активный столбец."
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:145
+msgid "Select a predefined layout preset"
+msgstr "Выберите готовый макет"
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:144
+msgid "Select a Layout"
+msgstr "Выберите макет"
+
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:96
+msgid "Enter text for the Layout field label. It will help identify your layout block inside the form builder, but will not be displayed in the form."
+msgstr "Введите текст для заголовка поля макета. Он поможет вам найти блок макета в конструкторе форм, но не будет отображаться в форме."
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/Settings.php:104
+msgid "Advanced"
+msgstr "Дополнительно"
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:264
+msgid "At least one item must be selected for inclusion in the CSV file."
+msgstr "Выберите хотя бы один элемент, который будет включен в файл CSV."
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:262
+msgid "Entry Information"
+msgstr "Данные записи"
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:223
+msgid "File Name"
+msgstr "Имя файла"
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:207
+msgid "Enable Entry CSV Attachment"
+msgstr "Включить вложение CSV записи"
+
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/EntryCsvAttachment.php:150
+msgid "All Fields"
+msgstr "Все поля"
+
+#: wpforms/pro/includes/fields/class-layout.php:76
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:362
+msgid "Layout"
+msgstr "Макет"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:425
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:210
+msgid "Select All"
+msgstr "Выбрать все"
+
+#: wpforms/src/Pro/Admin/Education/Core.php:109
+msgid "Contact Support"
+msgstr "Связаться с поддержкой"
+
+#: wpforms/src/Pro/Admin/Education/Core.php:108
+msgid "Your WPForms license is not active. To access the %name%, please contact support for more details."
+msgstr "Лицензия WPForms неактивна. Обратитесь в службу поддержки для доступа к %name%."
+
+#: wpforms/src/Pro/Admin/Education/Core.php:102
+msgid "Your WPForms license is expired. To access the %name%, please renew your license."
+msgstr "Истек срок действия лицензии WPForms. Обновите лицензию для доступа к %name%."
+
+#: wpforms/src/Pro/Admin/Education/Core.php:95
+msgid "Activate License"
+msgstr "Активировать лицензию"
+
+#: wpforms/src/Pro/Admin/Education/Core.php:93
+msgid "Would you like to save and refresh the form builder?"
+msgstr "Сохранить данные и обновить конструктор форм?"
+
+#: wpforms/src/Pro/Admin/Education/Core.php:92
+msgid "Your license was activated! All fields will be available once the form builder is refreshed."
+msgstr "Лицензия активирована! Все поля будут доступны после обновления конструктора форм."
+
+#: wpforms/src/Pro/Admin/Education/Core.php:91
+msgid "All set"
+msgstr "Все готово"
+
+#. translators: %s - WPForms.com account licenses page URL.
+#: wpforms/src/Pro/Admin/Education/Core.php:80
+msgid "Your key can be found inside the <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">WPForms.com Account Dashboard</a>."
+msgstr "Ключ можно найти в <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">панели управления учетной записью на сайте WPForms.com</a>."
+
+#: wpforms/src/Pro/Admin/Education/Core.php:76
+msgid "To access the %name%, please enter your WPForms license key."
+msgstr "Чтобы получить доступ к %name%, введите лицензионный ключ WPForms."
+
+#: wpforms/src/Pro/Admin/Education/Core.php:70
+#: wpforms/src/Pro/Admin/Education/Core.php:94
+msgid "Enter License Key"
+msgstr "Введите лицензионный ключ"
+
+#. translators: %s - WPForms Logs admin page URL.
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:336
+msgid "<a href=\"%s\">View log</a> for details."
+msgstr "Подробные сведения в <a href=\"%s\">журнале</a>."
+
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:330
+msgid "No entries were imported."
+msgstr "Записи не импортированы."
+
+#. translators: %d - number of imported entries.
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:318
+msgid "%d entry was not imported."
+msgid_plural "%d entries were not imported."
+msgstr[0] "Не выполнен импорт %d записи."
+msgstr[1] "Не выполнен импорт %d записей."
+msgstr[2] "Не выполнен импорт %d записей."
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:54
+msgid "not detected"
+msgstr "не обнаружено"
+
+#: wpforms/pro/wpforms-pro.php:418
+msgid "Website URL"
+msgstr "URL сайта"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:261
+msgid "Please upgrade to the PRO plan to unlock User Journey and more awesome features."
+msgstr "Перейдите на план PRO, чтобы открыть анализ пути пользователей и другие потрясающие функции."
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:246
+msgid "You can install the User Journey addon with just a few clicks!"
+msgstr "Установите дополнение для анализа пути пользователей за пару нажатий!"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:243
+msgid "Easily trace each visitor’s path through your site, right up to the moment they hit ‘Submit’!"
+msgstr "Отслеживайте путь каждого посетителя на сайте до нажатия кнопки «Отправить»!"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:225
+msgid "User took 7 steps over 14 mins"
+msgstr "Пользователь прошел 7 шагов за 14 минут"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:221
+msgid "Contact form submitted"
+msgstr "Контактная форма отправлена"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:197
+msgid "Contact Us"
+msgstr "Обратная связь"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:174
+msgid "Testimonials"
+msgstr "Отзывы"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:151
+msgid "Meet The Team"
+msgstr "Познакомьтесь с нашей командой"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:128
+msgid "About Us"
+msgstr "О нас"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:105
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:82
+msgid "Homepage"
+msgstr "Главная страница"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:59
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:27
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:237
+msgid "User Journey"
+msgstr "Активность пользователя"
+
+#: wpforms/pro/includes/payments/class-payment.php:355
+msgid "Allow your customer to pay recurringly via the form."
+msgstr "Разрешите клиентам проводить регулярные платежи через форму."
+
+#: wpforms/pro/includes/payments/class-payment.php:351
+msgid "Enable recurring subscription payments"
+msgstr "Включить регулярные платежи по подписке"
+
+#: wpforms/pro/includes/payments/class-payment.php:343
+msgid "Add New Plan"
+msgstr "Добавить план"
+
+#: wpforms/pro/includes/payments/class-payment.php:340
+msgid "Recurring Payments"
+msgstr "Регулярные платежи"
+
+#: wpforms/pro/includes/payments/class-payment.php:318
+msgid "Allow your customers to one-time pay via the form."
+msgstr "Разрешите клиентам проводить единовременные платежи через форму."
+
+#: wpforms/pro/includes/payments/class-payment.php:314
+msgid "Enable one-time payments"
+msgstr "Включить единовременные платежи"
+
+#: wpforms/pro/includes/payments/class-payment.php:306
+msgid "One-Time Payments"
+msgstr "Единовременные платежи"
+
+#: wpforms/pro/includes/payments/class-payment.php:202
+msgid "You must provide a plan name."
+msgstr "Укажите название плана."
+
+#: wpforms/pro/includes/payments/class-payment.php:201
+msgid "Are you sure you want to delete this recurring plan?"
+msgstr "Удалить этот план с регулярной оплатой?"
+
+#: wpforms/pro/includes/payments/class-payment.php:200
+msgid "Plan Name #{id}"
+msgstr "Название плана #{id}"
+
+#: wpforms/pro/includes/payments/class-payment.php:199
+msgid "Eg: Monthly Subscription"
+msgstr "Например: месячная подписка"
+
+#: wpforms/pro/includes/payments/class-payment.php:198
+msgid "Enter a plan name"
+msgstr "Введите название плана"
+
+#. translators: %s - payment provider.
+#: wpforms/pro/includes/payments/class-payment.php:183
+msgid "<p>You should check your settings in <strong>Payments » %s</strong>.</p>"
+msgstr "<p>Проверьте настройки в разделе <strong>«Платежи» > %s</strong>.</p>"
+
+#. translators: %s - payment provider.
+#: wpforms/pro/includes/payments/class-payment.php:173
+msgid "<p>One of %s's recurring payment plans doesn't have conditional logic, which means that One-Time Payments will never work and were disabled.</p>"
+msgstr "<p>В одном из планов регулярных платежей %s нет условной логики. Единовременные платежи не могут работать, и по этой причине они были отключены.</p>"
+
+#: wpforms/src/Pro/SmartTags/SmartTags.php:28
+msgid "Entry Details URL"
+msgstr "URL данных записи"
+
+#. translators: %s - WPForms Entries Overview admin page URL.
+#: wpforms/src/Pro/Integrations/LiteConnect/Integration.php:479
+msgid "You can view your form entries inside the WordPress Dashboard from the <a href=\"%s\" rel=\"noreferrer noopener\" target=\"_blank\">Entries Overview report</a>."
+msgstr "Посмотреть записи из форм можно в Консоли WordPress, открыв <a href=\"%s\" rel=\"noreferrer noopener\" target=\"_blank\">отчет о записях</a>."
+
+#: wpforms/src/Pro/Integrations/LiteConnect/Integration.php:470
+msgid "Your form entries have been restored successfully!"
+msgstr "Записи из форм восстановлены!"
+
+#: wpforms/src/Pro/Integrations/LiteConnect/Integration.php:159
+msgid "The form no longer exists"
+msgstr "Форма больше не существует"
+
+#. translators: %s - Time when Lite Connect was enabled.
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:542
+msgid "since you enabled Lite Connect on %s"
+msgstr "после активации Lite Connect %s"
+
+#. translators: %d - Backed up entries count.
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:529
+msgid "%d form entry has been backed up"
+msgid_plural "%d form entries have been backed up"
+msgstr[0] "Выполнено резервное копирование %d записи из форм"
+msgstr[1] "Выполнено резервное копирование %d записей из форм"
+msgstr[2] "Выполнено резервное копирование %d записей из форм"
+
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:362
+msgid "Unfortunately, there were some issues during the entries importing process. Don't worry - data is not lost. Please try again later."
+msgstr "Во время импорта записей произошло несколько ошибок. Не волнуйтесь, ваши данные не пропали. Повторите попытку позже."
+
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:257
+msgid "Entry Restore Complete"
+msgstr "Восстановление записи завершено"
+
+#. translators: %d - number of imported entries.
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:304
+msgid "%d entry has been successfully imported."
+msgid_plural "%d entries have been successfully imported."
+msgstr[0] "Выполнен импорт %d записи."
+msgstr[1] "Выполнен импорт %d записей."
+msgstr[2] "Выполнен импорт %d записей."
+
+#. translators: %1$s - An addon download URL, %2$s - Link to manual
+#. installation guide.
+#: wpforms/src/Pro/Admin/Education/Core.php:45
+msgid "Could not install the addon. Please <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">download it from wpforms.com</a> and <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">install it manually</a>."
+msgstr "Could not install the addon. Please <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">download it from wpforms.com</a> and <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">install it manually</a>."
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:616
+msgid "Dismiss recommended plugin"
+msgstr "Скрыть рекомендованный плагин"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:533
+msgid "Reset graph to display all forms"
+msgstr "Сбросьте график, чтобы увидеть все формы"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:203
+msgid "Form Entries"
+msgstr "Записи формы"
+
+#: wpforms/pro/wpforms-pro.php:304
+msgid "Read the documentation"
+msgstr "Читать документацию"
+
+#: wpforms/pro/templates/admin/lite-connect/dashboard-widget-notice-restore.php:26
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:199
+msgid "Restore Entries Now"
+msgstr "Восстановить записи"
+
+#: wpforms/pro/templates/admin/lite-connect/dashboard-widget-notice-restore.php:22
+msgid "Restore them now and get instant access to reports."
+msgstr "Восстановите их прямо сейчас и получите моментальный доступ к отчетам."
+
+#: wpforms/pro/templates/admin/lite-connect/dashboard-widget-notice-restore.php:18
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:197
+msgid "Restore Your Form Entries"
+msgstr "Восстановление записей из форм"
+
+#: wpforms/pro/templates/admin/lite-connect/dashboard-widget-notice-in-progress.php:23
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:169
+msgid "Your entries are currently being imported. This should only take a few minutes. An admin notice will be displayed when the process is complete."
+msgstr "Выполняется импорт записей. Это займет несколько минут. По завершении появится сообщение от администратора."
+
+#: wpforms/pro/templates/admin/lite-connect/dashboard-widget-notice-in-progress.php:20
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:168
+msgid "Entry Restore in Progress"
+msgstr "Выполняется восстановление записи"
+
+#: wpforms/pro/templates/admin/addons-item.php:24
+msgid "logo"
+msgstr "логотип"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:705
+msgid "Entry Preview must be displayed on its own page, without other fields. HTML fields are allowed."
+msgstr "Предпросмотр записи должен отображаться на отдельной странице без других полей. Можно использовать поля HTML."
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:121
+msgid "It looks like the form you are trying to access is no longer available."
+msgstr "Похоже, форма, к которой вы хотите получить доступ, больше недоступна."
+
+#. translators: %1$s - total size of the selected files in megabytes, %2$s -
+#. allowed file upload limit in megabytes.
+#: wpforms/pro/wpforms-pro.php:484 wpforms/pro/wpforms-pro.php:1315
+msgid "The total size of the selected files %1$s MB exceeds the allowed limit %2$s MB."
+msgstr "Общий объем выбранных файлов составляет %1$s МБ, что больше допустимого (%2$s МБ)."
+
+#: wpforms/pro/wpforms-pro.php:442
+msgid "File Uploads"
+msgstr "Загрузка файлов"
+
+#: wpforms/pro/includes/fields/class-file-upload.php:659
+msgid "Max File Uploads"
+msgstr "Макс. количество файлов"
+
+#. translators: %s - max number of files allowed.
+#: wpforms/pro/includes/fields/class-file-upload.php:215
+#: wpforms/pro/includes/fields/class-file-upload.php:1163
+#: wpforms/pro/wpforms-pro.php:445
+msgid "File uploads exceed the maximum number allowed (%s)."
+msgstr "Количество загрузок превышает ограничение (%s)."
+
+#: wpforms/pro/includes/fields/class-date-time.php:1317
+#: wpforms/pro/wpforms-pro.php:465 wpforms/pro/wpforms-pro.php:1324
+msgid "Please enter time between {minTime} and {maxTime}."
+msgstr "Выберите время от {minTime} до {maxTime}."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:417
+msgid "Please provide a meaningful content for the note."
+msgstr "Добавьте содержимое заметки."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:365
+msgid "Something went wrong while deleting a note. Please try again."
+msgstr "При удалении заметки произошла ошибка. Попробуйте еще раз."
+
+#. translators: %s - Link to the Media Library.
+#: wpforms/src/Pro/Forms/Fields/FileUpload/EntriesEdit.php:107
+msgid "Please use the default <a href=\"%s\">WordPress Media</a> interface to remove this file."
+msgstr "Для удаления этого файла воспользуйтесь стандартным <a href=\"%s\">медиаинтерфейсом WordPress</a>."
+
+#. translators: %s - WPForms plugin settings URL.
+#: wpforms/src/Pro/Admin/Pages/Addons.php:240
+msgid "To access addons please enter and activate your WPForms license key in the plugin <a href=\"%s\">settings</a>."
+msgstr "Для доступа к дополнениям активируйте лицензионный ключ WPForms в <a href=\"%s\">настройках плагина</a>."
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:23
+msgid "Section Dividers"
+msgstr "Делители на секции"
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:20
+msgid "Empty Fields"
+msgstr "Пустые поля"
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:98
+msgid "Cog"
+msgstr "Шестерня"
+
+#: wpforms/src/Pro/Admin/Entries/Helpers.php:24
+msgid "IP Address"
+msgstr "IP-адрес"
+
+#. translators: %s - Name of the file that has been deleted.
+#: wpforms/src/Pro/Admin/Entries/Edit.php:1426
+msgid "The uploaded file \"%s\" has been deleted."
+msgstr "Отправленный файл «%s» удален."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:560
+msgid "Back to Entry"
+msgstr "Назад к записи"
+
+#. translators: %s - file name.
+#: wpforms/src/Pro/Admin/Entries/Edit.php:368
+msgid "Are you sure you want to permanently delete the file \"%s\"?"
+msgstr "Удалить файл «%s» безвозвратно?"
+
+#: wpforms/src/Pro/Admin/Builder/Builder.php:97
+msgid "Show Smart Tags"
+msgstr "Показать смарт-теги"
+
+#. translators: %1$s: Payment provider completed payments. Example: `PayPal
+#. Standard completed payments`, %2$s - Disabled Payment provider completed
+#. payments.
+#: wpforms/src/Pro/Admin/Builder/Builder.php:67
+msgid "<p>You have just <strong>disabled</strong> the notification for <strong>%2$s</strong> and <strong>enabled</strong> the notification for <strong>%1$s</strong>. Please note that this email notification will only send for <strong>%1$s</strong>.</p><p>If you'd like to set up additional notifications for this form, please see our <a href=\"https://wpforms.com/docs/setup-form-notification-wpforms/\" rel=\"nofollow noopener\" target=\"_blank\">tutorial</a>.</p>"
+msgstr "<p>Вы <strong>выключили</strong> уведомление для <strong>%2$s</strong> и <strong>включили</strong> уведомление для <strong>%1$s</strong>. Обратите внимание: это уведомление по эл. почте будет отправлено только для <strong>%1$s</strong>.</p><p>Чтобы настроить дополнительные уведомления для этой формы, пройдите <a href=\"https://wpforms.com/docs/setup-form-notification-wpforms/\" rel=\"nofollow noopener\" target=\"_blank\">обучение</a>.</p>"
+
+#. translators: %s: Payment provider completed payments. Example: `PayPal
+#. Standard completed payments`.
+#: wpforms/src/Pro/Admin/Builder/Builder.php:54
+msgid "<p>You have just enabled this notification for <strong>%s</strong>. Please note that this email notification will only send for <strong>%s</strong>.</p><p>If you'd like to set up additional notifications for this form, please see our <a href=\"https://wpforms.com/docs/setup-form-notification-wpforms/\" rel=\"nofollow noopener\" target=\"_blank\">tutorial</a>.</p>"
+msgstr "<p>Вы включили это уведомление для <strong>%s</strong>. Обратите внимание: это уведомление по эл. почте будет отправлено только для <strong>%s</strong>.</p><p>Чтобы настроить дополнительные уведомления для этой формы, пройдите <a href=\"https://wpforms.com/docs/setup-form-notification-wpforms/\" rel=\"nofollow noopener\" target=\"_blank\">обучение</a>.</p>"
+
+#: wpforms/pro/wpforms-pro.php:997
+msgid "Email Message"
+msgstr "Эл. письмо"
+
+#: wpforms/pro/wpforms-pro.php:887
+msgid "Email Subject Line"
+msgstr "Строка темы письма"
+
+#: wpforms/pro/wpforms-pro.php:766
+msgid "Enable Notifications"
+msgstr "Включить уведомления"
+
+#. translators: 1$s, %2$s - Links to the WPForms.com doc articles.
+#: wpforms/pro/wpforms-pro.php:744
+msgid "After saving these settings, be sure to <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">test a form submission</a>. This lets you see how emails will look, and to ensure that they <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">are delivered successfully</a>."
+msgstr "После сохранения настроек <a href=\"%1$s\" target=\"_blank\" rel=\"noopener noreferrer\">протестируйте отправляемую форму</a>. Это позволит оценить оформление писем и <a href=\"%2$s\" target=\"_blank\" rel=\"noopener noreferrer\">эффективность их доставки</a>."
+
+#. translators: %s - Link to the WPForms.com doc article.
+#: wpforms/pro/wpforms-pro.php:729
+msgid "Notifications are emails sent when a form is submitted. By default, these emails include entry details. For setup and customization options, including a video overview, please <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">see our tutorial</a>."
+msgstr "Уведомления — это письма, которые рассылаются при отправке формы. По умолчанию в них содержатся данные записи. Для настройки функций и просмотра видеообзора <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">обратитесь к руководству</a>."
+
+#: wpforms/pro/wpforms-pro.php:491
+msgid "Password Strength"
+msgstr "Сложность пароля"
+
+#: wpforms/pro/templates/fields/richtext-single-iframe.php:22
+msgid "View Entry &gt; Rich Text field"
+msgstr "Смотреть запись и поле Rich Text"
+
+#: wpforms/pro/templates/admin/addons-item.php:26
+msgid "Learn more"
+msgstr "Подробнее"
+
+#: wpforms/pro/includes/fields/class-richtext.php:736
+msgid "Uploaded to this form"
+msgstr "Загружено в эту форму"
+
+#: wpforms/pro/includes/fields/class-richtext.php:735
+msgid "Insert into form"
+msgstr "Вставить в форму"
+
+#: wpforms/pro/includes/fields/class-richtext.php:263
+msgid "Text"
+msgstr "Текст"
+
+#: wpforms/pro/includes/fields/class-richtext.php:262
+msgid "Visual"
+msgstr "Визуально"
+
+#: wpforms/pro/includes/fields/class-richtext.php:223
+msgid "Full"
+msgstr "Полный"
+
+#: wpforms/pro/includes/fields/class-richtext.php:211
+msgid "Field Style"
+msgstr "Стиль поля"
+
+#: wpforms/pro/includes/fields/class-richtext.php:186
+msgid "Check this option to store files in the WordPress Media Library."
+msgstr "Включите эту опцию, чтобы сохранить файлы в библиотеке мультимедиа WordPress."
+
+#: wpforms/pro/includes/fields/class-richtext.php:185
+msgid "Store files in WordPress Media Library"
+msgstr "Сохранить файлы в библиотеке мультимедиа WordPress"
+
+#: wpforms/pro/includes/fields/class-richtext.php:172
+msgid "Check this option to allow uploading and embedding files."
+msgstr "Включите эту опцию, чтобы разрешить отправку и встраивание файлов."
+
+#: wpforms/pro/includes/fields/class-richtext.php:171
+msgid "Allow Media Uploads"
+msgstr "Разрешить отправку файлов"
+
+#: wpforms/pro/includes/fields/class-richtext.php:80
+msgid "Rich Text"
+msgstr "Форматированный текст"
+
+#: wpforms/pro/includes/fields/class-password.php:651
+#: wpforms/pro/wpforms-pro.php:493
+msgid "A stronger password is required. Consider using upper and lower case letters, numbers, and symbols."
+msgstr "Используйте более сложный пароль, содержащий строчные и заглавные буквы, цифры и специальные знаки."
+
+#: wpforms/pro/includes/fields/class-password.php:282
+msgid "Strong"
+msgstr "Надёжный"
+
+#: wpforms/pro/includes/fields/class-password.php:280
+msgid "Weak"
+msgstr "Слабый"
+
+#: wpforms/pro/includes/fields/class-password.php:269
+msgid "Select minimum password strength level."
+msgstr "Выберите минимальную сложность пароля."
+
+#: wpforms/pro/includes/fields/class-password.php:268
+msgid "Minimum Strength"
+msgstr "Минимальная надежность"
+
+#: wpforms/pro/includes/fields/class-password.php:253
+msgid "Check this option to set minimum password strength."
+msgstr "Включите эту опцию, чтобы установить минимальную сложность пароля."
+
+#: wpforms/pro/includes/fields/class-password.php:252
+msgid "Enable Password Strength"
+msgstr "Включить сложность пароля"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:982
+msgid "Preview Style"
+msgstr "Стиль предпросмотра"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:968
+msgid "Show entry preview after confirmation message"
+msgstr "Открыть предпросмотр записи после подтверждения"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:948
+msgid "You can't hide the previous button because it is required for the entry preview field on this page."
+msgstr "Кнопку «Назад» нельзя скрыть, так как она необходима для поля предпросмотра записи на этой странице."
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:946
+msgid "Page breaks are required for entry previews to work. If you'd like to remove page breaks, you'll have to first remove the entry preview field."
+msgstr "Для предпросмотра требуются разрывы страниц. Для удаления разрывов страниц необходимо сначала удалить поле предпросмотра записи."
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:920
+msgid "Updating preview…"
+msgstr "Обновление предпросмотра…"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:904
+msgid "Entry preview will be displayed here and will contain all fields found on the previous page."
+msgstr "Здесь отображается предпросмотр записи со всеми полями с предыдущей страницы."
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:827
+msgid "Table, Compact"
+msgstr "Таблица, компактный"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:826
+msgid "Table"
+msgstr "Таблица"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:825
+msgid "Compact"
+msgstr "Компактный"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:824
+#: wpforms/pro/includes/fields/class-richtext.php:224
+msgid "Basic"
+msgstr "Базовый"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:810
+msgid "Please take a moment to verify your information. You can also go back to make changes."
+msgstr "Проверьте данные. Если требуется что-то изменить, можно вернуться."
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:809
+msgid "This is a preview of your submission. It has not been submitted yet!"
+msgstr "Так будет выглядеть ваша запись. Она еще не отправлена!"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:776
+msgid "Choose the entry preview display style."
+msgstr "Выберите стиль отображения предпросмотра записи."
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:742
+msgid "Fill in the message to show above the entry preview."
+msgstr "Введите сообщение, которое будет показано поверх предпросмотра записи."
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:741
+msgid "Preview Notice"
+msgstr "Примечание к предпросмотру"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:723
+msgid "Check this option to show a message above the entry preview."
+msgstr "Включите эту опцию, чтобы показать сообщение поверх предпросмотра записи."
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:722
+msgid "Display Preview Notice"
+msgstr "Показать примечание к предпросмотру"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:602
+msgid "Preview not available"
+msgstr "Предпросмотр недоступен"
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:18
+#: wpforms/pro/includes/fields/class-entry-preview.php:885
+msgid "Entry Preview"
+msgstr "Предпросмотр записи"
+
+#: wpforms/pro/includes/fields/class-address.php:443
+#: wpforms/pro/includes/fields/class-address.php:562
+#: wpforms/pro/includes/fields/class-address.php:613
+msgid "Turn On if you want to hide this sub field."
+msgstr "Включите, если хотите скрыть вложенное поле."
+
+#: wpforms/pro/includes/class-conditional-logic-fields.php:94
+msgid "Smart Logic"
+msgstr "Умная логика"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:585
+msgid "Add New Group"
+msgstr "Добавить группу"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:579
+msgctxt "Conditional Logic: new rule logic."
+msgid "or"
+msgstr "или"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:570
+msgid "Delete rule"
+msgstr "Удалить правило"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:569
+msgctxt "Conditional Logic: new rule logic."
+msgid "And"
+msgstr "И"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:569
+msgid "Create new rule"
+msgstr "Создать новое правило"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:538
+msgid "--- Select Choice ---"
+msgstr "--- Выберите вариант ---"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:493
+msgid "less than"
+msgstr "меньше чем"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:492
+msgid "greater than"
+msgstr "больше чем"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:491
+msgid "ends with"
+msgstr "заканчивается на"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:490
+msgid "starts with"
+msgstr "начинается с"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:478
+msgid "not empty"
+msgstr "не пусто"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:477
+msgid "empty"
+msgstr "пусто"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:423
+msgid "--- Select Field ---"
+msgstr "--- Выберите поле ---"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:290
+msgid "Don't process"
+msgstr "Не обрабатывать"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:289
+msgid "Process"
+msgstr "Обрабатывать"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:285
+msgid "this connection if"
+msgstr "это подключение, если"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:234
+#: wpforms/pro/includes/fields/class-address.php:442
+#: wpforms/pro/includes/fields/class-address.php:561
+#: wpforms/pro/includes/fields/class-address.php:612
+msgid "Hide"
+msgstr "Скрыть"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:233
+msgid "Show"
+msgstr "Показать"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:229
+msgid "this field if"
+msgstr "это поле, если"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1548
+msgid "(Abandoned)"
+msgstr "(Не завершено)"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1547
+msgid "M j, Y @ g:ia"
+msgstr "M j, Y @ g:ia"
+
+#. translators: %1$s - date for the entry; %2$s - time for the entry.
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1099
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#. translators: %d - form id.
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1031
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:738
+msgid "Form (#%d)"
+msgstr "Форма (#%d)"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1287
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:308
+msgid "Advanced Options"
+msgstr "Расширенные параметры"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1271
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:286
+msgid "Form fields"
+msgstr "Поля формы"
+
+#: wpforms/src/Pro/Admin/Builder/Builder.php:51
+msgid " - clone"
+msgstr "- клон"
+
+#: wpforms/pro/wpforms-pro.php:825 wpforms/pro/wpforms-pro.php:1124
+msgid "Open / Close"
+msgstr "Открыть / Закрыть"
+
+#: wpforms/pro/wpforms-pro.php:823
+msgid "Clone"
+msgstr "Дублировать"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1074
+msgid "Export All"
+msgstr "Экспортировать все"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1074
+msgid "Export Filtered"
+msgstr "Экспорт по фильтру"
+
+#. translators: %s - number of entries found.
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:786
+msgid "Found <strong>%s entry</strong>"
+msgid_plural "Found <strong>%s entries</strong>"
+msgstr[0] "Найдена <strong>%s запись</strong>"
+msgstr[1] "Найдено <strong>%s записи</strong>"
+msgstr[2] "Найдено <strong>%s записей</strong>"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1388
+msgid "Export (XLSX)"
+msgstr "Экспорт (XLSX)"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:524
+#: wpforms/src/Pro/Admin/Entries/Edit.php:416
+msgid "It looks like the entry you are trying to access is no longer available."
+msgstr "Похоже, запись, к которой вы хотите получить доступ, больше недоступна."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:506
+#: wpforms/src/Pro/Admin/Entries/Edit.php:398
+msgid "It looks like the provided entry ID isn't valid."
+msgstr "Предоставленный ID записи не является валидным."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:88
+#: wpforms/src/Pro/Forms/Fields/Richtext/EntryViewContent.php:65
+msgid "Sorry, you are not allowed to view this entry."
+msgstr "Извините, но вы не можете просматривать эту запись."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:593
+msgid "See More Details"
+msgstr "Подробнее"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:255
+msgid "Export Options"
+msgstr "Настройки экспорта"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:183
+msgid "Export in Microsoft Excel (.xlsx)"
+msgstr "Экспорт в Microsoft Excel (.xlsx)"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:453
+msgid "No"
+msgstr "Нет"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:453
+msgid "Yes"
+msgstr "Да"
+
+#: wpforms/pro/wpforms-pro.php:1567
+msgid "Addon auto-updates controlled by WPForms"
+msgstr "Обновление дополнений контролируется WPForms"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:424
+msgid "Something went wrong while performing this action."
+msgstr "Что-то пошло не так во время выполнения этого действия."
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:417
+msgid "Your session expired. Please reload the builder."
+msgstr "Срок вашей сессии истек. Перезагрузите редактор."
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:759
+msgid "It looks like you don't have any form entries just yet - check back soon!"
+msgstr "Похоже, у вас еще нет записей в формах. Возвращайтесь позже!"
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:86
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:264
+msgid "Upgrade to WPForms Pro"
+msgstr "Улучшить до WPForms Pro"
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:83
+msgid "Please upgrade to the PRO plan to unlock Geolocation and more awesome features."
+msgstr "Перейдите на план PRO, чтобы открыть геолокацию и другие потрясающие функции."
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:79
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:257
+msgid "Install & Activate"
+msgstr "Установить и активировать"
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:69
+msgid "You can install the Geolocation addon with just a few clicks!"
+msgstr "Установите дополнение для геолокации за пару нажатий!"
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:67
+msgid "Geolocation allows you to quickly see where your visitors are located!"
+msgstr "Геолокация позволяет быстро понять, где находятся ваши посетители!"
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:61
+msgid "Geolocation"
+msgstr "Геолокация"
+
+#. translators: 1: Date 2: Date
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:600
+msgid "between %1$s and %2$s"
+msgstr "между %1$s и %2$s"
+
+#. translators: %s: Date
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:593
+msgid "on %s"
+msgstr "на %s"
+
+#. translators: 1: field name, 2: operation, 3: term
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:537
+msgid "where %1$s %2$s \"%3$s\""
+msgstr "где %1$s %2$s \"%3$s\""
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:533
+msgid "any form field"
+msgstr "любое поле формы"
+
+#: wpforms/pro/includes/fields/class-date-time.php:819
+msgid "End Time"
+msgstr "Окончание"
+
+#: wpforms/pro/includes/fields/class-date-time.php:819
+msgid "Start Time"
+msgstr "Начало"
+
+#: wpforms/pro/includes/fields/class-date-time.php:741
+msgid "Check this option to adjust the range of times that can be selected."
+msgstr "Включите эту опцию, чтобы настроить доступный для выбора временной диапазон."
+
+#: wpforms/pro/includes/fields/class-date-time.php:740
+#: wpforms/pro/wpforms-pro.php:463
+msgid "Limit Hours"
+msgstr "Ограничение по времени"
+
+#: wpforms/pro/includes/fields/class-date-time.php:708
+msgid "Check this option to prevent any previous date from being selected."
+msgstr "Включите эту опцию, чтобы запретить выбор даты в прошлом."
+
+#: wpforms/pro/includes/fields/class-date-time.php:707
+msgid "Disable Past Dates"
+msgstr "Запретить даты в прошлом"
+
+#: wpforms/pro/includes/fields/class-date-time.php:647
+msgid "Sat"
+msgstr "Сб"
+
+#: wpforms/pro/includes/fields/class-date-time.php:646
+msgid "Fri"
+msgstr "Пт"
+
+#: wpforms/pro/includes/fields/class-date-time.php:645
+msgid "Thu"
+msgstr "Чт"
+
+#: wpforms/pro/includes/fields/class-date-time.php:644
+msgid "Wed"
+msgstr "Ср"
+
+#: wpforms/pro/includes/fields/class-date-time.php:643
+msgid "Tue"
+msgstr "Вт"
+
+#: wpforms/pro/includes/fields/class-date-time.php:642
+msgid "Mon"
+msgstr "Пн"
+
+#: wpforms/pro/includes/fields/class-date-time.php:641
+msgid "Sun"
+msgstr "Вс"
+
+#: wpforms/pro/includes/fields/class-date-time.php:624
+msgid "Check this option to adjust which days of the week can be selected."
+msgstr "Включите эту опцию, чтобы настроить дни недели, которые можно выбирать."
+
+#: wpforms/pro/includes/fields/class-date-time.php:623
+msgid "Limit Days"
+msgstr "Ограничение по дням"
+
+#. translators: %d - choice number.
+#. translators: %d - choice value.
+#: wpforms/pro/includes/class-conditional-logic-core.php:546
+#: wpforms/pro/includes/class-conditional-logic-fields.php:683
+msgid "Choice %d"
+msgstr "Выбрать %d"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:155
+msgid "License key location"
+msgstr "Раположение лицензионного ключа"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:150
+msgid "License key type"
+msgstr "Тип лицензионного ключа"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:145
+msgid "License status"
+msgstr "Статус лицензии"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:128
+msgid "Total entries"
+msgstr "Всего записей"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:106
+msgid "Login to your WPForms account to update"
+msgstr "Войдите в свою учетную запись WPForms для обновления"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:101
+msgid "Plugin and Addon Access"
+msgstr "Доступ к плагину и дополнениям"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:100
+msgid "World Class Support"
+msgstr "Поддержка мирового уровня"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:99
+msgid "Security Improvements"
+msgstr "Улучшения безопасности"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:98
+msgid "Marketing and Payment Integration Compatibility Updates"
+msgstr "Обновление совместимости маркетинговых и платежных интеграций"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:97
+msgid "WordPress Compatibility Updates"
+msgstr "Обновление совместимости WordPress"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:96
+msgid "New Addons and Integrations"
+msgstr "Новые дополнения и интеграции"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:95
+msgid "New Features"
+msgstr "Новые возможности"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:94
+msgid "Plugin and Addon Updates"
+msgstr "Обновление плагина и дополнений"
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:93
+msgid "A valid license is required for following benefits. Please read carefully."
+msgstr "Для следующих преимуществ требуется действующая лицензия. Прочитайте внимательно."
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:71
+msgid "You have access to updates, addons, new features, and more."
+msgstr "У вас есть доступ к обновлениям, дополнениям, новым функциям и многому другому."
+
+#: wpforms/src/Pro/Admin/SiteHealth.php:66
+msgid "Security"
+msgstr "Безопасность"
+
+#. translators: %s license status
+#: wpforms/src/Pro/Admin/SiteHealth.php:61
+msgid "Your WPForms license is %s"
+msgstr "Ваша лицензия WPForms - %s"
+
+#: wpforms/pro/wpforms-pro.php:509
+msgid "Check this option to prevent the storage of IP addresses and User Agent on all forms. If unchecked, then this can be managed on a form-by-form basis inside the form builder under Settings → General"
+msgstr "Включите эту опцию, чтобы запретить хранение IP-адресов и агентов пользователя во всех формах. Если отключить опцию, эту функцию можно будет настраивать в конструкторе для каждой формы отдельно в меню «Настройки» → «Общие»"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:893
+msgid "Select columns&hellip;"
+msgstr "Выберите столбцы&hellip;"
+
+#: wpforms/src/Pro/Admin/Education/Core.php:116
+msgid "The %name% is not installed. Please install and activate it to use this feature."
+msgstr "%name% не установлено. Установите и активируйте, чтобы использовать эту функцию."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:855
+msgid "You don't have any fields in this form."
+msgstr "В этой форме нет полей."
+
+#. translators: %s - form edit URL.
+#: wpforms/src/Pro/Admin/Entries/Edit.php:845
+msgid "You don't have any fields in this form. <a href=\"%s\">Add some!</a>"
+msgstr "В этой форме нет полей. <a href=\"%s\">Добавьте поля!</a>"
+
+#: wpforms-aweber/class-aweber.php:473
+msgid "Click here to authorize."
+msgstr "Щелкните здесь для авторизации"
+
+#: wpforms/pro/templates/admin/empty-states/no-entries.php:17
+#: wpforms/pro/templates/admin/empty-states/no-entry.php:17
+msgid "Hi there!"
+msgstr "Привет!"
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:251
+#: wpforms/pro/includes/class-conditional-logic-core.php:338
+#: wpforms/src/Pro/Admin/Builder/Builder.php:89
+msgid "How to use Conditional Logic"
+msgstr "Как использовать условную логику"
+
+#: wpforms/pro/wpforms-pro.php:481
+msgid "File Upload Total Size"
+msgstr "Общий размер загружаемых файлов"
+
+#: wpforms/pro/wpforms-pro.php:438 wpforms/pro/wpforms-pro.php:1331
+msgid "File exceeds max size allowed. File was not uploaded."
+msgstr "Файл превышает максимально допустимый размер. Файл не был загружен."
+
+#: wpforms/pro/wpforms-pro.php:288
+msgid "Support"
+msgstr "Поддержка"
+
+#: wpforms/pro/wpforms-pro.php:287
+msgid "Go to WPForms.com Support page"
+msgstr "Перейти на страницу поддержки WPForms.com"
+
+#: wpforms/pro/wpforms-pro.php:305
+msgid "Docs"
+msgstr "Документы"
+
+#: wpforms/pro/includes/admin/class-license.php:550
+msgid "An active license is needed to create new forms and edit existing forms. It also provides access to new features & addons, plugin updates (including security improvements), and our world class support!"
+msgstr "Активная лицензия необходима для создания новых форм и редактирования существующих форм. Она также предоставляет доступ к новым функциям и дополнениям, обновлениям плагинов (включая улучшения безопасности) и нашей поддержке мирового класса!"
+
+#. translators: %1$s - post type name; %2$s - post type ID.
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1142
+msgid "%1$s ID: %2$s"
+msgstr "%1$s ID: %2$s"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:999
+msgid "No logs."
+msgstr "Нет журналов."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:991
+msgid "Log"
+msgstr "Журнал"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1185
+msgid "No entries found."
+msgstr "Записи не найдены."
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:668
+msgid "Edit Form Entry"
+msgstr "Редактировать запись формы"
+
+#: wpforms/pro/includes/admin/ajax-actions.php:123
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:950
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:297
+msgid "Entry unread."
+msgstr "Непрочитанная запись."
+
+#: wpforms/pro/includes/admin/ajax-actions.php:53
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1068
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:231
+msgid "Entry unstarred."
+msgstr "Запись без отметки."
+
+#: wpforms/pro/includes/admin/ajax-actions.php:43
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1009
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:199
+msgid "Entry starred."
+msgstr "Запись отмечена."
+
+#: wpforms/pro/includes/fields/class-date-time.php:1014
+#: wpforms/pro/includes/fields/class-date-time.php:1056
+msgid "Clear Date"
+msgstr "Очистить дату"
+
+#: wpforms/pro/includes/fields/class-html.php:227
+msgid "Contents of this field are not displayed in the form builder preview."
+msgstr "Содержимое этого поля не отображается в окне предварительного просмотра конструктора форм."
+
+#: wpforms/pro/includes/fields/class-html.php:118
+msgid "Enter text for the form field label. It will help identify your HTML blocks inside the form builder, but will not be displayed in the form."
+msgstr "Введите текст для заголовка поля. Это поможет идентифицировать ваши HTML-блоки внутри конструктора форм, но не будет отображаться в форме."
+
+#: wpforms/pro/includes/fields/class-html.php:117
+msgid "Label"
+msgstr "Заголовок"
+
+#: wpforms/pro/includes/fields/class-page-break.php:689
+msgid "First Page / Progress Indicator"
+msgstr "Первая страница / Индикатор прогресса"
+
+#: wpforms/pro/includes/fields/class-page-break.php:648
+msgid "By default, a user's view is pulled to the top of each form page. Set to ON to disable this animation."
+msgstr "По умолчанию видимая пользователю область вытягивается в верхнюю часть каждой страницы формы. Активируйте , чтобы отключить эту анимацию."
+
+#: wpforms/pro/includes/fields/class-page-break.php:647
+msgid "Disable Scroll Animation"
+msgstr "Отключить анимацию прокрутки"
+
+#: wpforms/pro/includes/fields/class-phone.php:209
+msgid "Smart"
+msgstr "Смарт"
+
+#: wpforms/pro/includes/fields/class-phone.php:163
+#: wpforms/pro/includes/fields/class-phone.php:359
+#: wpforms/pro/wpforms-pro.php:426
+msgid "Please enter a valid phone number."
+msgstr "Введите правильный номер телефона."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:210
+#: wpforms/pro/includes/fields/class-file-upload.php:1591
+#: wpforms/pro/includes/fields/class-file-upload.php:1658
+#: wpforms/pro/includes/fields/class-file-upload.php:1702
+#: wpforms/pro/includes/fields/class-file-upload.php:1729
+msgid "Something went wrong, please try again."
+msgstr "Что-то пошло не так, пожалуйста, попробуйте еще раз."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:1556
+msgid "Something went wrong while removing the file."
+msgstr "Что-то пошло не так при удалении файла."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:725
+msgid "Classic"
+msgstr "Классический"
+
+#: wpforms/pro/includes/fields/class-file-upload.php:724
+msgid "Modern"
+msgstr "Современный"
+
+#: wpforms/pro/includes/fields/class-file-upload.php:712
+msgid "Modern Style supports multiple file uploads, displays a drag-and-drop upload box, and uses AJAX. Classic Style supports single file upload and displays a traditional upload button."
+msgstr "Современный стиль поддерживает передачу нескольких файлов, отображает окно загрузки с помощью перетаскивания и использует AJAX. Классический стиль поддерживает передачу одного файла и отображает традиционную кнопку отправки."
+
+#: wpforms/pro/includes/fields/class-entry-preview.php:775
+#: wpforms/pro/includes/fields/class-file-upload.php:711
+msgid "Style"
+msgstr "Стиль"
+
+#: wpforms/pro/includes/fields/class-file-upload.php:660
+msgid "Enter the max number of files to allow. If left blank, the value defaults to 1."
+msgstr "Введите максимально допустимое количество файлов. По умолчанию: 1."
+
+#. translators: % - max number of files as a template string (not a number),
+#. replaced by a number later.
+#: wpforms/pro/includes/fields/class-file-upload.php:534
+msgid "You can upload up to %s files."
+msgstr "Вы можете загрузить до %s файлов."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:532
+msgid "Click or drag files to this area to upload."
+msgstr "Нажмите или перетащите файлы в эту область для загрузки."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:531
+#: wpforms/pro/templates/fields/file-upload-backend.php:22
+#: wpforms/pro/templates/fields/file-upload-frontend.php:40
+msgid "Click or drag a file to this area to upload."
+msgid_plural "Click or drag files to this area to upload."
+msgstr[0] "Нажмите или перетащите файл в эту область для загрузки."
+msgstr[1] "Нажмите или перетащите файлы в эту область для загрузки."
+msgstr[2] "Нажмите или перетащите файлы в эту область для загрузки."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:226
+msgid "File upload is in progress. Please submit the form once uploading is completed."
+msgstr "Загрузка файлов продолжается. Пожалуйста, отправьте форму сразу после завершения загрузки."
+
+#. translators: %s - max allowed file size by a server.
+#: wpforms/pro/includes/fields/class-file-upload.php:222
+msgid "File exceeds the upload limit allowed (%s)."
+msgstr "Файл превышает допустимый лимит загрузки (%s)."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:211
+msgid "This file was not uploaded."
+msgstr "Этот файл не был загружен."
+
+#: wpforms/src/Pro/Access/Capabilities.php:83
+msgid "Delete Others' Forms Entries"
+msgstr "Удалить другие записи форм"
+
+#: wpforms/src/Pro/Access/Capabilities.php:82
+msgid "Delete Own Forms Entries"
+msgstr "Удалить свои записи форм"
+
+#: wpforms/src/Pro/Access/Capabilities.php:81
+msgid "Edit Others' Forms Entries"
+msgstr "Редактировать другие записи форм"
+
+#: wpforms/src/Pro/Access/Capabilities.php:80
+msgid "Edit Own Forms Entries"
+msgstr "Изменить свои записи формы"
+
+#: wpforms/src/Pro/Access/Capabilities.php:79
+msgid "View Others' Forms Entries"
+msgstr "Смотреть другие записи форм"
+
+#: wpforms/src/Pro/Access/Capabilities.php:78
+msgid "View Own Forms Entries"
+msgstr "Смотреть свои записи форм"
+
+#: wpforms/src/Pro/Access/Capabilities.php:76
+msgid "Delete Others' Forms"
+msgstr "Удалить другие формы"
+
+#: wpforms/src/Pro/Access/Capabilities.php:75
+msgid "Delete Own Forms"
+msgstr "Удалить свои формы"
+
+#: wpforms/src/Pro/Access/Capabilities.php:74
+msgid "Edit Others' Forms"
+msgstr "Редактировать другие формы"
+
+#: wpforms/src/Pro/Access/Capabilities.php:73
+msgid "Edit Own Forms"
+msgstr "Редактировать свои формы"
+
+#: wpforms/src/Pro/Access/Capabilities.php:72
+msgid "View Others' Forms"
+msgstr "Смотреть другие формы"
+
+#: wpforms/src/Pro/Access/Capabilities.php:71
+msgid "View Own Forms"
+msgstr "Смотреть свои формы"
+
+#: wpforms/src/Pro/Admin/Education/Core.php:68
+msgid "Heads up!"
+msgstr "Осторожно!"
+
+#: wpforms/src/Pro/Admin/Entries/Overview/Table.php:153
+msgid "No forms found."
+msgstr "Формы не найдены."
+
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:164
+msgid "Get WPForms pro"
+msgstr "Получить WPForms Pro"
+
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:163
+msgid "Enter license key"
+msgstr "Введите лицензионный ключ"
+
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:162
+msgid "To create more forms, please verify your WPForms license."
+msgstr "Чтобы создать больше форм, пожалуйста, подтвердите свою лицензию WPForms."
+
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:161
+msgid "Heads up! A WPForms license key is required."
+msgstr "Внимание! Требуется лицензионный ключ WPForms."
+
+#: wpforms/pro/includes/admin/class-license.php:552
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:133
+#: wpforms/src/Pro/Admin/Education/Core.php:103
+msgid "Renew Now"
+msgstr "Обновить сейчас"
+
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:132
+msgid "An active license is needed to access new features & addons, plugin updates (including security improvements), and our world class support!"
+msgstr "Активная лицензия необходима для доступа к новым функциям и дополнениям, обновлениям плагинов (включая улучшения безопасности) и нашей поддержке мирового класса!"
+
+#: wpforms/pro/includes/admin/class-license.php:549
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:131
+msgid "Heads up! Your WPForms license has expired."
+msgstr "Внимание! Срок действия вашей лицензии WPForms истек."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:1063
+msgid "Entry edited."
+msgstr "Запись отредактирована."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:966
+msgid "Entry has not been saved, please see the fields errors."
+msgstr "Запись не сохранена, см. поля с ошибками."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:939
+msgid "Invalid entry."
+msgstr "Неверная запись."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:897
+msgid "Invalid Entry."
+msgstr "Неверная запись."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:893
+#: wpforms/src/Pro/Admin/Entries/Edit.php:932
+msgid "Invalid form."
+msgstr "Неверная форма."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:559
+#: wpforms/src/Pro/Admin/Entries/Edit.php:612
+msgid "Edit Entry"
+msgstr "Изменить запись"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:669
+#: wpforms/pro/wpforms-pro.php:837 wpforms/pro/wpforms-pro.php:1135
+#: wpforms/src/Pro/Admin/Entries/Edit.php:515
+msgid "Edit"
+msgstr "Редактировать"
+
+#: wpforms/pro/includes/admin/ajax-actions.php:113
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:891
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:603
+#: wpforms/src/Pro/Admin/Entries/Edit.php:468
+msgid "Entry read."
+msgstr "Запись прочитана."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:366
+msgid "The entry was successfully saved."
+msgstr "Запись была успешно сохранена."
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:364
+msgid "Continue Editing"
+msgstr "Продолжить редактирование"
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:363
+msgid "Success"
+msgstr "Успешно"
+
+#: wpforms/src/Pro/Admin/Entries/Edit.php:362
+#: wpforms/src/Pro/Admin/Entries/Edit.php:876
+msgid "Update"
+msgstr "Обновить"
+
+#. translators: %1$s - user link; %2$s - date.
+#. translators: %1$s - user name, %2$s - date.
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:948
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1022
+#: wpforms/pro/templates/admin/entry-print/notes.php:32
+msgid "Added by %1$s on %2$s"
+msgstr "Добавил(а) %1$s в %2$s"
+
+#: wpforms/pro/templates/admin/entry-print/head.php:52
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:165
+msgid "Close"
+msgstr "Закрыть"
+
+#. translators: %d is the entry ID.
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:83
+msgid "Entry #%d"
+msgstr "Запись #%d"
+
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:28
+msgid "Compact View"
+msgstr "Компактный вид"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:156
+msgid "You need to have at least one form before you can use entries export."
+msgstr "Вам нужно иметь хотя бы одну форму, чтобы использовать экспорт записей."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:139
+msgid "Select a Form"
+msgstr "Выберите форму"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:104
+msgid "Download Export File"
+msgstr "Скачать файл экспорта"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:90
+msgid "Custom Date Range"
+msgstr "Пользовательский диапазон дат"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:83
+msgid "Additional Information"
+msgstr "Дополнительная информация"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:75
+msgid "Form Fields"
+msgstr "Поля формы"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:63
+msgid "Select a form to export entries, then select the fields you would like to include. You can also define search and date filters to further personalize the list of entries you want to retrieve. WPForms will generate a downloadable CSV/XLSX file of your entries."
+msgstr "Выберите форму для экспорта записей, а затем выберите поля, которые вы хотели бы включить. Вы также можете определить фильтры поиска и даты для дальнейшей персонализации списка записей, которые вы хотите получить. WPForms будет генерировать загружаемые CSV ваших записей."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:61
+msgid "Export Entries"
+msgstr "Экспорт записей"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:216
+msgid "click here"
+msgstr "нажмите здесь"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:215
+msgid "If the download does not start automatically"
+msgstr "Если загрузка не запускается автоматически"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:214
+msgid "The file was generated successfully."
+msgstr "Файл был успешно сгенерирован."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:213
+msgid "No entries found after applying your filters."
+msgstr "После применения фильтров не найдено ни одной записи."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:212
+msgid "This can take a while. Please wait."
+msgstr "Это может занять некоторое время. Пожалуйста, подождите."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:211
+msgid "Generating a list of entries according to your filters."
+msgstr "Генерация списка записей в соответствии с вашими фильтрами."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:202
+msgid "The form does not have any fields for export."
+msgstr "У формы нет полей для экспорта."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:201
+msgid "Export file is empty."
+msgstr "Файл экспорта пуст."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:200
+msgid "Export file cannot be retrieved from a file system."
+msgstr "Файл экспорта не может быть извлечен из файловой системы."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:199
+msgid "Unknown request."
+msgstr "Неизвестный запрос."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:198
+msgid "Specified form seems to be broken."
+msgstr "Указанная форма похоже сломана."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:197
+msgid "Incorrect entry ID has been specified."
+msgstr "Указан неверный ID записи."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:196
+msgid "Incorrect form ID has been specified."
+msgstr "Указан неверный ID формы."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:195
+msgid "You don't have enough capabilities to complete this request."
+msgstr "У вас недостаточно возможностей для выполнения этого запроса."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:194
+msgid "There were problems while preparing your export file. Please recheck export settings and try again."
+msgstr "При подготовке файла экспорта возникли проблемы. Проверьте параметры экспорта и повторите попытку."
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:162
+msgid "Include data of previously deleted fields"
+msgstr "Включить данные ранее удаленных полей"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:161
+msgid "Payment Gateway Information"
+msgstr "Информация о платежном шлюзе"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:160
+msgid "Payment Status"
+msgstr "Статус платежа"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:166
+msgid "Geolocation Details"
+msgstr "Детали геолокации"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:159
+msgid "Unique Generated User ID"
+msgstr "Уникальный сгенерированный ID пользователя"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:158
+msgid "User IP"
+msgstr "IP пользователя"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:157
+#: wpforms/src/Pro/Admin/Entries/Helpers.php:25
+msgid "User Agent"
+msgstr "Браузер"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:155
+msgid "Viewed"
+msgstr "Просмотрено"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:306
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:907
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:937
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:153
+#: wpforms/src/Pro/Admin/Entries/Helpers.php:23
+msgid "Entry Notes"
+msgstr "Заметки записи"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:152
+#: wpforms/src/Pro/SmartTags/SmartTags.php:27
+msgid "Entry Date"
+msgstr "Дата записи"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:300
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:903
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:930
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:151
+#: wpforms/src/Pro/Admin/Entries/Helpers.php:22
+#: wpforms/src/Pro/SmartTags/SmartTags.php:26
+msgid "Entry ID"
+msgstr "ID записи"
+
+#. translators: %d - deleted field ID.
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:712
+msgid "Deleted field #%d"
+msgstr "Удалено поле #%d"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:796
+msgid "Customer"
+msgstr "Клиент"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:797
+msgid "Subscription"
+msgstr "Подписка"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:794
+msgid "Mode"
+msgstr "Режим"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:795
+msgid "Transaction"
+msgstr "Транзакция"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:613
+msgid "Postal"
+msgstr "Почтовый индекс"
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:45
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:611
+msgid "Zipcode"
+msgstr "Почтовый индекс"
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:27
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:41
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:602
+msgid "Location"
+msgstr "Местоположение"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:595
+msgid "Map"
+msgstr "Карта"
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:53
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:583
+msgid "Lat/Long"
+msgstr "Широта/Долгота"
+
+#. translators: %d - field ID.
+#. translators: %d - Field ID.
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:315
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:324
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:914
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:950
+#: wpforms/pro/includes/class-conditional-logic-core.php:445
+#: wpforms/src/Pro/Admin/Builder/Notifications/Advanced/Settings.php:251
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:189
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:295
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:96
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:316
+msgid "Field #%d"
+msgstr "Поле #%d"
+
+#: wpforms/src/Pro/Admin/Entries/Overview/Table.php:170
+msgid "Graph"
+msgstr "График"
+
+#: wpforms/src/Pro/Admin/Entries/Overview/Table.php:168
+msgid "All Time"
+msgstr "За все время"
+
+#: wpforms/src/Pro/Admin/Entries/Overview/Table.php:167
+msgid "Created"
+msgstr "Создано"
+
+#: wpforms/src/Pro/Admin/Entries/Overview/Table.php:166
+msgid "Form Name"
+msgstr "Название формы"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:429
+#: wpforms/src/Pro/Admin/Entries/Edit.php:901
+msgid "You do not have permission to perform this action."
+msgstr "У вас недостаточно прав для выполнения данного действия."
+
+#: wpforms/pro/templates/education/admin/did-you-know.php:25
+msgid "Did You Know?"
+msgstr "Знаете ли вы?"
+
+#: wpforms/pro/templates/education/admin/did-you-know.php:37
+#: wpforms/pro/wpforms-pro.php:725
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:246
+msgid "Dismiss this message."
+msgstr "Скрыть это сообщение."
+
+#: wpforms/pro/templates/education/admin/did-you-know.php:35
+msgid "Upgrade to Pro"
+msgstr "Улучшить до Pro"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:278
+msgid "You can automatically save submitted form info in a free Google Sheets spreadsheet. Great for keeping track of your entries!"
+msgstr "Вы можете автоматически сохранять отправленные данные формы в бесплатной электронной таблице Google Sheets. Отлично подходит для отслеживания ваших записей!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:273
+msgid "You can let users upload videos to your YouTube channel. Perfect for collecting testimonials!"
+msgstr "Вы можете позволить пользователям загружать видео на ваш канал YouTube. Идеально подходит для сбора отзывов!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:268
+msgid "Save time on invoicing! You can automatically add customers to Quickbooks after they complete a form."
+msgstr "Сэкономьте время на выставлении счетов! Вы можете автоматически добавлять клиентов в Quickbooks после заполнения формы."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:263
+msgid "You can get notified via text when someone completes your form! Great for closing deals faster."
+msgstr "Вы можете получить уведомление через текст, когда кто-то заполняет вашу форму! Отлично подходит для быстрого закрытия сделок."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:258
+msgid "When a user submits an uploaded file to your form, it can upload automatically to your Google Drive for better organization!"
+msgstr "Когда пользователь отправляет загруженный файл в вашу форму, он может автоматически загружаться на ваш Google Диск для лучшей организации!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:253
+msgid "You can automatically send uploaded files from your form entries to Dropbox for safekeeping and organization!"
+msgstr "Вы можете автоматически отправлять загруженные файлы из записей формы в Dropbox для сохранности и организации!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:248
+msgid "You can automatically send form entries to your Google Calendar. Perfect for appointments!"
+msgstr "Вы можете автоматически отправлять записи формы в свой Google календарь. Идеально подходит для встреч!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:243
+msgid "You can put a pre-built job application form on your website. Perfect if you’re looking for new employees!"
+msgstr "Вы можете разместить готовую форму заявления о приеме на работу на вашем сайте. Идеально, если вы ищете новых сотрудников!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:238
+msgid "You can make your forms feel like a one-on-one conversation and boost conversion rates."
+msgstr "Вы можете сделать свои формы похожими на беседу один на один и повысить коэффициент конверсии."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:233
+msgid "You can easily display survey results graphically. Great for presentations!"
+msgstr "Вы можете легко отображать результаты опроса в графическом виде. Отлично подходит для презентаций!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:228
+msgid "You can make your forms interactive and easier to complete. A great way to get more leads!"
+msgstr "Вы можете сделать свои формы интерактивными и легкозаполняемыми. Отличный способ получить больше лидов!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:223
+msgid "WPForms is a great alternative to SurveyMonkey! You can create your first survey or poll today."
+msgstr "WPForms - отличная альтернатива SurveyMonkey! Вы можете создать свой первый опрос или голосование сегодня."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:218
+msgid "You can create a customer cancellation survey to find out what you can do to improve."
+msgstr "Можно создать опрос об отмене клиента, чтобы узнать, что можно сделать для улучшения."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:213
+msgid "You can easily add a poll to your site! Helpful for making business decisions based on your audience's needs."
+msgstr "Вы можете легко добавить голосование на свой сайт! Полезно для принятия деловых решений на основе потребностей вашей аудитории."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:208
+msgid "You can add a Likert rating scale to your WordPress forms. Great for measuring your customer’s experience with your business!"
+msgstr "Добавьте шкалу оценки Лайкерта в формы WordPress. Отлично подходит для оценки впечатлений клиентов от взаимодействия с вашим бизнесом!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:203
+msgid "You can add a customer feedback form to your site. Try automatically emailing it out after a sale!"
+msgstr "Вы можете добавить форму отзыва клиента на свой сайт. Попробуйте автоматически отправить его по электронной почте после продажи!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:198
+msgid "You can create surveys or polls and see interactive visual reports of your user's answers."
+msgstr "Вы можете создавать опросы или голосования и просматривать интерактивные визуальные отчеты ответов ваших пользователей."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:193
+msgid "You can create a simple order form on your site to sell services or products online."
+msgstr "Вы можете создать простую форму заказа на своем сайте, чтобы продавать услуги или продукты онлайн."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:188
+msgid "You can make money selling digital downloads on your site by using Stripe or PayPal."
+msgstr "Вы можете зарабатывать деньги, продавая цифровые загрузки на своем сайте, используя Stripe или PayPal."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:183
+msgid "You can accept PayPal on your website — a great way to increase your revenue."
+msgstr "Вы можете принимать PayPal на своем веб-сайте - это отличный способ увеличить свой доход."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:178
+msgid "With the Offline Forms addon, you can save data entered into your forms even if the user loses their internet connection."
+msgstr "С помощью дополнения Offline Forms можно сохранять данные, введенные в формы, даже если пользователь теряет подключение к Интернету."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:173
+msgid "If you're planning an event, you can create an RSVP form to stay organized and get higher response rates!"
+msgstr "Если вы планируете мероприятие, вы можете создать форму RSVP, чтобы оставаться организованным и получать более высокие показатели отклика!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:168
+msgid "You can use NPS Surveys to learn about your visitors. A tactic used by some of the biggest brands around!"
+msgstr "Вы можете использовать опросы NPS, чтобы узнать о своих посетителях. Тактика, которую используют одни из крупнейших брендов вокруг!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:163
+msgid "You can limit one form submission per person to avoid duplicate entries. Perfect for applications and giveaway!"
+msgstr "Можно ограничить отправку одной формой на человека, чтобы избежать дублирования записей. Идеально подходит для приложений и бесплатных раздач!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:158
+msgid "You can let people automatically register as users on your WordPress site. Perfect for things like accepting guest blog posts!"
+msgstr "Вы можете позволить людям автоматически регистрироваться в качестве пользователей на вашем сайте WordPress. Идеально подходит для таких вещей, как публикация гостями постов в вашем блоге!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:153
+msgid "For added insight into your customers, you can collect your user's city, state, and country behind-the-scenes with Geolocation!"
+msgstr "Для получения дополнительной информации о ваших клиентах вы можете собирать информацию о городе, крае и стране своего пользователя с помощью геолокации!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:148
+msgid "You can increase your revenue by accepting recurring payments on your forms."
+msgstr "Вы можете увеличить свой доход, принимая регулярные платежи в своих формах."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:143
+msgid "You can set up your forms to let your site visitors pick which payment method they want to use."
+msgstr "Вы можете настроить свои формы, чтобы посетители вашего сайта могли выбирать, какой способ оплаты они хотят использовать."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:138
+msgid "You can easily add a field to your forms that let users draw their signature then saves it as an image with their entry."
+msgstr "Можно легко добавить в формы поле, позволяющее пользователям рисовать свою подпись, а затем сохранить ее в виде изображения со своей записью."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:133
+msgid "You can generate more fresh content for your website for free by accepting guest blog posts."
+msgstr "Вы можете бесплатно создавать более свежий контент для вашего сайта, позволяя гостям публиковать посты в вашем блоге."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:128
+msgid "You can automatically close a form at a specific date and time. Great for applications!"
+msgstr "Вы можете автоматически закрыть форму в определенную дату и время. Отлично подходит для приложений!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:123
+msgid "You can password-protect your forms. Perfect for collecting reviews or success stories from customers!"
+msgstr "Вы можете защитить паролем свои формы. Идеально подходит для сбора отзывов или историй успеха от клиентов!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:118
+msgid "You don’t have to build your forms from scratch. The Form Templates Pack addon gives you access to 150+ additional templates."
+msgstr "Вам не нужно создавать свои формы с нуля. Дополнение Form Templates Pack предоставляет доступ к 150+ дополнительным шаблонам."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:113
+msgid "You can build and customize your own professional-looking landing page. A great alternative to Google Forms!"
+msgstr "Можно создать и настроить собственный лендинг, который будет выглядеть профессионально. Отличная альтернатива Google Forms!"
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:108
+msgid "You can make distraction-free and custom landing pages in WPForms! Perfect for getting more leads."
+msgstr "Вы можете создать неотвлекающие и пользовательские лендинги в WPForms! Идеально подходят для получения большего количества лидов."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:103
+msgid "You can integrate your forms to automatically send entries to your most used apps. Perfect for users of Salesforce, Slack, Trello, and 5,000+ others."
+msgstr "Вы можете интегрировать свои формы для автоматической отправки записей в самые используемые приложения. Идеально подходит для пользователей Salesforce, Slack, Trello и 1500+ других."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:98
+msgid "You can easily integrate your forms with 5,000+ useful apps by using WPForms + Zapier."
+msgstr "Вы можете легко интегрировать свои формы с 1500+ полезными приложениями, используя WPForms + Zapier."
+
+#: wpforms/src/Pro/Admin/Education/Admin/DidYouKnow.php:93
+msgid "You can capture email addresses from partial form entries to get more leads. Abandoned cart emails have an average open rate of 45%!"
+msgstr "Вы можете захватить адреса электронной почты из частичных записей формы, чтобы получить больше лидов. У электронных писем из заброшенной корзины средний показатель открытия составляет 45%!"
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:197
+#: wpforms/src/Pro/Admin/Settings/Access.php:219
+msgid "Access"
+msgstr "Доступ"
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:177
+msgid "Can delete entries of forms created by others."
+msgstr "Можно удалять записи форм, созданные другими."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:173
+msgid "Can delete entries of forms created by themselves."
+msgstr "Можно удалять записи форм, созданные самостоятельно."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:169
+msgid "Delete Entries"
+msgstr "Удалить записи"
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:164
+msgid "Can edit entries of forms created by others."
+msgstr "Можно редактировать записи форм, созданных другими."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:160
+msgid "Can edit entries of forms created by themselves."
+msgstr "Можно редактировать записи форм, созданных самостоятельно."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:156
+msgid "Edit Entries"
+msgstr "Изменить записи"
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:151
+msgid "Can view entries of forms created by others."
+msgstr "Можно просматривать записи форм, созданных другими."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:147
+msgid "Can view entries of forms created by themselves."
+msgstr "Можно просматривать записи форм, созданных самостоятельно."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:137
+msgid "Can delete forms created by others."
+msgstr "Можно удалять формы, созданные другими."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:133
+msgid "Can delete forms created by themselves."
+msgstr "Можно удалять формы, созданные самостоятельно."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:129
+msgid "Delete Forms"
+msgstr "Удалить формы"
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:124
+msgid "Can edit forms created by others."
+msgstr "Можно редактировать формы, созданные другими."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:120
+msgid "Can edit forms created by themselves."
+msgstr "Можно редактировать формы, созданные самостоятельно."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:116
+msgid "Edit Forms"
+msgstr "Редактировать формы"
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:111
+msgid "Can view forms created by others."
+msgstr "Можно просматривать формы, созданные другими."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:110
+#: wpforms/src/Pro/Admin/Settings/Access.php:123
+#: wpforms/src/Pro/Admin/Settings/Access.php:136
+#: wpforms/src/Pro/Admin/Settings/Access.php:150
+#: wpforms/src/Pro/Admin/Settings/Access.php:163
+#: wpforms/src/Pro/Admin/Settings/Access.php:176
+msgid "Others"
+msgstr "Другие"
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:107
+msgid "Can view forms created by themselves."
+msgstr "Можно просматривать формы, созданные самостоятельно."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:106
+#: wpforms/src/Pro/Admin/Settings/Access.php:119
+#: wpforms/src/Pro/Admin/Settings/Access.php:132
+#: wpforms/src/Pro/Admin/Settings/Access.php:146
+#: wpforms/src/Pro/Admin/Settings/Access.php:159
+#: wpforms/src/Pro/Admin/Settings/Access.php:172
+msgid "Own"
+msgstr "Свои"
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:103
+msgid "View Forms"
+msgstr "Смотреть формы"
+
+#: wpforms/src/Pro/Access/Capabilities.php:70
+#: wpforms/src/Pro/Admin/Settings/Access.php:94
+msgid "Create Forms"
+msgstr "Создать формы"
+
+#. translators: %1$s - capability being granted; %2$s - capability(s) required
+#. for a capability being granted; %3$s - role a capability is granted to.
+#: wpforms/src/Pro/Admin/Settings/Access.php:79
+msgid "Would you like to also remove %2$s access from %3$s?"
+msgstr "Вы также хотите удалить %2$s доступ из %3$s?"
+
+#. translators: %1$s - capability being granted; %2$s - capability(s) required
+#. for a capability being granted; %3$s - role a capability is granted to.
+#: wpforms/src/Pro/Admin/Settings/Access.php:79
+msgid "In order to remove %1$s access, %2$s access is also required to be removed."
+msgstr "Для того, чтобы удалить %1$s доступ, %2$s доступ также должен быть удален."
+
+#. translators: %1$s - capability being granted; %2$s - capability(s) required
+#. for a capability being granted; %3$s - role a capability is granted to.
+#: wpforms/src/Pro/Admin/Settings/Access.php:77
+msgid "Would you like to also grant %2$s access to %3$s?"
+msgstr "Вы хотели бы также предоставить %2$s с доступом к %3$s?"
+
+#. translators: %1$s - capability being granted; %2$s - capability(s) required
+#. for a capability being granted; %3$s - role a capability is granted to.
+#: wpforms/src/Pro/Admin/Settings/Access.php:77
+msgid "In order to give %1$s access, %2$s access is also required."
+msgstr "Для предоставления %1$s доступа требуется %2$s доступ."
+
+#. translators: %s - addon name.
+#: wpforms/pro/templates/education/admin/settings/integrations-item.php:43
+msgid "Integrate %s with WPForms"
+msgstr "Интегрируйте %s с WPForms"
+
+#: wpforms/src/Pro/Admin/Education/Admin/Settings/Integrations.php:38
+msgid "Refresh page"
+msgstr "Обновить страницу"
+
+#: wpforms/src/Pro/Admin/Education/Admin/Settings/Integrations.php:37
+msgid "Almost done! Would you like to refresh the page?"
+msgstr "Почти готово! Хотите обновить страницу?"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:404
+msgid "No entries for selected period."
+msgstr "Нет записей за выбранный период."
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:143
+#: wpforms/src/Pro/Integrations/LiteConnect/Admin.php:259
+msgid "View Entries"
+msgstr "Посмотреть записи"
+
+#: wpforms-drip/src/Provider/FormBuilder.php:157
+msgid "Marketing provider connection"
+msgstr "Подключение поставщика услуг маркетинга"
+
+#: wpforms-drip/src/Provider/PageIntegrations.php:56
+msgid "Disconnect"
+msgstr "Отключить"
+
+#. translators: %s - Connection date.
+#: wpforms-drip/src/Provider/PageIntegrations.php:55
+msgid "Connected on: %s"
+msgstr "Подключено: %s"
+
+#. translators: %s - addon name.
+#: wpforms/src/Pro/Admin/Education/Builder/Fields.php:160
+msgid "%s addon"
+msgstr "Дополнение %s"
+
+#. translators: %s - field name.
+#: wpforms/src/Pro/Admin/Education/Builder/Fields.php:153
+msgid "%s field"
+msgstr "Поле %s"
+
+#: wpforms/src/Pro/Admin/Education/Core.php:69
+msgid "To access the %name%, please enter and activate your WPForms license key in the plugin settings."
+msgstr "Чтобы получить доступ к дополнениям, введите и активируйте свой лицензионный ключ WPForms в настройках плагина."
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:636
+#: wpforms/src/Pro/Admin/Entries/Overview/Page.php:288
+msgid "Please select a different period or check back later."
+msgstr "Пожалуйста, выберите другой период или проверьте позже."
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:610
+msgid "Install"
+msgstr "Установить"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:605
+msgid "Recommended Plugin:"
+msgstr "Рекомендованный плагин:"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:575
+msgid "Show all forms"
+msgstr "Показать все формы"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:529
+#: wpforms/src/Pro/Admin/Entries/Overview/Table.php:266
+msgid "Display only this form data in the graph"
+msgstr "Отображать только данные этой формы на графике"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:635
+#: wpforms/src/Pro/Admin/Entries/Overview/Page.php:287
+msgid "No entries for selected period"
+msgstr "Нет записей за выбранный период"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:329
+#: wpforms/src/Pro/Admin/Entries/Overview/Page.php:237
+#: wpforms/src/Pro/Admin/Entries/Overview/Table.php:262
+msgid "Reset chart to display all forms"
+msgstr "Сбросить график для отображения всех форм"
+
+#: wpforms/pro/includes/admin/class-license.php:554
+#: wpforms/pro/templates/education/admin/did-you-know.php:31
+#: wpforms/src/Pro/Admin/Builder/LicenseAlert.php:134
+#: wpforms/src/Pro/Admin/DashboardWidget.php:291
+#: wpforms/src/Pro/Admin/DashboardWidget.php:613
+#: wpforms/src/Pro/Forms/Fields/Layout/Builder.php:245
+msgid "Learn More"
+msgstr "Подробнее"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:286
+msgid "Create Your Form"
+msgstr "Создать форму"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:282
+msgid "You can use WPForms to build contact forms, surveys, payment forms, and more with just a few clicks."
+msgstr "Используйте WPForms создания контактных форм, опросов, платежных форм и многого другого всего за несколько кликов."
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:281
+msgid "Create Your First Form to Start Collecting Leads"
+msgstr "Создайте свою первую форму, чтобы начать собирать лиды"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:280
+msgid "Sullie the WPForms mascot"
+msgstr "Сaлли - эмблема WPForms"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:201
+#: wpforms/src/Pro/Admin/DashboardWidget.php:309
+#: wpforms/src/Pro/Admin/DashboardWidget.php:357
+#: wpforms/src/Pro/Admin/Entries/Overview/Page.php:285
+msgid "Total Entries"
+msgstr "Всего записей"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:199
+msgid "Show Less"
+msgstr "Показать меньше"
+
+#: wpforms/src/Pro/Admin/DashboardWidget.php:198
+#: wpforms/src/Pro/Admin/DashboardWidget.php:576
+msgid "Show More"
+msgstr "Показать больше"
+
+#: wpforms/pro/includes/class-conditional-logic-fields.php:440
+msgid "Entry Confirmation stopped by conditional logic."
+msgstr "Подтверждение записи остановлено условной логикой."
+
+#: wpforms/pro/includes/class-conditional-logic-fields.php:384
+msgid "Entry Notification stopped by conditional logic."
+msgstr "Уведомление о записи было остановлено условной логикой."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:1943
+msgid "File must have an extension."
+msgstr "Файл должен иметь расширение."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:220
+msgid "File exceeds the max size allowed."
+msgstr "Размер файла превышает максимально допустимый размер."
+
+#. translators: %s - error text.
+#: wpforms/pro/includes/fields/class-file-upload.php:1842
+msgid "File upload error. %s"
+msgstr "Ошибка во время загрузки файла. %s"
+
+#: wpforms/pro/includes/fields/class-file-upload.php:1837
+msgid "File upload stopped by extension."
+msgstr "Расширение файла остановило его загрузку."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:1836
+msgid "Failed to write file to disk."
+msgstr "Не удалось записать файл на диск."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:1835
+msgid "Missing a temporary folder."
+msgstr "Отсутствует временная папка."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:1833
+msgid "No file was uploaded."
+msgstr "Файл не был загружен."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:1832
+msgid "The uploaded file was only partially uploaded."
+msgstr "Загружаемый файл был загружен лишь частично."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:1831
+msgid "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form."
+msgstr "Загруженный файл превышает директиву MAX_FILE_SIZE, заданную в HTML форме."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:1830
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini."
+msgstr "Загруженный файл превышает директиву upload_max_filesize, заданную в php.ini."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:748
+msgid "Check this option to store the final uploaded file in the WordPress Media Library"
+msgstr "Включите эту опцию для сохранения загруженных файлов в библиотеке мультимедиа WordPress"
+
+#: wpforms/pro/includes/fields/class-file-upload.php:747
+msgid "Store file in WordPress Media Library"
+msgstr "Сохранить файл в библиотеке мультимедиа WordPress"
+
+#. translators: %s - max upload size.
+#: wpforms/pro/includes/fields/class-file-upload.php:624
+msgid "Enter the max size of each file, in megabytes, to allow. If left blank, the value defaults to the maximum size the server allows which is %s."
+msgstr "Введите максимально допустимый размер файла в мегабайтах. По умолчанию используется размер, допустимый сервером: %s."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:622
+msgid "Max File Size"
+msgstr "Макс. размер файла"
+
+#: wpforms/pro/includes/fields/class-file-upload.php:589
+msgid "Enter the extensions you would like to allow, comma separated."
+msgstr "Введите расширения файлов, которые вы хотите разрешить, разделяя их запятой."
+
+#: wpforms/pro/includes/fields/class-file-upload.php:588
+msgid "Allowed File Extensions"
+msgstr "Разрешенные расширения файлов"
+
+#: wpforms/pro/includes/fields/class-file-upload.php:94
+msgid "File Upload"
+msgstr "Загрузка файла"
+
+#: wpforms/pro/includes/fields/class-page-break.php:630
+msgid "Split"
+msgstr "Разделить"
+
+#: wpforms/pro/includes/fields/class-page-break.php:629
+msgid "Center"
+msgstr "По центру"
+
+#: wpforms/pro/includes/fields/class-page-break.php:628
+msgid "Right"
+msgstr "Справа"
+
+#: wpforms/pro/includes/fields/class-page-break.php:627
+msgid "Left"
+msgstr "Слева"
+
+#: wpforms/pro/includes/fields/class-page-break.php:617
+msgid "Select the alignment for the Next/Previous page navigation buttons"
+msgstr "Выберите выравнивание для кнопок перехода к следующей/предыдущей странице"
+
+#: wpforms/pro/includes/fields/class-page-break.php:616
+msgid "Page Navigation Alignment"
+msgstr "Выравнивание навигации страницы"
+
+#: wpforms/pro/includes/fields/class-page-break.php:571
+msgid "Enter text for Previous page navigation button."
+msgstr "Введите текст для кнопки перехода на предыдущую страницу."
+
+#: wpforms/pro/includes/fields/class-page-break.php:570
+msgid "Previous Label"
+msgstr "Текст для кнопки «Назад»"
+
+#: wpforms/pro/includes/fields/class-page-break.php:550
+msgid "Toggle displaying the Previous page navigation button."
+msgstr "Показывать кнопку перехода на предыдущую страницу."
+
+#: wpforms/pro/includes/fields/class-page-break.php:549
+msgid "Display Previous"
+msgstr "Показать кнопку «Назад»"
+
+#: wpforms/pro/includes/fields/class-page-break.php:528
+#: wpforms/pro/includes/fields/class-page-break.php:685
+msgid "Next"
+msgstr "Далее"
+
+#: wpforms/pro/includes/fields/class-page-break.php:519
+msgid "Enter text for Next page navigation button."
+msgstr "Введите текст для кнопки перехода на следующую страницу."
+
+#: wpforms/pro/includes/fields/class-page-break.php:518
+msgid "Next Label"
+msgstr "Текст для кнопки «Далее»"
+
+#: wpforms/pro/includes/fields/class-page-break.php:492
+msgid "Enter text for the page title."
+msgstr "Введите текст для заголовка страницы."
+
+#: wpforms/pro/includes/fields/class-page-break.php:491
+msgid "Page Title"
+msgstr "Заголовок страницы"
+
+#: wpforms/pro/includes/fields/class-page-break.php:456
+msgid "Select the primary color for the Page Indicator theme."
+msgstr "Выберите основной цвет для темы индикатора страницы."
+
+#: wpforms/pro/includes/fields/class-page-break.php:455
+msgid "Page Indicator Color"
+msgstr "Цвет индикатора страницы"
+
+#: wpforms/pro/includes/fields/class-page-break.php:430
+msgid "Select theme for Page Indicator which is displayed at the top of the form."
+msgstr "Выберите тему для индикатора страницы, который отображается вверху формы."
+
+#: wpforms/pro/includes/fields/class-page-break.php:429
+msgid "Progress Indicator"
+msgstr "Индикатор прогресса"
+
+#: wpforms/pro/includes/fields/class-page-break.php:422
+msgid "None"
+msgstr "Нет"
+
+#: wpforms/pro/includes/fields/class-page-break.php:421
+msgid "Connector"
+msgstr "Коннектор"
+
+#: wpforms/pro/includes/fields/class-page-break.php:420
+msgid "Circles"
+msgstr "Круги"
+
+#: wpforms/pro/includes/fields/class-page-break.php:419
+msgid "Progress Bar"
+msgstr "Полоса заполнения"
+
+#: wpforms/pro/includes/fields/class-page-break.php:302
+#: wpforms/pro/includes/fields/class-page-break.php:683
+msgid "Previous"
+msgstr "Назад"
+
+#. translators: %1$s - current step in multi-page form; %2$d - total number of
+#. pages.
+#: wpforms/pro/includes/fields/class-page-break.php:235
+msgid "Step %1$s of %2$d"
+msgstr "Шаг %1$s из %2$d"
+
+#: wpforms/pro/includes/fields/class-page-break.php:37
+#: wpforms/pro/includes/fields/class-page-break.php:690
+#: wpforms/src/Pro/Admin/Entries/PrintPreview.php:402
+msgid "Page Break"
+msgstr "Разрыв страницы"
+
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:494
+#: wpforms/src/Pro/Forms/Fields/CreditCard/Frontend.php:62
+msgid "This page is insecure. Credit Card field should be used for testing purposes only."
+msgstr "Эта страница является небезопасной. Поле кредитной карты должно использоваться только в целях тестирования."
+
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:382
+msgid "Name on Card Placeholder Text"
+msgstr "Подсказка в поле ввода (placeholder) имени карты"
+
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:357
+msgid "Security Code Placeholder Text"
+msgstr "Подсказка в поле ввода (placeholder) кода безопасности"
+
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:332
+msgid "Card Number Placeholder Text"
+msgstr "Подсказка в поле ввода (placeholder) номера карты"
+
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:173
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:451
+msgid "Expiration"
+msgstr "Срок действия"
+
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:159
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:446
+msgid "Name on Card"
+msgstr "Имя на карте"
+
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:138
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:439
+msgid "Security Code"
+msgstr "Код безопасности"
+
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:115
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:434
+msgid "Card Number"
+msgstr "Номер карты"
+
+#. translators: %s - Choice item number.
+#: wpforms/src/Pro/Admin/Entries/PrintPreview.php:490
+msgid "Item %s"
+msgstr "Продукт %s"
+
+#: wpforms/pro/includes/fields/class-url.php:159
+#: wpforms/pro/wpforms-pro.php:420 wpforms/pro/wpforms-pro.php:1327
+msgid "Please enter a valid URL."
+msgstr "Пожалуйста, введите корректный URL."
+
+#: wpforms/pro/includes/fields/class-url.php:18
+msgid "Website / URL"
+msgstr "Веб-сайт / URL"
+
+#: wpforms/pro/includes/fields/class-html.php:225
+msgid "HTML / Code Block"
+msgstr "Блок HTML кода"
+
+#: wpforms/pro/includes/fields/class-html.php:18
+msgid "HTML"
+msgstr "HTML"
+
+#: wpforms/pro/includes/fields/class-hidden.php:18
+msgid "Hidden Field"
+msgstr "Скрытое поле"
+
+#: wpforms/pro/includes/fields/class-divider.php:18
+#: wpforms/src/Pro/Admin/Entries/PrintPreview.php:398
+msgid "Section Divider"
+msgstr "Разделитель секции"
+
+#: wpforms/pro/includes/fields/class-date-time.php:1125
+msgid "YYYY"
+msgstr "YYYY"
+
+#: wpforms/pro/includes/fields/class-date-time.php:1124
+msgid "DD"
+msgstr "DD"
+
+#: wpforms/pro/includes/fields/class-date-time.php:1123
+msgid "MM"
+msgstr "MM"
+
+#: wpforms/pro/includes/fields/class-date-time.php:537
+msgid "Interval"
+msgstr "Интервал"
+
+#: wpforms/pro/includes/fields/class-date-time.php:514
+msgid "Advanced time options."
+msgstr "Расширенные параметры времени."
+
+#: wpforms/pro/includes/fields/class-date-time.php:500
+msgid "1 hour"
+msgstr "1 час"
+
+#: wpforms/pro/includes/fields/class-date-time.php:499
+msgid "30 minutes"
+msgstr "30 минут"
+
+#: wpforms/pro/includes/fields/class-date-time.php:498
+msgid "15 minutes"
+msgstr "15 минут"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:222
+#: wpforms/pro/includes/fields/class-date-time.php:433
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:793
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:154
+msgid "Type"
+msgstr "Тип"
+
+#: wpforms/pro/includes/fields/class-date-time.php:427
+msgid "Date Dropdown"
+msgstr "Выпадающий список даты"
+
+#: wpforms/pro/includes/fields/class-date-time.php:422
+msgid "Date Picker"
+msgstr "Выбор даты"
+
+#: wpforms/pro/includes/fields/class-date-time.php:408
+msgid "Advanced date options."
+msgstr "Расширенные параметры даты."
+
+#: wpforms/pro/includes/fields/class-date-time.php:332
+msgid "Date and Time"
+msgstr "Дата и время"
+
+#: wpforms/pro/includes/fields/class-date-time.php:321
+msgid "Select format for the date field."
+msgstr "Выберите формат для поля даты."
+
+#: wpforms/pro/includes/fields/class-date-time.php:169
+#: wpforms/pro/includes/fields/class-date-time.php:334
+#: wpforms/pro/includes/fields/class-date-time.php:513
+#: wpforms/pro/includes/fields/class-date-time.php:947
+msgid "Time"
+msgstr "Время"
+
+#: wpforms/pro/includes/fields/class-date-time.php:18
+msgid "Date / Time"
+msgstr "Дата / Время"
+
+#: wpforms/pro/includes/fields/class-address.php:551
+msgid "ZIP / Postal"
+msgstr "Почтовый индекс"
+
+#: wpforms/pro/includes/fields/class-address.php:407
+#: wpforms/pro/includes/fields/class-address.php:459
+#: wpforms/pro/includes/fields/class-address.php:492
+#: wpforms/pro/includes/fields/class-address.php:524
+#: wpforms/pro/includes/fields/class-address.php:578
+#: wpforms/pro/includes/fields/class-address.php:628
+msgid "Default Value"
+msgstr "Значение по умолчанию"
+
+#: wpforms/pro/includes/fields/class-address.php:403
+#: wpforms/pro/includes/fields/class-address.php:455
+#: wpforms/pro/includes/fields/class-address.php:488
+#: wpforms/pro/includes/fields/class-address.php:520
+#: wpforms/pro/includes/fields/class-address.php:574
+#: wpforms/pro/includes/fields/class-address.php:624
+#: wpforms/pro/includes/fields/class-date-time.php:446
+#: wpforms/pro/includes/fields/class-date-time.php:550
+msgid "Placeholder"
+msgstr "Подсказка в поле ввода"
+
+#: wpforms/pro/includes/fields/class-address.php:322
+msgid "Scheme"
+msgstr "Схема"
+
+#: wpforms/pro/includes/fields/class-address.php:310
+msgid "Select scheme format for the address field."
+msgstr "Выберите формат для поля адреса."
+
+#: wpforms/pro/includes/fields/class-address.php:52
+#: wpforms/pro/includes/fields/class-address.php:602
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:49
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:620
+msgid "Country"
+msgstr "Страна"
+
+#: wpforms/pro/includes/fields/class-address.php:50
+#: wpforms/pro/includes/fields/class-address.php:513
+msgid "State / Province / Region"
+msgstr "Область / Провинция / Регион"
+
+#: wpforms/pro/includes/fields/class-address.php:49
+msgid "Postal Code"
+msgstr "Почтовый индекс"
+
+#: wpforms/pro/includes/fields/class-address.php:41
+msgid "State"
+msgstr "Штат"
+
+#: wpforms/pro/includes/fields/class-address.php:40
+msgid "Zip Code"
+msgstr "Почтовый индекс"
+
+#: wpforms/pro/includes/fields/class-address.php:39
+#: wpforms/pro/includes/fields/class-address.php:48
+#: wpforms/pro/includes/fields/class-address.php:481
+msgid "City"
+msgstr "Город"
+
+#: wpforms/pro/includes/fields/class-address.php:38
+#: wpforms/pro/includes/fields/class-address.php:47
+#: wpforms/pro/includes/fields/class-address.php:432
+msgid "Address Line 2"
+msgstr "Дополнения к адресу"
+
+#: wpforms/pro/includes/fields/class-address.php:37
+#: wpforms/pro/includes/fields/class-address.php:46
+#: wpforms/pro/includes/fields/class-address.php:396
+msgid "Address Line 1"
+msgstr "Адресная строка 1"
+
+#: wpforms/pro/includes/fields/class-password.php:501
+msgid "Field values do not match."
+msgstr "Значения полей не совпадают."
+
+#: wpforms/pro/includes/fields/class-password.php:328
+msgid "Enter text for the confirmation field placeholder."
+msgstr "Введите текст подсказки в поле ввода подтверждения."
+
+#: wpforms/pro/includes/fields/class-password.php:327
+msgid "Confirmation Placeholder Text"
+msgstr "Подсказка в поле ввода подтверждения"
+
+#: wpforms/pro/includes/fields/class-password.php:234
+msgid "Check this option to ask users to provide their password twice."
+msgstr "Включите эту опцию, чтобы попросить пользователя дважды ввести пароль."
+
+#: wpforms/pro/includes/fields/class-password.php:233
+msgid "Enable Password Confirmation"
+msgstr "Включить подтверждение пароля"
+
+#: wpforms/pro/includes/fields/class-password.php:121
+#: wpforms/pro/includes/fields/class-password.php:395
+msgid "Confirm Password"
+msgstr "Подтвердите пароль"
+
+#: wpforms/pro/includes/fields/class-password.php:18
+#: wpforms/pro/includes/fields/class-password.php:97
+#: wpforms/pro/includes/fields/class-password.php:390
+msgid "Password"
+msgstr "Пароль"
+
+#: wpforms/pro/includes/fields/class-address.php:45
+#: wpforms/pro/includes/fields/class-phone.php:211
+msgid "International"
+msgstr "Международный"
+
+#: wpforms/pro/includes/fields/class-address.php:36
+#: wpforms/pro/includes/fields/class-phone.php:210
+msgid "US"
+msgstr "США"
+
+#: wpforms/pro/includes/fields/class-phone.php:197
+msgid "Select format for the phone form field"
+msgstr "Выберите формат для поля номера телефона"
+
+#: wpforms/pro/includes/fields/class-date-time.php:320
+#: wpforms/pro/includes/fields/class-date-time.php:479
+#: wpforms/pro/includes/fields/class-date-time.php:573
+#: wpforms/pro/includes/fields/class-phone.php:196
+msgid "Format"
+msgstr "Формат"
+
+#. translators: %1$s - rating value; %2$s - rating scale.
+#: wpforms/pro/includes/fields/class-rating.php:481
+msgid "Rate %1$d out of %2$d"
+msgstr "Оценить на %1$d из %2$d"
+
+#: wpforms/pro/includes/fields/class-rating.php:306
+msgid "Select the color for the rating icon"
+msgstr "Выберите цвет значка оценки"
+
+#: wpforms/pro/includes/fields/class-rating.php:305
+msgid "Icon Color"
+msgstr "Цвет значка"
+
+#: wpforms/pro/includes/fields/class-rating.php:285
+msgid "Large"
+msgstr "Большой"
+
+#: wpforms/pro/includes/fields/class-password.php:281
+#: wpforms/pro/includes/fields/class-rating.php:284
+msgid "Medium"
+msgstr "Средний"
+
+#: wpforms/pro/includes/fields/class-rating.php:283
+msgid "Small"
+msgstr "Небольшой"
+
+#: wpforms/pro/includes/fields/class-rating.php:272
+msgid "Select the size of the rating icon"
+msgstr "Выберите размер значка оценки"
+
+#: wpforms/pro/includes/fields/class-rating.php:271
+msgid "Icon Size"
+msgstr "Размер значка"
+
+#: wpforms/pro/includes/fields/class-rating.php:251
+msgid "Smiley Face"
+msgstr "Смайлик"
+
+#: wpforms/pro/includes/fields/class-rating.php:250
+msgid "Thumb"
+msgstr "Большой палец"
+
+#: wpforms/pro/includes/fields/class-rating.php:249
+msgid "Heart"
+msgstr "Сердце"
+
+#: wpforms/pro/includes/fields/class-rating.php:237
+msgid "Select icon to display"
+msgstr "Выберите значок для отображения"
+
+#: wpforms/pro/includes/fields/class-rating.php:236
+msgid "Icon"
+msgstr "Значок"
+
+#: wpforms/pro/includes/fields/class-rating.php:172
+msgid "Select rating scale"
+msgstr "Выберите шкалу для оценки"
+
+#: wpforms/pro/includes/fields/class-rating.php:171
+msgid "Scale"
+msgstr "Шкала"
+
+#: wpforms/pro/includes/fields/class-rating.php:28
+msgid "Rating"
+msgstr "Оценка"
+
+#: wpforms/pro/includes/fields/class-address.php:27
+msgid "Address"
+msgstr "Адрес"
+
+#: wpforms/pro/includes/fields/class-phone.php:25
+#: wpforms/pro/wpforms-pro.php:424
+msgid "Phone"
+msgstr "Телефон"
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:407
+msgid "Upgrade Now"
+msgstr "Улучшить сейчас"
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:434
+msgid "Install Addon"
+msgstr "Установить дополнение"
+
+#: wpforms/pro/templates/education/admin/entries/geolocation.php:78
+#: wpforms/pro/templates/education/admin/entries/user-journey.php:256
+#: wpforms/src/Pro/Admin/Pages/Addons.php:424
+msgid "Activate"
+msgstr "Активировать"
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:417
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:476
+msgid "Inactive"
+msgstr "Неактивный"
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:477
+msgid "Not Installed"
+msgstr "Не установлено"
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:475
+msgid "Active"
+msgstr "Активный"
+
+#. translators: %s - WPForms.com Account page URL.
+#: wpforms/src/Pro/Admin/Pages/Addons.php:304
+msgid "Want to get even more features? <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Upgrade your WPForms account</a> and unlock the following extensions."
+msgstr "Хотите получить еще больше возможностей? <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Обновите учетную запись WPForms</a> и разблокируйте следующие расширения."
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:299
+msgid "Unlock More Features..."
+msgstr "Открыть больше возможностей..."
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:197
+msgid "Available Addons"
+msgstr "Доступные дополнения"
+
+#. translators: %s - refresh addons page URL.
+#: wpforms/src/Pro/Admin/Pages/Addons.php:185
+msgid "Improve your forms with our premium addons. Missing an addon that you think you should be able to see? Click the <a href=\"%s\">Refresh Addons</a> button above."
+msgstr "Улучшите свои формы с помощью наших премиумных дополнений. Отсутствует дополнение, которое, по вашему мнению, вы должны видеть в списке? Нажмите кнопку <a href=\"%s\">Обновить список дополнений</a> выше."
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:233
+msgid "Addons have successfully been refreshed."
+msgstr "Список дополнений был успешно обновлен."
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:227
+msgid "In order to get access to Addons, you need to resolve your license key errors."
+msgstr "Чтобы получить доступ к дополнениям, устраните проблему с лицензионным ключом."
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:221
+msgid "There was an issue retrieving Addons for this site. Please click on the button above to refresh."
+msgstr "Во время получения дополнений для этого сайта произошла ошибка. Пожалуйста, нажмите кнопку выше для обновления данных."
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:165
+msgid "Search Addons"
+msgstr "Поиск дополнений"
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:163
+msgid "Refresh Addons"
+msgstr "Обновить список дополнений"
+
+#: wpforms/src/Pro/Admin/Pages/Addons.php:161
+msgid "WPForms Addons"
+msgstr "Дополнения WPForms"
+
+#: wpforms/src/Pro/Migrations/Upgrade143.php:323
+msgid "No updates are currently needed."
+msgstr "В настоящее время обновление не требуется."
+
+#. translators: %1$s - total number of entries upgraded; %2$s - total number of
+#. entries on site.
+#: wpforms/src/Pro/Migrations/Upgrade143.php:311
+msgid "Updated %1$s of %2$s entries."
+msgstr "Обновлены %1$s из %2$s записей."
+
+#: wpforms/src/Pro/Migrations/Upgrade143.php:303
+msgid "Please do not leave this page or close the browser while the upgrade is in progress."
+msgstr "Пожалуйста, не уходите с этой страницы и не закрывайте вкладку браузера во время обновления."
+
+#: wpforms/src/Pro/Migrations/Upgrade143.php:301
+msgid "Upgrade"
+msgstr "Обновление"
+
+#: wpforms/src/Pro/Migrations/Upgrade143.php:296
+msgid "Resume Upgrade"
+msgstr "Продолжить обновление"
+
+#: wpforms/src/Pro/Migrations/Upgrade143.php:295
+msgid "WPForms database upgrade is incomplete, click the button below to resume."
+msgstr "Обновление базы данных WPForms не завершено, щелкните кнопку ниже для продолжения."
+
+#: wpforms/src/Pro/Migrations/Upgrade143.php:292
+msgid "Run Upgrade"
+msgstr "Запустить обновление"
+
+#: wpforms/src/Pro/Migrations/Upgrade143.php:291
+msgid "WPForms needs to upgrade the database, click the button below to begin."
+msgstr "Плагину WPForms требуется обновить базу данных, нажмите кнопку ниже для начала обновления."
+
+#. translators: %s - entries upgrade page URL.
+#: wpforms/src/Pro/Migrations/Upgrade143.php:259
+msgid "WPForms needs to upgrade the database, click <a href=\"%s\">here</a> to start the upgrade."
+msgstr "Плагину WPForms требуется обновить базу данных, нажмите <a href=\"%s\">здесь</a> для начала обновления."
+
+#. translators: %s - resume page URL.
+#: wpforms/src/Pro/Migrations/Upgrade143.php:256
+msgid "WPForms database upgrade is incomplete, click <a href=\"%s\">here</a> to resume."
+msgstr "Обновление базы данных WPForms не завершено, нажмите <a href=\"%s\">здесь</a> для продолжения."
+
+#. translators: %s - plugin settings page URL.
+#: wpforms/pro/includes/admin/class-license.php:499
+msgid "Please <a href=\"%s\">enter and activate</a> your license key for WPForms to enable automatic updates."
+msgstr "Пожалуйста, <a href=\"%s\">введите и активируйте</a> ваш лицензионный ключ для WPForms для включения автоматического обновления."
+
+#: wpforms/pro/includes/admin/class-license.php:348
+msgid "You have deactivated the key from this site successfully."
+msgstr "Вы успешно деактивировали ключ этого сайта."
+
+#: wpforms/pro/includes/admin/class-license.php:297
+msgid "Your key has been refreshed successfully."
+msgstr "Ваш ключ был успешно обновлен."
+
+#: wpforms/pro/includes/admin/class-license.php:282
+#: wpforms/pro/includes/admin/class-license.php:570
+msgid "Your license key for WPForms has been disabled. Please use a different key to continue receiving automatic updates."
+msgstr "Ваш лицензионный ключ для WPForms был отключен. Пожалуйста, используйте другой ключ, чтобы продолжить получать автоматические обновления."
+
+#: wpforms/pro/includes/admin/class-license.php:269
+msgid "Your license key for WPForms has expired. Please renew your license key on WPForms.com to continue receiving automatic updates."
+msgstr "Срок действия вашего лицензионного ключа для WPForms истек. Обновите лицензионный ключ на WPForms.com, чтобы продолжить получать автоматические обновления."
+
+#: wpforms/pro/includes/admin/class-license.php:256
+#: wpforms/pro/includes/admin/class-license.php:581
+msgid "Your license key for WPForms is invalid. The key no longer exists or the user associated with the key has been deleted. Please use a different key to continue receiving automatic updates."
+msgstr "Ваш лицензионный ключ для WPForms недействителен. Ключ больше не существует или пользователь, с которым он был связан, был удален. Пожалуйста, используйте другой ключ, чтобы продолжить получать автоматические обновления."
+
+#: wpforms/pro/includes/admin/class-license.php:143
+msgid "Congratulations! This site is now receiving automatic updates."
+msgstr "Поздравляем! Этот сайт теперь получает автоматические обновления."
+
+#: wpforms/pro/includes/admin/class-license.php:121
+#: wpforms/pro/includes/admin/class-license.php:237
+#: wpforms/pro/includes/admin/class-license.php:333
+msgid "There was an error connecting to the remote key API. Please try again later."
+msgstr "Во время подключения по ключу API произошла ошибка. Пожалуйста, повторите попытку позже."
+
+#: wpforms/pro/includes/admin/ajax-actions.php:165
+#: wpforms/pro/includes/admin/ajax-actions.php:209
+#: wpforms/src/Pro/Admin/Education/Core.php:96
+msgid "Please enter a license key."
+msgstr "Пожалуйста, введите лицензионный ключ."
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1313
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:512
+#: wpforms/pro/includes/class-conditional-logic-core.php:476
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:326
+msgid "is not"
+msgstr "не является"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1310
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:511
+#: wpforms/pro/includes/class-conditional-logic-core.php:475
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:325
+msgid "is"
+msgstr "является"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1307
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:510
+#: wpforms/pro/includes/class-conditional-logic-core.php:489
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:324
+msgid "does not contain"
+msgstr "не содержит"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1304
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:509
+#: wpforms/pro/includes/class-conditional-logic-core.php:488
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:323
+msgid "contains"
+msgstr "содержит"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1272
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:287
+msgid "Any form field"
+msgstr "Любое из полей"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:742
+msgid "----------"
+msgstr "----------"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:737
+msgid "Mark Read"
+msgstr "Отметить прочитанной"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:719
+msgid "Filter"
+msgstr "Фильтр"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:715
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:93
+msgid "Select a date range"
+msgstr "Выберите диапазон дат"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:691
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:743
+#: wpforms/pro/wpforms-pro.php:824 wpforms/pro/wpforms-pro.php:1123
+msgid "Delete"
+msgstr "Удалить"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:690
+msgid "Delete Form Entry"
+msgstr "Удалить запись формы"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:649
+msgid "View"
+msgstr "Просмотр"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:648
+msgid "View Form Entry"
+msgstr "Просмотреть запись формы"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:617
+msgid "Mark entry read"
+msgstr "Отметить прочитанным"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:617
+msgid "Mark entry unread"
+msgstr "Отметить непрочитанным"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:612
+msgid "Star entry"
+msgstr "Отметить запись"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:612
+msgid "Unstar entry"
+msgstr "Снять отметку с записи"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:400
+msgid "Recurring"
+msgstr "Повторяющийся"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:174
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:207
+msgid "Payment"
+msgid_plural "Payments"
+msgstr[0] "Платеж"
+msgstr[1] "Платежи"
+msgstr[2] "Платежи"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:228
+msgid "Change columns to display"
+msgstr "Изменить колонки для отображения"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:790
+msgid "Total"
+msgstr "Итого"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:182
+#: wpforms/src/Pro/Admin/Entries/Export/Export.php:156
+msgid "Starred"
+msgstr "Отмечено"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:162
+msgid "Unread"
+msgstr "Непрочитанные"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:156
+msgid "All"
+msgstr "Все"
+
+#. translators: %d - Number of form entries.
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1251
+msgid "See %d new entry"
+msgid_plural "See %d new entries"
+msgstr[0] "Открыть %d новую запись"
+msgstr[1] "Открыть %d новых записи"
+msgstr[2] "Открыть %d новых записей"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1085
+msgid "Delete All"
+msgstr "Удалить все"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1079
+msgid "Mark All Read"
+msgstr "Отметить все прочитанным"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1067
+msgid "Preview Form"
+msgstr "Предпросмотр формы"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1060
+msgid "Edit This Form"
+msgstr "Редактировать эту форму"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1053
+msgid "All Entries"
+msgstr "Все записи"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1112
+msgid "Open form selector"
+msgstr "Открыть переключатель форм"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:1039
+msgid "Select Form"
+msgstr "Выберите форму"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1209
+msgid "Field"
+msgstr "Поле"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:888
+msgid "Currently columns have not been configured, so we're showing the first 3 fields."
+msgstr "В настоящее время столбцы не настроены, поэтому мы показываем первые 3 поля."
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:886
+msgid "Select the fields to show when viewing the entries list for this form."
+msgstr "Выберите поля, которые будут отображаться при просмотре списка записей для этой формы."
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:818
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:97
+msgid "Search"
+msgstr "Поиск"
+
+#. translators: %s - WPForms Builder page.
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:672
+msgid "Whoops, you haven't created a form yet. Want to <a href=\"%s\">give it a go</a>?"
+msgstr "Упс, вы еще не создали формы еще. Хотите <a href=\"%s\">создать форму</a>?"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:1158
+msgid "All entries for the currently selected form were successfully deleted."
+msgstr "Все записи для выбранной формы были успешно удалены."
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:360
+msgid "All entries marked as read."
+msgstr "Все записи помечены как прочитанные."
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:245
+msgid "Number of entries per page:"
+msgstr "Количество записей на странице:"
+
+#: wpforms/pro/includes/admin/entries/class-entries-export.php:367
+msgid "Error"
+msgstr "Ошибка"
+
+#: wpforms/pro/includes/admin/entries/class-entries-export.php:366
+msgid "You do not have permission to export entries."
+msgstr "У вас недостаточно прав для экспорта записей."
+
+#: wpforms/pro/includes/admin/entries/class-entries-export.php:223
+msgid "ID"
+msgstr "ID"
+
+#: wpforms/pro/includes/admin/entries/class-entries-export.php:222
+msgid "Date GMT"
+msgstr "Дата GMT"
+
+#: wpforms/pro/includes/admin/entries/class-entries-export.php:221
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:225
+#: wpforms/pro/includes/fields/class-date-time.php:122
+#: wpforms/pro/includes/fields/class-date-time.php:333
+#: wpforms/pro/includes/fields/class-date-time.php:407
+#: wpforms/pro/includes/fields/class-date-time.php:934
+#: wpforms/pro/includes/fields/class-date-time.php:940
+msgid "Date"
+msgstr "Дата"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1532
+msgid "The user who created this entry also submitted the entries below."
+msgstr "Пользователь, создавший эту запись, также отправил записи ниже."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1526
+msgid "Related Entries"
+msgstr "Связанные записи"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:227
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1417
+msgid "Actions"
+msgstr "Действия"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:738
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1400
+msgid "Mark Unread"
+msgstr "Отметить непрочитанной"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1393
+msgid "Resend Notifications"
+msgstr "Повторная отправка уведомлений"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1383
+msgid "Export (CSV)"
+msgstr "Экспорт (CSV)"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:741
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1378
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:96
+msgid "Print"
+msgstr "Печать"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:739
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1358
+#: wpforms/pro/includes/fields/class-rating.php:248
+msgid "Star"
+msgstr "Звезда"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:740
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1358
+msgid "Unstar"
+msgstr "Снять отметку"
+
+#: wpforms/pro/templates/admin/entries/single-entry/payment-details.php:94
+msgctxt "Gateway mode"
+msgid "Test"
+msgstr "Тест"
+
+#. translators: %s - addon status label.
+#: wpforms/pro/templates/admin/addons-item.php:47
+msgid "Status: %s"
+msgstr "Статус: %s"
+
+#: wpforms/pro/templates/admin/entries/single-entry/payment-details.php:26
+msgid "Payment Details"
+msgstr "Детали оплаты"
+
+#: wpforms/src/Pro/Integrations/LiteConnect/Integration.php:160
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1233
+msgid "Delete Entry"
+msgstr "Удалить запись"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list-table.php:427
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1199
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:529
+msgid "Completed"
+msgstr "Завершено"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1190
+msgid "User IP:"
+msgstr "IP пользователя:"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1173
+msgid "User:"
+msgstr "Пользователь:"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1162
+msgid "Modified:"
+msgstr "Изменено:"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1153
+msgid "Submitted:"
+msgstr "Отправлено:"
+
+#. translators: %s - entry ID.
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1124
+msgid "Entry ID: %s"
+msgstr "ID записи: %s"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1111
+msgid "Entry Details"
+msgstr "Детали записи"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:1070
+msgid "Debug Information"
+msgstr "Отладочная информация"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:956
+msgctxt "Entry: note"
+msgid "Delete"
+msgstr "Удалить"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:909
+msgid "No notes."
+msgstr "Нет заметок"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:900
+#: wpforms/src/Pro/Admin/Entries/Export/Admin.php:107
+#: wpforms/src/Pro/AntiSpam/KeywordFilter.php:109
+msgid "Cancel"
+msgstr "Отменить"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:883
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:899
+msgid "Add Note"
+msgstr "Добавить заметку"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:873
+#: wpforms/pro/templates/admin/entry-print/legend-start.php:32
+#: wpforms/pro/templates/admin/entry-print/notes.php:19
+msgid "Notes"
+msgstr "Заметки"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:808
+#: wpforms/pro/includes/fields/class-entry-preview.php:619
+#: wpforms/pro/templates/admin/entry-print/field.php:41
+#: wpforms/src/Pro/Admin/Entries/Edit.php:371
+#: wpforms/src/Pro/Admin/Entries/Edit.php:821
+#: wpforms/src/Pro/Admin/Entries/PrintPreview.php:461
+msgid "Empty"
+msgstr "Пусто"
+
+#. translators: %d - field ID.
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:799
+#: wpforms/pro/includes/fields/class-entry-preview.php:526
+#: wpforms/pro/templates/admin/entry-print/field.php:30
+#: wpforms/src/Pro/Admin/Entries/Edit.php:745
+msgid "Field ID #%d"
+msgstr "Поле ID #%d"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:765
+#: wpforms/pro/templates/admin/entry-print/no-fields.php:14
+#: wpforms/src/Pro/Admin/Entries/Edit.php:662
+msgid "This entry does not have any fields"
+msgstr "У этой записи нет заполненных полей"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:751
+#: wpforms/src/Pro/Admin/Entries/Edit.php:651
+msgid "Hide Empty Fields"
+msgstr "Скрыть пустые поля"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:751
+#: wpforms/src/Pro/Admin/Entries/Edit.php:651
+msgid "Show Empty Fields"
+msgstr "Показать пустые поля"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:683
+msgid "Next form entry"
+msgstr "Следующая запись формы"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:677
+msgid "Current form entry"
+msgstr "Текущая запись формы"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:669
+msgid "Previous form entry"
+msgstr "Предыдущая запись формы"
+
+#. translators: %1$d - current number of entry; %2$d - total number of entries.
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:660
+msgid "Entry %1$d of %2$d"
+msgstr "Запись %1$d из %2$d"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:653
+#: wpforms/pro/templates/admin/empty-states/no-entries.php:24
+#: wpforms/pro/templates/admin/empty-states/no-entry.php:24
+msgid "Back to All Entries"
+msgstr "Назад к записям"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:632
+#: wpforms/src/Pro/Admin/Entries/Edit.php:365
+msgid "View Entry"
+msgstr "Просмотреть запись"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:490
+msgid "Notifications were resent!"
+msgstr "Уведомления были отправлены!"
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:426
+msgid "Note added."
+msgstr "Заметка добавлена."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:334
+msgid "Note deleted."
+msgstr "Заметка удалена."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:305
+msgid "This entry has been marked unread."
+msgstr "Эта запись была помечена непрочитанной."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:241
+msgid "This entry has been unstarred."
+msgstr "С этой записи была снята отметка."
+
+#: wpforms/pro/includes/admin/entries/class-entries-single.php:209
+msgid "This entry has been starred."
+msgstr "Эта запись была отмечена."
+
+#. translators: %s - WPForms.com Account dashboard URL.
+#: wpforms/pro/wpforms-pro.php:1401
+msgid "Your WPForms license key has expired. In order to continue receiving support and plugin updates you must renew your license key. Please log in to <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">your WPForms.com account</a> to renew your license."
+msgstr "Срок действия вашего лицензионного ключа WPForms истек. Для того, чтобы продолжать получать поддержку и обновления плагинов, вы должны обновить ключ лицензии. Пожалуйста, войдите в <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">свою учетную запись WPForms.com,</a> чтобы продлить лицензию."
+
+#: wpforms/pro/includes/class-conditional-logic-core.php:247
+#: wpforms/pro/includes/class-conditional-logic-core.php:333
+#: wpforms/src/Pro/Admin/Builder/Builder.php:112
+msgid "Enable Conditional Logic"
+msgstr "Включить условную логику"
+
+#. translators: %s - WPForms.com announcement page URL.
+#: wpforms/pro/wpforms-pro.php:1348
+msgid "Conditional logic functionality is now included in the core WPForms plugin! The WPForms Conditional Logic addon can be removed without affecting your forms. For more details <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">read our announcement</a>."
+msgstr "Функциональность условной логики теперь включена в ядро плагина WPForms! Дополнение WPForms Условная логика может быть удален без ущерба для ваших форм. Для более подробной информации <a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">прочитайте наше объявление</a>."
+
+#: wpforms/pro/wpforms-pro.php:1246
+msgid "Form confirmations"
+msgstr "Подтверждения формы"
+
+#: wpforms/pro/wpforms-pro.php:1245
+msgid "this confirmation if"
+msgstr "это подтверждение если"
+
+#: wpforms/pro/wpforms-pro.php:1243
+msgid "Don't use"
+msgstr "Не использовать"
+
+#: wpforms/pro/wpforms-pro.php:1242
+msgid "Use"
+msgstr "Использовать"
+
+#: wpforms/pro/wpforms-pro.php:1225
+msgid "Confirmation Redirect URL"
+msgstr "URL для перенаправления"
+
+#: wpforms/pro/wpforms-pro.php:1205
+msgid "Confirmation Page"
+msgstr "Страница подтверждения"
+
+#: wpforms/pro/wpforms-pro.php:1191
+msgid "Automatically scroll to the confirmation message"
+msgstr "Автоматически прокрутить к подтверждению"
+
+#: wpforms/pro/wpforms-pro.php:1169
+#: wpforms/src/Pro/Admin/Builder/Builder.php:95
+msgid "Confirmation Message"
+msgstr "Подтверждающее сообщение"
+
+#: wpforms/pro/wpforms-pro.php:1154
+msgid "Go to URL (Redirect)"
+msgstr "Перенаправить на URL (редирект)"
+
+#: wpforms/pro/wpforms-pro.php:1153
+msgid "Show Page"
+msgstr "Показать страницу"
+
+#: wpforms/pro/wpforms-pro.php:1148
+msgid "Confirmation Type"
+msgstr "Тип подтверждения"
+
+#: wpforms/pro/wpforms-pro.php:1092
+msgid "Default Confirmation"
+msgstr "Подтверждение по умолчанию"
+
+#: wpforms/pro/wpforms-pro.php:1087
+msgid "Add New Confirmation"
+msgstr "Добавить подтверждение"
+
+#: wpforms/pro/wpforms-pro.php:1086
+msgid "Confirmations"
+msgstr "Подтверждения"
+
+#: wpforms/pro/wpforms-pro.php:1073 wpforms/pro/wpforms-pro.php:1171
+msgid "Thanks for contacting us! We will be in touch with you shortly."
+msgstr "Спасибо, что написали нам! Мы свяжемся с вами в ближайшее время."
+
+#: wpforms/pro/wpforms-pro.php:1025
+msgid "Email notifications"
+msgstr "Уведомления по эл. почте"
+
+#: wpforms/pro/wpforms-pro.php:1024
+msgid "this notification if"
+msgstr "это уведомление, если"
+
+#: wpforms/pro/wpforms-pro.php:1022
+msgid "Don't send"
+msgstr "Не отправлять"
+
+#: wpforms/pro/wpforms-pro.php:1021
+msgid "Send"
+msgstr "Отправить"
+
+#. translators: %s - all fields smart tag.
+#: wpforms/pro/wpforms-pro.php:1009
+msgid "To display all form fields, use the %s Smart Tag."
+msgstr "Для отображения всех полей формы, используйте смарт-тег %s."
+
+#: wpforms/pro/wpforms-pro.php:1152
+msgid "Message"
+msgstr "Сообщение"
+
+#: wpforms/pro/wpforms-pro.php:973
+msgid "Reply-To"
+msgstr "Адрес для ответов"
+
+#: wpforms/pro/wpforms-pro.php:940
+msgid "From Email"
+msgstr "С адреса"
+
+#: wpforms/pro/wpforms-pro.php:904
+msgid "From Name"
+msgstr "От кого"
+
+#. translators: %s - form name.
+#: wpforms/pro/wpforms-pro.php:890
+msgid "New Entry: %s"
+msgstr "Новая запись: %s"
+
+#: wpforms/pro/wpforms-pro.php:870
+msgid "CC"
+msgstr "CC"
+
+#: wpforms/pro/wpforms-pro.php:853
+msgid "Enter the email address to receive form entry notifications. For multiple notifications, separate email addresses with a comma."
+msgstr "Введите адрес электронной почты, чтобы получать на него уведомления о записях для формы. Для отправки нескольких уведомлений каждый адрес электронной почты должен быть отделен запятой."
+
+#: wpforms/pro/wpforms-pro.php:850
+msgid "Send To Email Address"
+msgstr "Отправить на адрес"
+
+#: wpforms/pro/wpforms-pro.php:774
+msgid "Default Notification"
+msgstr "Стандартное уведомление"
+
+#: wpforms/pro/wpforms-pro.php:718
+msgid "Add New Notification"
+msgstr "Добавить уведомление"
+
+#: wpforms/pro/wpforms-pro.php:716
+msgid "Notifications"
+msgstr "Уведомления"
+
+#. translators: %s - form name.
+#: wpforms/pro/wpforms-pro.php:701
+msgid "New %s Entry"
+msgstr "Новая запись для %s"
+
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:733
+#: wpforms/pro/includes/admin/entries/class-entries-list.php:848
+#: wpforms/pro/wpforms-pro.php:633 wpforms/src/Pro/Admin/AdminBarMenu.php:96
+#: wpforms/src/Pro/Admin/DashboardWidget.php:202
+#: wpforms/src/Pro/Admin/Entries/Overview/Page.php:125
+#: wpforms/src/Pro/Admin/Entries/Overview/Page.php:182
+msgid "Entries"
+msgstr "Записи"
+
+#: wpforms/pro/wpforms-pro.php:609
+msgid "Disable storing user details (IP address and user agent)"
+msgstr "Отключить хранение деталей пользователя (IP адрес и user agent браузера)"
+
+#: wpforms/pro/wpforms-pro.php:597
+msgid "Disable storing entry information in WordPress"
+msgstr "Отключить хранение записей формы в WordPress"
+
+#: wpforms/pro/wpforms-pro.php:508
+msgid "Disable User Details"
+msgstr "Отключить детали пользователя"
+
+#: wpforms/pro/wpforms-pro.php:503
+msgid "Check this option to disable user tracking cookies. This will disable the Related Entries feature and the Form Abandonment addon."
+msgstr "Включите эту опцию, чтобы отключить файлы cookie для отслеживания пользователей. Также будет выключен функционал связанных записей и дополнение для покинутых форм."
+
+#: wpforms/pro/wpforms-pro.php:502
+msgid "Disable User Cookies"
+msgstr "Отключить куки пользователей"
+
+#: wpforms/src/Pro/Admin/Entries/Export/Ajax.php:791
+msgid "Currency"
+msgstr "Валюта"
+
+#: wpforms/pro/wpforms-pro.php:477 wpforms/pro/wpforms-pro.php:1311
+msgid "Please enter a valid credit card number."
+msgstr "Укажите действительный номер карты."
+
+#: wpforms/pro/includes/fields/class-payment-credit-card.php:18
+#: wpforms/pro/wpforms-pro.php:475
+msgid "Credit Card"
+msgstr "Кредитная карта"
+
+#: wpforms/pro/wpforms-pro.php:471 wpforms/pro/wpforms-pro.php:1310
+msgid "Payment is required."
+msgstr "Требуется оплата."
+
+#: wpforms/pro/wpforms-pro.php:469
+msgid "Payment Required"
+msgstr "Оплата обязательна"
+
+#: wpforms/pro/wpforms-pro.php:459 wpforms/pro/wpforms-pro.php:1323
+msgid "Please enter time in 24-hour format (eg 22:45)."
+msgstr "Введите время в 24-часовом формате (например, 22:45)."
+
+#: wpforms/pro/wpforms-pro.php:457
+msgid "Time (24 hour)"
+msgstr "Время (24 часа)"
+
+#: wpforms/pro/wpforms-pro.php:453 wpforms/pro/wpforms-pro.php:1322
+msgid "Please enter time in 12-hour AM/PM format (eg 8:45 AM)."
+msgstr "Введите время в 12-часовом формате AM / PM (например, 8:45 AM)."
+
+#: wpforms/pro/wpforms-pro.php:451
+msgid "Time (12 hour)"
+msgstr "Время (12 часов)"
+
+#. translators: $s - allowed file size in MB.
+#: wpforms/pro/includes/fields/class-file-upload.php:1919
+msgid "File exceeds max size allowed (%s)."
+msgstr "Файл превышает максимально допустимый размер (%s)."
+
+#: wpforms/pro/wpforms-pro.php:436
+msgid "File Size"
+msgstr "Размер файла"
+
+#: wpforms/pro/includes/fields/class-file-upload.php:219
+#: wpforms/pro/includes/fields/class-file-upload.php:1948
+#: wpforms/pro/includes/fields/class-file-upload.php:1976
+#: wpforms/pro/wpforms-pro.php:432 wpforms/pro/wpforms-pro.php:1330
+msgid "File type is not allowed."
+msgstr "Недопустимый тип файла."
+
+#: wpforms/pro/wpforms-pro.php:430
+msgid "File Extension"
+msgstr "Расширение файла"
+
+#: wpforms/src/Pro/Admin/Settings/Access.php:199
+msgid "Save Settings"
+msgstr "Сохранить настройки"
+
+#: wpforms/src/Pro/Access/Integrations.php:101
+#: wpforms/src/Pro/Access/Integrations.php:158
+#: wpforms/src/Pro/Admin/DashboardWidget.php:222
+#: wpforms/src/Pro/Admin/SiteHealth.php:37
+msgid "WPForms"
+msgstr "WPForms"

@@ -1,6 +1,7 @@
 /******/ "use strict";
+var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./js/lib/confirmation-modal.js
+;// CONCATENATED MODULE: ./js/src/lib/confirmation-modal.js
 /**
  * @package Polylang
  */
@@ -101,7 +102,7 @@ const initializeLanguageOldValue = () => {
 	languagesList.attr( 'data-old-value', languagesList.children( ':selected' ).first().val() );
 };
 
-;// CONCATENATED MODULE: ./js/classic-editor.js
+;// CONCATENATED MODULE: ./js/src/classic-editor.js
 /**
  * @package Polylang
  */
@@ -237,7 +238,8 @@ jQuery(
 							ajaxurl,
 							data,
 							function( response ) {
-								var res = wpAjax.parseAjaxResponse( response, 'ajax-response' );
+								// Target a non existing WP HTML id to avoid a conflict with WP ajax requests.
+								var res = wpAjax.parseAjaxResponse( response, 'pll-ajax-response' );
 								$.each(
 									res.responses,
 									function() {

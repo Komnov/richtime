@@ -1,0 +1,17 @@
+.woocommerce-MyAccount-navigation ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+.woocommerce-MyAccount-navigation li {
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fff; }
+  .woocommerce-MyAccount-navigation li:last-of-type {
+    border-bottom: none; }
+
+.payment_method_fondy img {
+  height: 35px; }
+  @media (min-width: 992px) {
+    .payment_method_fondy img {
+      height: 50px; } }

@@ -42,7 +42,7 @@ if ( ! function_exists( 'mercury_posted_on' ) ) :
 			esc_html( get_the_date( 'd.m.Y' ) ),
 		);
 
-		$posted_on = '<div class="post-posted-date"><span class="dashicons dashicons-clock"></span><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></div>';
+		$posted_on = '<div class="post-meta-item post-posted-date"><span class="dashicons dashicons-clock"></span><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></div>';
 
 		echo $posted_on; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
@@ -79,21 +79,23 @@ endif;
 
 if ( ! function_exists( 'mercury_post_views' ) ) {
 	function mercury_post_views() {
-		echo '<div class="post-view-count">' . do_shortcode( '[post-views]' ) . '</div>';
+		if ( pvc_get_post_views() > 0 ) {
+			echo '<div class="post-meta-item post-view-count">' . do_shortcode( '[post-views]' ) . '</div>';
+		}
 	}
 }
 if ( ! function_exists( 'mercury_post_comments_count' ) ) {
 	function mercury_post_comments_count() {
 		$comment_count = get_comments_number( get_post() );
 //		if ( ! empty( $comment_count ) ) {
-		echo '<div class="post-comment-count"><span class="dashicons dashicons-admin-comments"></span><span class="comment-count-text">' . $comment_count . '</span></div>';
+		echo '<div class="post-meta-item post-comment-count"><span class="dashicons dashicons-admin-comments"></span><span class="comment-count-text">' . $comment_count . '</span></div>';
 //		}
 	}
 }
 
 if ( ! function_exists( 'mercury_post_link' ) ) {
 	function mercury_post_link() {
-		echo sprintf( '<div class="post-arrow-link"><a href="%s"><span class="dashicons dashicons-arrow-right-alt"></span></a></div>', get_permalink() );
+		echo sprintf( '<div class="post-meta-item post-arrow-link"><a href="%s"><span class="dashicons dashicons-arrow-right-alt"></span></a></div>', get_permalink() );
 	}
 }
 
@@ -137,3 +139,23 @@ if ( ! function_exists( 'wp_body_open' ) ) :
 		do_action( 'wp_body_open' );
 	}
 endif;
+
+if ( ! function_exists( 'the_favorite_count' ) ) {
+	function the_favorite_count() {
+		if ( is_user_logged_in() ) {
+			$fav_pr = get_user_meta( get_current_user_id(), 'favorites_products', true );
+			if ( is_array( $fav_pr ) && count( $fav_pr ) > 0 ) {
+				echo sprintf( '<sup>%d</sup>', count( $fav_pr ) );
+			}
+		}
+	}
+}
+
+if ( ! function_exists( 'the_cart_count' ) ) {
+	function the_cart_count() {
+		$count = WC()->cart->get_cart_contents_count();
+		if ( $count > 0 ) {
+			echo sprintf( '<sup>%d</sup>', $count );
+		}
+	}
+}

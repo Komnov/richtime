@@ -44,7 +44,7 @@ while ( have_posts() ) :
 			</div>
 			<?php
 			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) : ?>
+			if ( is_user_logged_in() && comments_open() || get_comments_number() ) : ?>
 				<div class="row">
 					<div class="col-md-6">
 						<?php comments_template(); ?>

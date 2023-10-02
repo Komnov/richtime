@@ -2,8 +2,8 @@
 
 class Mercury_Filter {
 
-	private string $type;
-	private int $term_id;
+	private $type;
+	private $term_id;
 
 	public function __construct( WP_Term $term ) {
 		if ( 0 === $term->parent ) {

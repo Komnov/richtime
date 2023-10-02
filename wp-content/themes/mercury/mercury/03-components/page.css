@@ -3,8 +3,8 @@
 }
 
 .tag {
-	background-color: #ECFFFC;
-	padding: 9px 0px;
+	background-color: #91ffeb;
+	padding: 9px 0;
 	width: 128px;
 	border-radius: 100px;
 	font-size: 12px;
@@ -27,14 +27,19 @@
 }
 
 .entry-content p {
-	opacity: .2;
+	opacity: .7;
+}
+
+.post-meta-item {
+	display: flex;
+	align-items: center;
 }
 
 .entry-footer {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 30px;
-	opacity: .2;
+	opacity: .7;
 }
 
 .page-template article {
@@ -158,13 +163,24 @@
 }
 
 .news .preview-big {
-	max-width: 825px;
-	width: 100%;
+	max-width: 100%;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.news .preview-big .post-info {
+	padding-left: 15px;
+	width: 25%;
 }
 
 .mercury-post-meta {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
+}
+
+.post-arrow-link:hover {
+	opacity: 1;
 }
 
 .post-content {
@@ -201,6 +217,13 @@
 
 .map-wrapper {
 	text-align: center;
+}
+
+.moscow {
+	background-image: url("./assets/images/demo/moscow.png");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=page.css.map */

@@ -4,24 +4,10 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit0c6bffce0ae3be551c79741eef762d0b
+class ComposerStaticInit579f4726ad613eb0109dd44a8e9fdb01
 {
     public static $files = array (
         '344a0f93a05b8ca362c22e39586db500' => __DIR__ . '/../..' . '/lib/polyfill-mbstring/bootstrap.php',
-    );
-
-    public static $prefixLengthsPsr4 = array (
-        'C' => 
-        array (
-            'Composer\\Installers\\' => 20,
-        ),
-    );
-
-    public static $prefixDirsPsr4 = array (
-        'Composer\\Installers\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
-        ),
     );
 
     public static $classMap = array (
@@ -35,6 +21,7 @@ class ComposerStaticInit0c6bffce0ae3be551c79741eef762d0b
         'Cyr_To_Lat\\KAGG\\WP_Background_Processing\\WP_Background_Process' => __DIR__ . '/../..' . '/lib/wp-background-processing/class-wp-background-process.php',
         'Cyr_To_Lat\\Main' => __DIR__ . '/../..' . '/src/php/class-main.php',
         'Cyr_To_Lat\\Post_Conversion_Process' => __DIR__ . '/../..' . '/src/php/background-processes/class-post-conversion-process.php',
+        'Cyr_To_Lat\\Request' => __DIR__ . '/../..' . '/src/php/class-request.php',
         'Cyr_To_Lat\\Requirements' => __DIR__ . '/../..' . '/src/php/class-requirements.php',
         'Cyr_To_Lat\\Settings\\Abstracts\\SettingsBase' => __DIR__ . '/../..' . '/src/php/Settings/Abstracts/SettingsBase.php',
         'Cyr_To_Lat\\Settings\\Abstracts\\SettingsInterface' => __DIR__ . '/../..' . '/src/php/Settings/Abstracts/SettingsInterface.php',
@@ -50,9 +37,7 @@ class ComposerStaticInit0c6bffce0ae3be551c79741eef762d0b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit0c6bffce0ae3be551c79741eef762d0b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit0c6bffce0ae3be551c79741eef762d0b::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit0c6bffce0ae3be551c79741eef762d0b::$classMap;
+            $loader->classMap = ComposerStaticInit579f4726ad613eb0109dd44a8e9fdb01::$classMap;
 
         }, null, ClassLoader::class);
     }

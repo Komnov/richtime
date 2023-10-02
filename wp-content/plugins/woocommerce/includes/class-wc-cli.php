@@ -6,6 +6,8 @@
  * @version 3.0.0
  */
 
+use Automattic\WooCommerce\DataBase\Migrations\CustomOrderTable\CLIRunner;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -28,6 +30,7 @@ class WC_CLI {
 		require_once dirname( __FILE__ ) . '/cli/class-wc-cli-rest-command.php';
 		require_once dirname( __FILE__ ) . '/cli/class-wc-cli-tool-command.php';
 		require_once dirname( __FILE__ ) . '/cli/class-wc-cli-update-command.php';
+		require_once dirname( __FILE__ ) . '/cli/class-wc-cli-tracker-command.php';
 	}
 
 	/**
@@ -37,6 +40,9 @@ class WC_CLI {
 		WP_CLI::add_hook( 'after_wp_load', 'WC_CLI_Runner::after_wp_load' );
 		WP_CLI::add_hook( 'after_wp_load', 'WC_CLI_Tool_Command::register_commands' );
 		WP_CLI::add_hook( 'after_wp_load', 'WC_CLI_Update_Command::register_commands' );
+		WP_CLI::add_hook( 'after_wp_load', 'WC_CLI_Tracker_Command::register_commands' );
+		$cli_runner = wc_get_container()->get( CLIRunner::class );
+		WP_CLI::add_hook( 'after_wp_load', array( $cli_runner, 'register_commands' ) );
 	}
 }
 

@@ -1,153 +1,43 @@
-( function ( $ ) {
+( function( $ ) {
 
-	window.onload = function () {
-		pvcUpdateChart( 'this_month' );
-		pvcUpdateMostViewed( 'this_month' );
-	};
-	
-	// ready event
+	/**
+	 * Load initial data.
+	 */
+	window.addEventListener( 'load', function() {
+		updatePostViewsWidget( 'this_month' );
+		updatePostMostViewedWidget( 'this_month' );
+	} );
+
+	/**
+	 * Ready event.
+	 */
 	$( function() {
+		// toggle collapse items
 		$( '.pvc-accordion-header' ).on( 'click', function( e ) {
 			$( this ).closest( '.pvc-accordion-item' ).toggleClass( 'pvc-collapsed' );
-			
-			var items = $( '#pvc-dashboard-accordion' ).find( '.pvc-accordion-item' ),
-				menuItems = {};
+
+			var items = $( '#pvc-dashboard-accordion' ).find( '.pvc-accordion-item' );
+			var menuItems = {};
 
 			if ( items.length > 0 ) {
 				$( items ).each( function( index, item ) {
-					var itemName = $( item ).prop( 'id' );
+					var itemName = $( item ).attr( 'id' );
+
 					itemName = itemName.replace( 'pvc-', '' );
-					
+
 					menuItems[itemName] = $( item ).hasClass( 'pvc-collapsed' );
 				} );
 			}
-			
-			// update user options
-			var userOptions = {
-				menu_items: menuItems
-			};
 
-			pvcUpdateUserOptions( userOptions );
+			// update user options
+			pvcUpdateUserOptions( { menu_items: menuItems } );
 		} );
 	} );
-	
-	function pvcGetViewedData( init, period, container ) {
-		$( container ).addClass( 'loading' ).find( '.spinner' ).addClass( 'is-active' );
-		
-		$.ajax( {
-			url: pvcArgs.ajaxURL,
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				action: 'pvc_dashboard_most_viewed',
-				nonce: pvcArgs.nonce,
-				period: period
-			},
-			success: function ( response ) {		
-				// remove loader
-				$( container ).removeClass( 'loading' );
-				$( container ).find( '.spinner' ).removeClass( 'is-active' );
 
-				// first call?
-				if ( init ) {
-					$( container ).find( '#pvc-viewed' ).html( response.html );
-				} else {
-					pvcBindMonthEvents( response.months, container );
-					
-					$( container ).find( '#pvc-viewed' ).html( response.html );
-				}
-			}
-		} );
-	}
-
-	function pvcGetChartData( init, period, container ) {
-		$( container ).addClass( 'loading' ).find( '.spinner' ).addClass( 'is-active' );
-		
-		$.ajax( {
-			url: pvcArgs.ajaxURL,
-			type: 'POST',
-			dataType: 'json',
-			data: {
-				action: 'pvc_dashboard_chart',
-				nonce: pvcArgs.nonce,
-				period: period
-			},
-			success: function ( response ) {		
-				// remove loader
-				$( container ).removeClass( 'loading' );
-				$( container ).find( '.spinner' ).removeClass( 'is-active' );
-					
-				// first call?
-				if ( init ) {
-					var config = {
-						type: 'line',
-						options: {
-							responsive: true,
-							legend: {
-								display: true,
-								position: 'bottom',
-								onClick: function( e, element ) {
-									var index = element.datasetIndex,
-										ci = this.chart,
-										meta = ci.getDatasetMeta( index );
-
-									// set new hidden value
-									meta.hidden = ( meta.hidden === null ? ! ci.data.datasets[index].hidden : null );
-
-									// rerender the chart
-									ci.update();
-									
-									// update user options
-									var userOptions = {
-										post_type: ci.data.datasets[index].post_type,
-										hidden: meta.hidden === null ? false : meta.hidden
-									}
-									
-									pvcUpdateUserOptions( userOptions );
-								},
-								labels: {
-									boxWidth: 0,
-									fontSize: 12,
-									padding: 10,
-									usePointStyle: false
-								}
-							},
-							scales: {
-								xAxes: [ {
-									display: true,
-									scaleLabel: {
-										display: false,
-										labelString: response.text.xAxes
-									}
-								} ],
-								yAxes: [ {
-									display: true,
-									scaleLabel: {
-										display: false,
-										labelString: response.text.yAxes
-									}
-								} ]
-							},
-							hover: {
-								mode: 'label'
-							}
-						}
-					};
-
-					config = pvcUpdateConfig( config, response );
-
-					window.chartPVC = new Chart( document.getElementById( 'pvc-chart' ).getContext( '2d' ), config );
-				} else {
-					pvcBindMonthEvents( response.months, container );
-
-					window.chartPVC.config = pvcUpdateConfig( window.chartPVC.config, response );
-					window.chartPVC.update();
-				}
-			}
-		} );
-	}
-
-	function pvcUpdateUserOptions( options ) {
+	/**
+	 * Update user options.
+	 */
+	pvcUpdateUserOptions = function( options ) {
 		$.ajax( {
 			url: pvcArgs.ajaxURL,
 			type: 'POST',
@@ -157,29 +47,28 @@
 				nonce: pvcArgs.nonceUser,
 				options: options
 			},
-			success: function ( ) {}
+			success: function() {}
 		} );
 	}
 
-	function pvcUpdateConfig( config, args ) {
+	/**
+	 * Update configuration.
+	 */
+	pvcUpdateConfig = function( config, args ) {
 		// update datasets
 		config.data = args.data;
 
 		// update tooltips with new dates
-		config.options.tooltips = {
+		config.options.plugins.tooltip = {
 			callbacks: {
-				title: function ( tooltip ) {
-					return args.data.dates[tooltip[0].index];
+				title: function( tooltip ) {
+					return args.data.dates[tooltip[0].dataIndex];
 				}
 			}
 		};
 
-		// update labels
-		config.options.scales.xAxes[0].scaleLabel.labelString = args.text.xAxes;
-		config.options.scales.yAxes[0].scaleLabel.labelString = args.text.yAxes;
-
 		// update colors
-		$.each( config.data.datasets, function ( i, dataset ) {
+		$.each( config.data.datasets, function( i, dataset ) {
 			dataset.fill = args.design.fill;
 			dataset.borderColor = args.design.borderColor;
 			dataset.backgroundColor = args.design.backgroundColor;
@@ -193,66 +82,210 @@
 		return config;
 	}
 
-	function pvcUpdateChart( period ) {
+	/**
+	 * Get post most viewed data.
+	 */
+	function getPostMostViewedData( init, period, container ) {
+		$( container ).addClass( 'loading' ).find( '.spinner' ).addClass( 'is-active' );
+
+		$.ajax( {
+			url: pvcArgs.ajaxURL,
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				action: 'pvc_dashboard_post_most_viewed',
+				nonce: pvcArgs.nonce,
+				period: period
+			},
+			success: function( response ) {
+				// remove loader
+				$( container ).removeClass( 'loading' );
+				$( container ).find( '.spinner' ).removeClass( 'is-active' );
+
+				// next call?
+				if ( ! init )
+					bindMonthEvents( response.months, container );
+
+				$( container ).find( '#pvc-post-most-viewed-content' ).html( response.html );
+			}
+		} );
+	}
+
+	/**
+	 * Get post views data.
+	 */
+	function getPostViewsData( init, period, container ) {
+		$( container ).addClass( 'loading' ).find( '.spinner' ).addClass( 'is-active' );
+
+		$.ajax( {
+			url: pvcArgs.ajaxURL,
+			type: 'POST',
+			dataType: 'json',
+			data: {
+				action: 'pvc_dashboard_post_views_chart',
+				nonce: pvcArgs.nonce,
+				period: period
+			},
+			success: function( response ) {
+				// remove loader
+				$( container ).removeClass( 'loading' );
+				$( container ).find( '.spinner' ).removeClass( 'is-active' );
+
+				// first call?
+				if ( init ) {
+					var config = {
+						type: 'line',
+						options: {
+							maintainAspectRatio: true,
+							responsive: true,
+							plugins: {
+								legend: {
+									display: true,
+									position: 'bottom',
+									align: 'center',
+									fullSize: true,
+									onClick: function( e, element, legend ) {
+										var index = element.datasetIndex;
+										var ci = legend.chart;
+										var meta = ci.getDatasetMeta( index );
+
+										// set new hidden value
+										if ( ci.isDatasetVisible( index ) )
+											meta.hidden = true;
+										else
+											meta.hidden = false;
+
+										// rerender the chart
+										ci.update();
+
+										// update user options
+										pvcUpdateUserOptions( {
+											post_type: ci.data.datasets[index].post_type,
+											hidden: meta.hidden
+										} );
+									},
+									labels: {
+										boxWidth: 0,
+										boxHeight: 0,
+										fontSize: 12,
+										padding: 10,
+										usePointStyle: false,
+										textAlign: 'center'
+									}
+								}
+							},
+							scales: {
+								x: {
+									display: true,
+									title: {
+										display: false
+									}
+								},
+								y: {
+									display: true,
+									grace: 0,
+									beginAtZero: true,
+									title: {
+										display: false
+									},
+									ticks: {
+										precision: 0,
+										maxTicksLimit: 12
+									}
+								}
+							},
+							hover: {
+								mode: 'label'
+							}
+						}
+					};
+
+					config = pvcUpdateConfig( config, response );
+
+					window.pvcPostViewsChart = new Chart( document.getElementById( 'pvc-post-views-chart' ).getContext( '2d' ), config );
+				} else {
+					bindMonthEvents( response.months, container );
+
+					window.pvcPostViewsChart.config = pvcUpdateConfig( window.pvcPostViewsChart.config, response );
+					window.pvcPostViewsChart.update();
+				}
+			}
+		} );
+	}
+
+	/**
+	 * Update post views widget.
+	 */
+	function updatePostViewsWidget( period ) {
 		var container = $( '#pvc-post-views' ).find( '.pvc-dashboard-container' );
 
 		if ( $( container ).length > 0 ) {
-			pvcBindMonthEvents( false, container );
+			bindMonthEvents( false, container );
 
-			pvcGetChartData( true, period, container );
+			getPostViewsData( true, period, container );
 		}
 	}
-	
-	function pvcUpdateMostViewed( period ) {
-		var container = $( '#pvc-most-viewed' ).find( '.pvc-dashboard-container' );
+
+	/**
+	 * Update post most viewed widget.
+	 */
+	function updatePostMostViewedWidget( period ) {
+		var container = $( '#pvc-post-most-viewed' ).find( '.pvc-dashboard-container' );
 
 		if ( $( container ).length > 0 ) {
-			pvcBindMonthEvents( false, container );
+			bindMonthEvents( false, container );
 
-			pvcGetViewedData( true, period, container );
+			getPostMostViewedData( true, period, container );
 		}
 	}
 
-	function pvcBindMonthEvents( newMonths, container ) {
+	/**
+	 * Bind month events.
+	 */
+	function bindMonthEvents( newMonths, container ) {
 		var months = $( container ).find( '.pvc-months' );
 
 		// replace months?
 		if ( newMonths !== false )
 			months[0].innerHTML = newMonths;
 
-		var prev = months[0].getElementsByClassName( 'prev' );
-		var next = months[0].getElementsByClassName( 'next' );
+		var prev = months[0].getElementsByClassName( 'prev' )[0];
+		var next = months[0].getElementsByClassName( 'next' )[0];
 
-		if ( $( container ).closest( '.pvc-accordion-item' ).attr( 'id' ) === 'pvc-most-viewed' ) {
-			prev[0].addEventListener( 'click', pvcLoadMostViewedData );
-		} else {
-			prev[0].addEventListener( 'click', pvcLoadChartData );
-		}
+		if ( $( container ).closest( '.pvc-accordion-item' ).attr( 'id' ) === 'pvc-post-most-viewed' )
+			prev.addEventListener( 'click', loadPostMostViewedData );
+		else
+			prev.addEventListener( 'click', loadPostViewsData );
 
 		// skip span
-		if ( next[0].tagName === 'A' ) {
-			if ( $( container ).closest( '.pvc-accordion-item' ).attr( 'id' ) === 'pvc-most-viewed' ) {
-				next[0].addEventListener( 'click', pvcLoadMostViewedData );
-			} else {
-				next[0].addEventListener( 'click', pvcLoadChartData );
-			}
+		if ( next.tagName === 'A' ) {
+			if ( $( container ).closest( '.pvc-accordion-item' ).attr( 'id' ) === 'pvc-post-most-viewed' )
+				next.addEventListener( 'click', loadPostMostViewedData );
+			else
+				next.addEventListener( 'click', loadPostViewsData );
 		}
 	}
 
-	function pvcLoadChartData( e ) {
+	/**
+	 * Load post views data.
+	 */
+	function loadPostViewsData( e ) {
 		e.preventDefault();
-		
+
 		var container = $( '#pvc-post-views' ).find( '.pvc-dashboard-container' );
 
-		pvcGetChartData( false, e.target.dataset.date, container );
+		getPostViewsData( false, e.target.dataset.date, container );
 	}
-	
-	function pvcLoadMostViewedData( e ) {
+
+	/**
+	 * Load post most viewed data.
+	 */
+	function loadPostMostViewedData( e ) {
 		e.preventDefault();
 		
-		var container = $( '#pvc-most-viewed' ).find( '.pvc-dashboard-container' );
+		var container = $( '#pvc-post-most-viewed' ).find( '.pvc-dashboard-container' );
 
-		pvcGetViewedData( false, e.target.dataset.date, container );
+		getPostMostViewedData( false, e.target.dataset.date, container );
 	}
 
 } )( jQuery );

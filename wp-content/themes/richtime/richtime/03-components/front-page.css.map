@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "front-page.css",
+	"sources": [
+		"../../assets/sass/richtime/03-components/front-page.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,iBAAiB;AACjB,cAAc,CAAC;CACb,UAAU,EAAE,IAAI;CACjB"
+}

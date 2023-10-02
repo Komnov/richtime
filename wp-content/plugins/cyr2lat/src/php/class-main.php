@@ -6,11 +6,15 @@
  */
 
 // phpcs:disable Generic.Commenting.DocComment.MissingShort
+/** @noinspection PhpUndefinedNamespaceInspection */
 /** @noinspection PhpUndefinedClassInspection */
 // phpcs:enable Generic.Commenting.DocComment.MissingShort
 
 namespace Cyr_To_Lat;
 
+use Automattic\WooCommerce\Utilities\FeaturesUtil;
+use Polylang;
+use SitePress;
 use WP_Error;
 use wpdb;
 use Exception;
@@ -21,6 +25,13 @@ use Cyr_To_Lat\Symfony\Polyfill\Mbstring\Mbstring;
  * Class Main
  */
 class Main {
+
+	/**
+	 * Request type.
+	 *
+	 * @var Request
+	 */
+	protected $request;
 
 	/**
 	 * Plugin settings.
@@ -72,30 +83,52 @@ class Main {
 	protected $acf;
 
 	/**
-	 * Term saved in pre_insert_term filter.
+	 * Flag showing that we are processing a term.
 	 *
-	 * @var string|WP_Error|null
+	 * @var bool
 	 */
-	private $term;
+	private $is_term = false;
 
 	/**
-	 * Taxonomy saved in pre_insert_term filter.
+	 * Taxonomies saved in pre_insert_term or get_terms_args filter.
 	 *
-	 * @var string|null
+	 * @var string[]|null
 	 */
-	private $taxonomy;
+	private $taxonomies;
 
 	/**
 	 * Polylang locale.
 	 *
 	 * @var string
 	 */
-	private $pll_locale = false;
+	private $pll_locale;
+
+	/**
+	 * WPML locale.
+	 *
+	 * @var string
+	 */
+	protected $wpml_locale;
+
+	/**
+	 * WPML languages.
+	 *
+	 * @var array
+	 */
+	protected $wpml_languages;
+
+	/**
+	 * Current request is frontend.
+	 *
+	 * @var bool|null
+	 */
+	protected $is_frontend;
 
 	/**
 	 * Main constructor.
 	 */
 	public function __construct() {
+		$this->request       = new Request();
 		$this->settings      = new Settings();
 		$this->admin_notices = new Admin_Notices();
 		$requirements        = new Requirements( $this->settings, $this->admin_notices );
@@ -114,21 +147,21 @@ class Main {
 			$this->admin_notices
 		);
 
-		if ( defined( 'WP_CLI' ) && constant( 'WP_CLI' ) ) {
+		if ( $this->request->is_cli() ) {
 			$this->cli = new WP_CLI( $this->converter );
 		}
 
-		$this->acf = new ACF( $this->settings );
+		$this->acf         = new ACF( $this->settings );
+		$this->is_frontend = $this->request->is_frontend();
 	}
 
 	/**
 	 * Init class.
 	 *
 	 * @noinspection PhpUndefinedClassInspection
-	 * @noinspection PhpUnusedLocalVariableInspection
 	 */
 	public function init() {
-		if ( defined( 'WP_CLI' ) && constant( 'WP_CLI' ) ) {
+		if ( $this->request->is_cli() ) {
 			try {
 				/**
 				 * Method WP_CLI::add_command() accepts class as callable.
@@ -151,11 +184,27 @@ class Main {
 		add_filter( 'sanitize_title', [ $this, 'sanitize_title' ], 9, 3 );
 		add_filter( 'sanitize_file_name', [ $this, 'sanitize_filename' ], 10, 2 );
 		add_filter( 'wp_insert_post_data', [ $this, 'sanitize_post_name' ], 10, 2 );
-		add_filter( 'pre_insert_term', [ $this, 'pre_term_filter' ], PHP_INT_MAX, 2 );
+		add_filter( 'pre_insert_term', [ $this, 'pre_insert_term_filter' ], PHP_INT_MAX, 2 );
 
-		if ( class_exists( 'Polylang' ) ) {
+		if ( ! $this->is_frontend || class_exists( SitePress::class ) ) {
+			add_filter( 'get_terms_args', [ $this, 'get_terms_args_filter' ], PHP_INT_MAX, 2 );
+		}
+
+		if ( class_exists( Polylang::class ) ) {
 			add_filter( 'locale', [ $this, 'pll_locale_filter' ] );
 		}
+
+		if ( class_exists( SitePress::class ) ) {
+			$this->wpml_locale = $this->get_wpml_locale();
+
+			// We cannot use locale filter here
+			// as WPML reverts locale at PHP_INT_MAX in \WPML\ST\MO\Hooks\LanguageSwitch::filterLocale.
+			add_filter( 'ctl_locale', [ $this, 'wpml_locale_filter' ], - PHP_INT_MAX );
+
+			add_action( 'wpml_language_has_switched', [ $this, 'wpml_language_has_switched' ], 10, 3 );
+		}
+
+		add_action( 'before_woocommerce_init', [ $this, 'declare_wc_compatibility' ] );
 	}
 
 	/**
@@ -187,43 +236,37 @@ class Main {
 			return $pre;
 		}
 
-		$is_term = false;
-		// phpcs:disable WordPress.PHP.DevelopmentFunctions.error_log_debug_backtrace
-		$backtrace = debug_backtrace( ~DEBUG_BACKTRACE_PROVIDE_OBJECT | DEBUG_BACKTRACE_IGNORE_ARGS );
-		// phpcs:enable
-		foreach ( $backtrace as $backtrace_entry ) {
-			if ( 'wp_insert_term' === $backtrace_entry['function'] ) {
-				$is_term = true;
-				break;
+		if ( $this->is_term ) {
+			// Make sure we search in the db only once being called from wp_insert_term().
+			$this->is_term = false;
+
+			// Fix case when showing previously created categories in cyrillic with WPML.
+			if ( $this->is_frontend && class_exists( SitePress::class ) ) {
+				return $title;
+			}
+
+			$sql = $wpdb->prepare(
+				"SELECT slug FROM $wpdb->terms t LEFT JOIN $wpdb->term_taxonomy tt
+							ON t.term_id = tt.term_id
+							WHERE t.name = %s",
+				$title
+			);
+
+			if ( $this->taxonomies ) {
+				$sql .= ' AND tt.taxonomy IN (' . $this->prepare_in( $this->taxonomies ) . ')';
+			}
+
+			// phpcs:disable WordPress.DB.PreparedSQL.NotPrepared
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			$term = $wpdb->get_var( $sql );
+			// phpcs:enable WordPress.DB.PreparedSQL.NotPrepared
+
+			if ( ! empty( $term ) ) {
+				return $term;
 			}
 		}
 
-		$term = '';
-		if ( $is_term && null !== $this->term && null !== $this->taxonomy ) {
-			// phpcs:disable WordPress.DB.DirectDatabaseQuery
-			$term = $wpdb->get_var(
-				$wpdb->prepare(
-					"SELECT slug FROM $wpdb->terms t LEFT JOIN $wpdb->term_taxonomy tt
-							ON t.term_id = tt.term_id
-							WHERE t.name = %s AND tt.taxonomy = %s",
-					$title,
-					$this->taxonomy
-				)
-			);
-			// phpcs:enable
-
-			// Make sure we search in the db only once being called from wp_insert_term().
-			$this->term     = null;
-			$this->taxonomy = null;
-		}
-
-		if ( ! empty( $term ) ) {
-			$title = $term;
-		} else {
-			$title = $this->is_wc_attribute_taxonomy( $title ) ? $title : $this->transliterate( $title );
-		}
-
-		return $title;
+		return $this->is_wc_attribute_taxonomy( $title ) ? $title : $this->transliterate( $title );
 	}
 
 	/**
@@ -268,21 +311,21 @@ class Main {
 		}
 
 		if ( seems_utf8( $filename ) ) {
-			$filename = mb_strtolower( $filename );
+			$filename = (string) Mbstring::mb_strtolower( $filename );
 		}
 
 		return $this->transliterate( $filename );
 	}
 
 	/**
-	 * Fix string encoding on MacOS.
+	 * Fix string encoding on macOS.
 	 *
 	 * @param string $string String.
+	 * @param array  $table  Conversion table.
 	 *
 	 * @return string
 	 */
-	private function fix_mac_string( $string ) {
-		$table     = $this->get_filtered_table();
+	private function fix_mac_string( $string, $table ) {
 		$fix_table = Conversion_Tables::get_fix_table_for_mac();
 
 		$fix = [];
@@ -323,15 +366,6 @@ class Main {
 	}
 
 	/**
-	 * Get transliteration table.
-	 *
-	 * @return array
-	 */
-	private function get_filtered_table() {
-		return (array) apply_filters( 'ctl_table', $this->settings->get_table() );
-	}
-
-	/**
 	 * Transliterate string using a table.
 	 *
 	 * @param string $string String.
@@ -339,19 +373,12 @@ class Main {
 	 * @return string
 	 */
 	public function transliterate( $string ) {
-		$table = $this->get_filtered_table();
+		$table = (array) apply_filters( 'ctl_table', $this->settings->get_table() );
 
-		$string = $this->fix_mac_string( $string );
+		$string = $this->fix_mac_string( $string, $table );
 		$string = $this->split_chinese_string( $string, $table );
-		$string = strtr( $string, $table );
 
-		if ( function_exists( 'iconv' ) ) {
-			$new_string = iconv( 'UTF-8', 'UTF-8//TRANSLIT//IGNORE', $string );
-
-			return $new_string ?: $string;
-		}
-
-		return $string;
+		return strtr( $string, $table );
 	}
 
 	/**
@@ -408,7 +435,7 @@ class Main {
 	 * @param array $data    An array of slashed post data.
 	 * @param array $postarr An array of sanitized, but otherwise unmodified post data.
 	 *
-	 * @return mixed
+	 * @return array
 	 * @noinspection PhpUnusedParameterInspection
 	 */
 	public function sanitize_post_name( $data, $postarr = [] ) {
@@ -439,24 +466,34 @@ class Main {
 	 * @param string|int|WP_Error $term     The term name to add, or a WP_Error object if there's an error.
 	 * @param string              $taxonomy Taxonomy slug.
 	 *
-	 * @return mixed
+	 * @return string|int
 	 */
-	public function pre_term_filter( $term, $taxonomy ) {
-		$this->term     = null;
-		$this->taxonomy = null;
-
+	public function pre_insert_term_filter( $term, $taxonomy ) {
 		if (
 			0 === $term ||
-			'' === trim( $term ) ||
-			is_wp_error( $term )
+			is_wp_error( $term ) ||
+			'' === trim( $term )
 		) {
 			return $term;
 		}
 
-		$this->term     = $term;
-		$this->taxonomy = $taxonomy;
+		$this->is_term    = true;
+		$this->taxonomies = [ $taxonomy ];
 
 		return $term;
+	}
+
+	/**
+	 * Filters the terms query arguments.
+	 *
+	 * @param array    $args       An array of get_terms() arguments.
+	 * @param string[] $taxonomies An array of taxonomy names.
+	 */
+	public function get_terms_args_filter( $args, $taxonomies ) {
+		$this->is_term    = true;
+		$this->taxonomies = $taxonomies;
+
+		return $args;
 	}
 
 	/**
@@ -475,6 +512,7 @@ class Main {
 		if ( false === $rest_locale ) {
 			return $locale;
 		}
+
 		if ( $rest_locale ) {
 			$this->pll_locale = $rest_locale;
 
@@ -482,6 +520,10 @@ class Main {
 		}
 
 		if ( ! is_admin() ) {
+			return $locale;
+		}
+
+		if ( ! $this->request->is_post() ) {
 			return $locale;
 		}
 
@@ -537,19 +579,19 @@ class Main {
 		// phpcs:disable WordPress.Security.NonceVerification.Recommended
 		if ( isset( $_POST['post_ID'] ) ) {
 			$pll_get_post_language = pll_get_post_language(
-				(int) filter_input( INPUT_POST, 'post_ID', FILTER_SANITIZE_STRING ),
+				(int) filter_input( INPUT_POST, 'post_ID', FILTER_SANITIZE_FULL_SPECIAL_CHARS ),
 				'locale'
 			);
 		}
 		if ( isset( $_POST['pll_post_id'] ) ) {
 			$pll_get_post_language = pll_get_post_language(
-				(int) filter_input( INPUT_POST, 'pll_post_id', FILTER_SANITIZE_STRING ),
+				(int) filter_input( INPUT_POST, 'pll_post_id', FILTER_SANITIZE_FULL_SPECIAL_CHARS ),
 				'locale'
 			);
 		}
 		if ( isset( $_GET['post'] ) ) {
 			$pll_get_post_language = pll_get_post_language(
-				(int) filter_input( INPUT_GET, 'post', FILTER_SANITIZE_STRING ),
+				(int) filter_input( INPUT_GET, 'post', FILTER_SANITIZE_FULL_SPECIAL_CHARS ),
 				'locale'
 			);
 		}
@@ -574,7 +616,7 @@ class Main {
 		// phpcs:disable WordPress.Security.NonceVerification.Missing
 		if ( isset( $_POST['term_lang_choice'] ) ) {
 			$pll_get_language = PLL()->model->get_language(
-				filter_input( INPUT_POST, 'term_lang_choice', FILTER_SANITIZE_STRING )
+				filter_input( INPUT_POST, 'term_lang_choice', FILTER_SANITIZE_FULL_SPECIAL_CHARS )
 			);
 
 			if ( $pll_get_language ) {
@@ -585,6 +627,70 @@ class Main {
 		// phpcs:enable WordPress.Security.NonceVerification.Missing
 
 		return $pll_get_term_language;
+	}
+
+	/**
+	 * Locale filter for WPML.
+	 *
+	 * @param string $locale Locale.
+	 *
+	 * @return string
+	 */
+	public function wpml_locale_filter( $locale ) {
+		if ( $this->wpml_locale ) {
+			return $this->wpml_locale;
+		}
+
+		return $locale;
+	}
+
+	/**
+	 * Get wpml locale.
+	 *
+	 * @return string|null
+	 */
+	protected function get_wpml_locale() {
+		$language_code        = wpml_get_current_language();
+		$this->wpml_languages = (array) apply_filters( 'wpml_active_languages', [] );
+
+		return (
+		isset( $this->wpml_languages[ $language_code ] ) ?
+			$this->wpml_languages[ $language_code ]['default_locale'] :
+			null
+		);
+	}
+
+	/**
+	 * Save switched locale.
+	 *
+	 * @param null|string $language_code     Language code to switch into.
+	 * @param bool|string $cookie_lang       Optionally also switch the cookie language to the value given.
+	 * @param string      $original_language Original language.
+	 *
+	 * @noinspection PhpUnusedParameterInspection
+	 */
+	public function wpml_language_has_switched( $language_code, $cookie_lang, $original_language ) {
+		$language_code = (string) $language_code;
+
+		$this->wpml_locale =
+			isset( $this->wpml_languages[ $language_code ] ) ?
+				$this->wpml_languages[ $language_code ]['default_locale'] :
+				null;
+	}
+
+	/**
+	 * Declare compatibility with custom order tables for WooCommerce.
+	 *
+	 * @return void
+	 */
+	public function declare_wc_compatibility() {
+		if ( class_exists( FeaturesUtil::class ) ) {
+			FeaturesUtil::declare_compatibility(
+				'custom_order_tables',
+				constant( 'CYR_TO_LAT_FILE' ),
+				true
+			);
+		}
 	}
 
 	/**
@@ -601,14 +707,15 @@ class Main {
 	public function prepare_in( $items, $format = '%s' ) {
 		global $wpdb;
 
-		$items    = (array) $items;
-		$how_many = count( $items );
+		$prepared_in = '';
+		$items       = (array) $items;
+		$how_many    = count( $items );
+
 		if ( $how_many > 0 ) {
 			$placeholders    = array_fill( 0, $how_many, $format );
 			$prepared_format = implode( ',', $placeholders );
-			$prepared_in     = $wpdb->prepare( $prepared_format, $items ); // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
-		} else {
-			$prepared_in = '';
+			// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+			$prepared_in = $wpdb->prepare( $prepared_format, $items );
 		}
 
 		return $prepared_in;
