@@ -85,7 +85,7 @@
 					<?php endif ?>
 				</div>
 
-				<div class="chrono">
+				<div class="chrono" style="display: none;">
 					<a href="http://google.com" target="_blank">
 						<svg xmlns="http://www.w3.org/2000/svg" width="186" height="45" viewBox="0 0 186 45"><title>
 								Chrono24</title>

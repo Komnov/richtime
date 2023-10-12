@@ -15355,46 +15355,79 @@ a.button.button-hide-price:hover {
 	margin-top: 15px;
 }
 
-@media screen and (min-width:1024px){.term-yuvelirnye-izdeliya .richtime-filter-content .tab-items-wrapper .tab-item {
-    width: 15%;
+@media screen and (min-width:1024px){
+		.term-yuvelirnye-izdeliya .richtime-filter-content .tab-items-wrapper .tab-item {
+	    width: 15%;
+	}
+		.term-yuvelirnye-izdeliya #pa_kamni .tab-item {
+	    width: 20%;
+	}
+		.term-yuvelirnye-izdeliya #pa_metall .tab-item:nth-child(2n) {
+	    justify-content: center;
+	    display: flex;
+	    margin-left: -32px;
+	    margin-right: 10px;
+	}
+		div#collection_name .col-12 .tab-items-wrapper {
+	    justify-content: flex-start;
+	}
+	    .yuvelirnye-izdeliya .woocommerce-product-gallery__image {
+	    margin-top: -100px;
+	    margin-bottom: -165px;
+	}
+	 .yuvelirnye-izdeliya .breadcrumbs-wrapper {
+	    position: relative;
+	    z-index: 11;
+	}
+	.yuvelirnye-izdeliya .woocommerce-tabs.wc-tabs-wrapper {
+	    position: relative;
+	    z-index: 1111;
+	}
+	.yuvelirnye-izdeliya .yith_expand{
+	    display:none !important;
+	}
+	.navigation-row {
+	    position: relative;
+	}
 }
-	.term-yuvelirnye-izdeliya #pa_kamni .tab-item {
-    width: 20%;
-}
-	.term-yuvelirnye-izdeliya #pa_metall .tab-item:nth-child(2n) {
-    justify-content: center;
-    display: flex;
-    margin-left: -32px;
-    margin-right: 10px;
-}
-	div#collection_name .col-12 .tab-items-wrapper {
-    justify-content: flex-start;
-}
-    .yuvelirnye-izdeliya .woocommerce-product-gallery__image {
-    margin-top: -100px;
-    margin-bottom: -165px;
-}
- .yuvelirnye-izdeliya .breadcrumbs-wrapper {
-    position: relative;
-    z-index: 11;
-}
-.yuvelirnye-izdeliya .woocommerce-tabs.wc-tabs-wrapper {
-    position: relative;
-    z-index: 1111;
-}
-.yuvelirnye-izdeliya .yith_expand{
-    display:none !important;
-}
-.navigation-row {
-    position: relative;
-}
-}
+
+
+
 
 
 /*CUSTOM STYLES*/
 #main-carousel {
 	background-color: #ebeaea;
 }
+.brands__list .elementor-element .elementor-widget {
+	margin: 0 0;
+}
+.brands__list .brand__item_desc {
+	margin: 0 0!important;
+}
+.brands__list .brand__item_desc .elementor-widget-wrap > div {
+	margin-bottom: 0px;
+}
+.brands__list .brand__item_desc .elementor-widget-wrap > div * {
+	margin: 0 0!important;
+}
+.brands__list a img {
+	max-width: 150px;
+	object-fit: contain;
+}
+.brands__list {
+	position: relative;
+}
+.yith_magnifier_mousetrap {
+	z-index: 900!important;
+}
+.side-menu {
+	z-index: 999!important;
+}
+/*CUSTOM STYLES*/
+
+
+
 
 
 @media (min-width: 992px) {
@@ -15414,32 +15447,17 @@ a.button.button-hide-price:hover {
 	.navigation-row .menu {
 		justify-content: space-between;
 	}
-}
-@media (min-width: 1200) {
-	.site-logo img {
-    height: 80px;
+	.yuvelirnye-izdeliya .woocommerce-product-gallery__image {
+		margin: 0 0!important;
 	}
-	#main-carousel .slick-slide {
-	    max-height: 300px;
+	.woocommerce div.product div.images div.thumbnails {
+		max-width: 100%!important;
 	}
-	#main-carousel .slick-slide img {
-	    max-height: 300px;
-	    object-fit: contain;
+	.richtime-filter-content {
+    padding-top: 85px;
 	}
 }
 
-@media (min-width: 1360) {
-	.site-logo img {
-    height: 80px;
-	}
-	#main-carousel .slick-slide {
-	    max-height: 300px;
-	}
-	#main-carousel .slick-slide img {
-	    max-height: 300px;
-	    object-fit: contain;
-	}
-}
 
 @media (min-width: 1700px) {
 	#main-carousel .slick-slide {
@@ -15454,6 +15472,12 @@ a.button.button-hide-price:hover {
 @media (max-width: 992px) {
 	.index__page_brands img.swiper-slide-image {
     padding: 11px;
+	}
+	.brands__list {
+		position: relative;
+	}
+	.brands__list a img {
+		max-width: 200px!important;
 	}
 }
 
